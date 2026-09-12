@@ -30,20 +30,21 @@ jobs:
       OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
     steps:
       - name: Descargar el repositorio
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           ref: ${{ github.event.repository.default_branch }}
           fetch-depth: 0
 
       - name: Preparar Python y Node
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.12"
 
       - name: Preparar Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
           node-version: "20"
+          package-manager-cache: false
 
       - name: Validar y generar artículo
         env:
