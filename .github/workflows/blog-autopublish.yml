@@ -56,6 +56,7 @@ jobs:
           python tools/auto_publish_blog.py "${args[@]}"
 
       - name: Guardar el artículo y los artefactos generados
+        id: commit
         shell: bash
         run: |
           set -euo pipefail
@@ -64,13 +65,15 @@ jobs:
           git add tools/posts.json tools/blog_queue.json blog blog.html sitemap.xml assets/img/photos
           if git diff --cached --quiet; then
             echo "No hay cambios para publicar."
+            echo "published=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
           git commit -m "chore(blog): publicar artículo programado"
           git push
+          echo "published=true" >> "$GITHUB_OUTPUT"
 
       - name: Configurar SSH de despliegue
-        if: success()
+        if: steps.commit.outputs.published == 'true'
         env:
           DPZ_SSH_PRIVATE_KEY: ${{ secrets.DPZ_SSH_PRIVATE_KEY }}
         shell: bash
@@ -88,7 +91,7 @@ jobs:
           echo "DPZ_SSH_KEY_FILE=$key_file" >> "$GITHUB_ENV"
 
       - name: Desplegar en dpzdata.com
-        if: success()
+        if: steps.commit.outputs.published == 'true'
         shell: bash
         run: |
           set -euo pipefail
@@ -106,5 +109,5 @@ jobs:
           ssh -i "$DPZ_SSH_KEY_FILE" -o IdentitiesOnly=yes "$DPZ_SSH_USER@$DPZ_SSH_HOST" "sudo rsync -a --delete '$remote_tmp/' '/var/www/dpzdata/' && sudo chown -R caddy:caddy '/var/www/dpzdata' && sudo chmod -R 755 '/var/www/dpzdata' && find '$remote_tmp' -mindepth 1 -delete"
 
       - name: Verificar producción
-        if: success()
+        if: steps.commit.outputs.published == 'true'
         run: node tools/seo-audit.mjs --prod
