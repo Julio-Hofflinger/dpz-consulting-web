@@ -1,0 +1,365 @@
+{
+  "site": {
+    "domain": "https://dpzdata.com",
+    "brand": "DPZ Consulting",
+    "author": "Equipo DPZ Consulting",
+    "author_role": "Diagnóstico, Planificación y Zonificación del Territorio",
+    "og_image": "https://dpzdata.com/assets/img/og/og-dpz.png"
+  },
+  "categories": {
+    "regulatorio": "Regulatorio",
+    "sig": "SIG & Datos",
+    "reforestacion": "Reforestación",
+    "arbolado": "Arbolado Urbano",
+    "forestal": "Gestión Forestal",
+    "riesgos": "Suelos & Riesgos",
+    "diagnostico": "Diagnóstico"
+  },
+  "posts": [
+    {
+      "slug": "observaciones-autoridad-proyecto",
+      "title": "Cómo responder observaciones de la autoridad sin retrasar tu proyecto",
+      "category": "regulatorio",
+      "focus_keyword": "observaciones de la autoridad",
+      "secondary_keywords": ["responder observaciones ambientales", "soporte regulatorio Chile"],
+      "intent": "informacional",
+      "updated": "2026-09-01",
+      "date": "2026-07-10",
+      "read": "7 min",
+      "excerpt": "Claves para preparar respuestas técnicas sólidas y defendibles ante requerimientos sectoriales.",
+      "description": "Guía práctica para preparar respuestas técnicas sólidas y defendibles ante observaciones y requerimientos de la autoridad ambiental, forestal o sectorial en Chile.",
+      "photo": "photo-1454165804606-c3d57bc86b40",
+      "image_alt": "Profesional revisando documentación técnica y normativa",
+      "service_link": "revisión técnica de observaciones y soporte regulatorio",
+      "cta_title": "¿Observaciones pendientes?",
+      "cta_text": "Te ayudamos a preparar respuestas técnicas defendibles y a cerrar el proceso.",
+      "lead": "Recibir observaciones de la autoridad no es un fracaso: es parte normal del proceso. Lo que marca la diferencia entre un proyecto que avanza y uno que se estanca es la calidad y oportunidad de la respuesta.",
+      "sections": [
+        { "id": "entender", "h2": "Entender la observación antes de responder", "html": "<p>El error más común es responder rápido sin comprender qué se está pidiendo realmente. Cada observación tiene tres capas: qué se objeta, por qué se objeta y qué se espera como respuesta.</p><ul><li><strong>Qué se objeta:</strong> el hecho técnico o el vacío de información.</li><li><strong>Por qué se objeta:</strong> la norma o criterio que respalda el requerimiento.</li><li><strong>Qué se espera:</strong> un antecedente nuevo, una corrección o una justificación.</li></ul>" },
+        { "id": "trazabilidad", "h2": "Construir una respuesta trazable", "html": "<p>La autoridad revisa decenas de expedientes. Facilitar la revisión juega a tu favor: cita la observación, responde directo, respalda con el antecedente e indica dónde se incorpora el cambio.</p>", "key": "El plazo no se pierde escribiendo la respuesta, se pierde cuando la respuesta no resuelve el fondo y genera una nueva observación." },
+        { "id": "cuando", "h2": "Cuándo conviene apoyo externo", "html": "<p>Si el proyecto acumula varias rondas, si el equipo interno está saturado o si el requerimiento cruza disciplinas, un apoyo técnico externo puede consolidar una respuesta integral y cerrar el ciclo.</p>" }
+      ]
+    },
+    {
+      "slug": "cartografia-sig-diagnostico-territorial",
+      "title": "El rol de la cartografía SIG en el diagnóstico territorial moderno",
+      "category": "sig",
+      "focus_keyword": "cartografía SIG",
+      "secondary_keywords": ["diagnóstico territorial Chile", "análisis espacial"],
+      "intent": "informacional",
+      "updated": "2026-09-01",
+      "date": "2026-07-08",
+      "read": "8 min",
+      "excerpt": "Cómo los sistemas de información geográfica aceleran decisiones precisas sobre el terreno.",
+      "description": "Cómo los sistemas de información geográfica (SIG) aceleran y respaldan el diagnóstico territorial: capas de datos, análisis espacial y decisiones defendibles en Chile.",
+      "photo": "photo-1524661135-423995f22d0b",
+      "image_alt": "Mapa cartográfico y análisis de datos geoespaciales",
+      "service_link": "diagnóstico ambiental-territorial",
+      "cta_title": "¿Necesitas cartografía SIG?",
+      "cta_text": "Producimos cartografía técnica y análisis espacial para tu proyecto.",
+      "lead": "Un diagnóstico territorial es tan bueno como los datos que lo sustentan. Los Sistemas de Información Geográfica transformaron la manera de entender el territorio.",
+      "sections": [
+        { "id": "capas", "h2": "De datos dispersos a capas integradas", "html": "<p>El territorio contiene múltiples dimensiones que interactúan: relieve, cobertura vegetal, hidrografía, uso de suelo y restricciones normativas. El SIG las organiza como capas georreferenciadas.</p>" },
+        { "id": "analisis", "h2": "Análisis espacial que respalda decisiones", "html": "<p>Más allá de visualizar, el SIG calcula: superficie sobre umbral de pendiente, intersección con cobertura vegetal, distancia a cursos de agua protegidos.</p>", "key": "Un buen análisis SIG convierte un mapa bonito en un argumento técnico medible y verificable." },
+        { "id": "comunicar", "h2": "Comunicar el territorio con claridad", "html": "<p>La cartografía es también un lenguaje. Un mapa bien diseñado comunica en segundos lo que un texto tardaría páginas en explicar.</p>" }
+      ]
+    },
+    {
+      "slug": "diseno-reforestaciones-supervision",
+      "title": "Diseño de reforestaciones: del plan a la supervisión en terreno",
+      "category": "reforestacion",
+      "focus_keyword": "diseño de reforestaciones",
+      "secondary_keywords": ["supervisión de reforestación", "restauración ecológica Chile"],
+      "intent": "informacional",
+      "updated": "2026-09-01",
+      "date": "2026-07-05",
+      "read": "9 min",
+      "excerpt": "Buenas prácticas para asegurar sobrevivencia y cumplimiento en proyectos de restauración.",
+      "description": "Buenas prácticas para diseñar y supervisar reforestaciones y restauración: selección de especies, preparación de suelo, riego y control de sobrevivencia en Chile.",
+      "photo": "photo-1466692476868-aef1dfb1e735",
+      "image_alt": "Plantación de árboles en un proyecto de reforestación",
+      "service_link": "diseño y la supervisión de reforestaciones",
+      "cta_title": "¿Un proyecto de reforestación?",
+      "cta_text": "Diseñamos y supervisamos reforestaciones con foco en sobrevivencia y cumplimiento.",
+      "lead": "Una reforestación exitosa no empieza con la plantación: empieza con el diseño. Y no termina hasta que la supervisión confirma la sobrevivencia comprometida.",
+      "sections": [
+        { "id": "diagnostico", "h2": "Diagnóstico del sitio", "html": "<p>Antes de definir qué plantar, hay que entender dónde se planta: tipo de suelo, pendiente, exposición, disponibilidad de agua y competencia existente.</p>" },
+        { "id": "especies", "h2": "Selección de especies", "html": "<p>La elección debe responder al objetivo del proyecto y a las condiciones del sitio. Priorizar especies nativas adecuadas mejora la sobrevivencia y el valor ecológico.</p>", "key": "Plantar la especie correcta en el lugar correcto es el factor que más influye en la sobrevivencia a mediano plazo." },
+        { "id": "supervision", "h2": "Supervisión y control de sobrevivencia", "html": "<p>La supervisión cierra el ciclo: verifica en terreno que lo plantado sobrevive según lo comprometido y dispone reposiciones cuando corresponde.</p>" }
+      ]
+    },
+    {
+      "slug": "censo-arbolado-urbano-guia",
+      "title": "Censo de arbolado urbano: qué es y por qué tu municipio lo necesita",
+      "category": "arbolado",
+      "focus_keyword": "censo de arbolado urbano",
+      "secondary_keywords": ["inventario de árboles urbanos", "gestión de áreas verdes"],
+      "intent": "informacional",
+      "updated": "2026-09-01",
+      "date": "2026-07-14",
+      "read": "7 min",
+      "excerpt": "Un inventario del arbolado urbano es la base para gestionar, planificar y priorizar la inversión en áreas verdes.",
+      "description": "Qué es un censo de arbolado urbano, qué datos levanta y cómo permite a municipios y privados gestionar riesgo, planificar mantención y priorizar inversión en áreas verdes.",
+      "photo": "photo-1523712999610-f77fbcfc3843",
+      "image_alt": "Árboles en una avenida urbana",
+      "service_link": "censo y caracterización de arbolado urbano",
+      "cta_title": "¿Necesitas censar tu arbolado?",
+      "cta_text": "Levantamos el inventario y la caracterización de tu arbolado urbano con estándar técnico.",
+      "lead": "No se puede gestionar lo que no se conoce. Un censo de arbolado urbano convierte un conjunto disperso de árboles en un activo administrable, con datos que permiten decidir con criterio.",
+      "sections": [
+        { "id": "que-es", "h2": "Qué levanta un censo de arbolado", "html": "<p>Un censo caracteriza cada individuo arbóreo y lo georreferencia. Los datos típicos incluyen:</p><ul><li>Especie y ubicación exacta (coordenadas).</li><li>Dimensiones: altura, diámetro y proyección de copa.</li><li>Estado sanitario y estructural.</li><li>Conflictos con infraestructura y riesgo asociado.</li></ul>" },
+        { "id": "para-que", "h2": "Para qué sirve", "html": "<p>Con el inventario en mano, la gestión deja de ser reactiva. Permite priorizar podas, detectar árboles de riesgo, planificar reposiciones y justificar presupuesto de mantención.</p>", "key": "Un árbol de riesgo no detectado es un pasivo; el mismo árbol censado y monitoreado es una decisión de gestión informada." },
+        { "id": "sig", "h2": "El censo como capa SIG viva", "html": "<p>Integrado a un sistema de información geográfica, el censo se vuelve una capa consultable y actualizable que se cruza con otras variables urbanas para planificar el verde de la ciudad.</p>" }
+      ]
+    },
+    {
+      "slug": "plan-de-manejo-forestal-cuando",
+      "title": "Plan de manejo forestal: cuándo lo necesitas y qué debe contener",
+      "category": "forestal",
+      "focus_keyword": "plan de manejo forestal",
+      "secondary_keywords": ["manejo de bosque nativo", "CONAF plan de manejo"],
+      "intent": "informacional",
+      "updated": "2026-09-01",
+      "date": "2026-07-16",
+      "read": "8 min",
+      "excerpt": "Guía para entender cuándo se exige un plan de manejo y qué elementos técnicos no pueden faltar.",
+      "description": "Qué es un plan de manejo forestal, en qué casos se requiere en Chile y qué componentes técnicos debe incluir para ser aprobado y ejecutable.",
+      "photo": "photo-1416879595882-3373a0480b5b",
+      "image_alt": "Bosque manejado con senderos",
+      "service_link": "gestión forestal y planes de manejo",
+      "cta_title": "¿Requieres un plan de manejo?",
+      "cta_text": "Elaboramos planes de manejo simples y planes de corrección técnicamente defendibles.",
+      "lead": "El plan de manejo es el instrumento que ordena la intervención sobre el recurso forestal y vegetacional. Bien elaborado, es la diferencia entre una intervención autorizada y un problema con la autoridad.",
+      "sections": [
+        { "id": "cuando", "h2": "Cuándo se necesita", "html": "<p>Diversas intervenciones sobre vegetación nativa o plantaciones requieren un instrumento de manejo aprobado antes de ejecutar. Ante la duda, conviene evaluar el caso antes de intervenir.</p>" },
+        { "id": "contenido", "h2": "Qué debe contener", "html": "<p>Un plan sólido combina diagnóstico y prescripción:</p><ul><li>Caracterización del rodal y del sitio.</li><li>Cartografía de las áreas de intervención.</li><li>Objetivos y prescripciones de manejo.</li><li>Medidas de protección y de reforestación cuando aplica.</li></ul>", "key": "Un plan de manejo no es un trámite: es una hoja de ruta técnica que también protege legalmente al propietario." },
+        { "id": "correccion", "h2": "Planes de corrección", "html": "<p>Cuando ya existe una intervención observada, un plan de corrección permite regularizar y definir las acciones reparatorias con respaldo técnico.</p>" }
+      ]
+    },
+    {
+      "slug": "riesgo-incendios-prediales-prevencion",
+      "title": "Riesgo de incendios en predios: diagnóstico y prevención con criterio técnico",
+      "category": "riesgos",
+      "focus_keyword": "riesgo de incendios en predios",
+      "secondary_keywords": ["prevención de incendios forestales", "silvicultura preventiva"],
+      "intent": "informacional",
+      "updated": "2026-09-01",
+      "date": "2026-07-18",
+      "read": "8 min",
+      "excerpt": "Cómo evaluar el riesgo de incendio de un predio y qué medidas de prevención priorizar.",
+      "description": "Cómo se evalúa el riesgo de incendios en predios rurales y de interfaz, qué variables considerar y qué medidas de prevención y silvicultura preventiva priorizar en Chile.",
+      "photo": "photo-1470115636492-6d2b56f9146d",
+      "image_alt": "Paisaje seco con riesgo de incendio",
+      "service_link": "diagnóstico de suelos, fuego y riesgos",
+      "cta_title": "¿Preocupa el riesgo de incendio?",
+      "cta_text": "Evaluamos el riesgo de tu predio y diseñamos medidas de prevención priorizadas.",
+      "lead": "El riesgo de incendio no se elimina, se gestiona. Un diagnóstico técnico permite pasar de la preocupación difusa a un plan de medidas concretas y priorizadas por impacto.",
+      "sections": [
+        { "id": "variables", "h2": "Qué variables definen el riesgo", "html": "<p>El riesgo combina peligro y vulnerabilidad. En terreno se evalúan:</p><ul><li>Tipo y continuidad del combustible vegetal.</li><li>Topografía: pendiente y exposición.</li><li>Cercanía a infraestructura y accesos.</li><li>Condiciones climáticas locales.</li></ul>" },
+        { "id": "medidas", "h2": "Medidas de prevención priorizadas", "html": "<p>La silvicultura preventiva reduce y fragmenta el combustible: cortafuegos, manejo de densidad, poda y limpieza de material fino en las zonas críticas.</p>", "key": "Prevenir no es intervenir todo el predio, sino intervenir lo correcto donde más reduce el riesgo." },
+        { "id": "interfaz", "h2": "La zona de interfaz", "html": "<p>Donde la vegetación se encuentra con viviendas e infraestructura, la prevención es prioritaria y debe combinar medidas prediales con criterios de defensa en torno a las edificaciones.</p>" }
+      ]
+    },
+    {
+      "slug": "dia-o-eia-chile-diferencias",
+      "title": "DIA o EIA en Chile: diferencias y cómo orientar tu proyecto",
+      "category": "regulatorio",
+      "focus_keyword": "DIA o EIA en Chile",
+      "secondary_keywords": ["Declaración de Impacto Ambiental", "Estudio de Impacto Ambiental", "SEIA Chile"],
+      "intent": "informacional",
+      "date": "2026-08-28",
+      "updated": "2026-09-02",
+      "read": "8 min",
+      "excerpt": "Conoce qué distingue a una DIA de un EIA y qué antecedentes conviene revisar antes de definir la estrategia ambiental de un proyecto.",
+      "description": "DIA o EIA en Chile: diferencias, preguntas clave y antecedentes técnicos para orientar el ingreso de un proyecto al SEIA con mejor preparación.",
+      "image": "assets/img/photos/dpz-soporte-regulatorio-900.webp",
+      "image_alt": "Profesional revisando antecedentes técnicos y regulatorios de un proyecto en Chile",
+      "service_link": "soporte técnico-regulatorio y revisión de antecedentes",
+      "cta_title": "¿No tienes claro el instrumento?",
+      "cta_text": "Revisamos el proyecto, su localización y sus componentes para ordenar los antecedentes iniciales.",
+      "lead": "Elegir entre una Declaración de Impacto Ambiental (DIA) y un Estudio de Impacto Ambiental (EIA) no debería resolverse por intuición ni solo por el tamaño del proyecto. La decisión depende de la tipología aplicable y de si se configuran efectos, características o circunstancias que requieren una evaluación más profunda.",
+      "key_takeaways": [
+        "La DIA y el EIA son vías distintas dentro del Sistema de Evaluación de Impacto Ambiental (SEIA).",
+        "La definición debe partir de la tipología del proyecto, su localización y sus posibles impactos.",
+        "Una matriz temprana de antecedentes reduce retrabajos y mejora la trazabilidad de la estrategia ambiental."
+      ],
+      "sections": [
+        { "id": "diferencias", "h2": "Qué diferencia a una DIA de un EIA", "html": "<p>Ambos instrumentos ingresan al SEIA, pero no cumplen exactamente la misma función. La DIA presenta los antecedentes necesarios para demostrar que el proyecto no genera los efectos del artículo 11 de la Ley N°19.300. El EIA se utiliza cuando corresponde analizar efectos significativos y, por lo tanto, exige una caracterización y evaluación de impactos más desarrollada.</p><p>El <a href=\"https://www.sea.gob.cl/evaluacion-de-impacto-ambiental/cual-es-el-proceso-de-evaluacion-de-impacto-ambiental\" target=\"_blank\" rel=\"noopener noreferrer\">SEA explica las diferencias del procedimiento</a>, incluidos los plazos y las particularidades de la participación ciudadana.</p>" },
+        { "id": "preguntas", "h2": "Las preguntas que conviene responder primero", "html": "<p>Antes de redactar, conviene ordenar cuatro preguntas: ¿qué actividad se ejecutará?, ¿en qué ubicación exacta?, ¿qué obras y fases tendrá?, y ¿qué componentes ambientales podrían verse afectados? La respuesta debe considerar tanto las obras principales como caminos, instalaciones temporales, accesos, extracción de recursos y cambios durante la operación.</p><ul><li>Revisa la tipología de ingreso aplicable.</li><li>Delimita el área de influencia con información espacial consistente.</li><li>Identifica permisos ambientales sectoriales y normativa relacionada.</li></ul>", "key": "La localización y la descripción completa del proyecto suelen cambiar la estrategia más que una comparación superficial entre DIA y EIA." },
+        { "id": "antecedentes", "h2": "Antecedentes técnicos que ordenan la decisión", "html": "<p>Una revisión inicial combina cartografía, uso de suelo, hidrología, vegetación, receptores sensibles, restricciones territoriales y antecedentes de proyectos cercanos. El objetivo no es producir todos los estudios de una vez, sino detectar brechas que puedan afectar la vía de ingreso o generar observaciones posteriores.</p><p>El <a href=\"https://www.sea.gob.cl/criterios-de-evaluacion-en-el-seia\" target=\"_blank\" rel=\"noopener noreferrer\">buscador de criterios del SEA</a> permite contrastar el proyecto con lineamientos técnicos vigentes para distintas materias.</p>" },
+        { "id": "errores", "h2": "Errores frecuentes al definir la estrategia", "html": "<p>Un error común es copiar la estructura de un proyecto anterior sin verificar si la ubicación, la escala o las obras cambiaron. También genera retrabajo presentar cartografía con límites distintos entre capítulos o describir medidas antes de explicar con precisión el impacto que se busca abordar.</p><p>Una <a href=\"../servicios.html\">revisión técnica temprana</a> permite construir una matriz de requisitos, responsables y fuentes, dejando explícito qué debe confirmarse antes de ingresar.</p>" }
+      ],
+      "faqs": [
+        { "question": "¿La DIA siempre es más simple que el EIA?", "answer": "La DIA suele tener un alcance distinto, pero su complejidad depende de la tipología, la localización, los permisos y la información que deba acreditar el proyecto." },
+        { "question": "¿Qué debe revisarse antes de escoger DIA o EIA?", "answer": "La tipología de ingreso, la descripción completa de las obras, la localización, los componentes ambientales y los efectos, características o circunstancias potenciales." },
+        { "question": "¿Este artículo reemplaza una revisión legal o sectorial?", "answer": "No. Es una orientación general; cada proyecto debe revisarse con sus antecedentes actualizados y criterios oficiales aplicables." }
+      ],
+      "sources": [
+        { "name": "SEA Chile — ¿Cuál es el proceso de evaluación de impacto ambiental?", "url": "https://www.sea.gob.cl/evaluacion-de-impacto-ambiental/cual-es-el-proceso-de-evaluacion-de-impacto-ambiental" },
+        { "name": "SEA Chile — Procedimiento de evaluación de una DIA", "url": "https://www.sea.gob.cl/procedimiento-de-evaluacion-de-una-declaracion-de-impacto-ambiental-dia" },
+        { "name": "SEA Chile — Criterios de evaluación en el SEIA", "url": "https://www.sea.gob.cl/criterios-de-evaluacion-en-el-seia" }
+      ]
+    },
+    {
+      "slug": "humedales-urbanos-delimitacion-proyecto",
+      "title": "Humedales urbanos en Chile: cómo incorporarlos al diagnóstico territorial",
+      "category": "diagnostico",
+      "focus_keyword": "humedales urbanos en Chile",
+      "secondary_keywords": ["delimitación de humedales urbanos", "Ley 21.202", "diagnóstico ambiental territorial"],
+      "intent": "informacional",
+      "date": "2026-08-24",
+      "updated": "2026-09-02",
+      "read": "9 min",
+      "excerpt": "Una guía práctica para revisar hidrología, vegetación, suelos y límite urbano antes de diseñar o evaluar un proyecto cercano a un humedal.",
+      "description": "Humedales urbanos en Chile: criterios de delimitación, revisión cartográfica y antecedentes que conviene integrar al diagnóstico de un proyecto.",
+      "image": "assets/img/photos/dpz-cartografia-sig-900.webp",
+      "image_alt": "Cartografía ambiental utilizada para analizar un humedal urbano en Chile",
+      "service_link": "diagnóstico ambiental-territorial y cartografía SIG",
+      "cta_title": "¿Tu proyecto está cerca de un humedal?",
+      "cta_text": "Ordenamos antecedentes de gabinete y terreno para identificar restricciones y decisiones de diseño.",
+      "lead": "Los humedales urbanos requieren una lectura territorial cuidadosa porque sus límites ecológicos no siempre coinciden con cercos, calles o límites administrativos. Un diagnóstico temprano ayuda a evitar decisiones de localización basadas solo en una fotografía o en una capa desactualizada.",
+      "key_takeaways": [
+        "La delimitación técnica debe considerar al menos uno de los criterios definidos en la regulación aplicable.",
+        "El límite urbano es un dato relevante cuando se analiza la figura de humedal urbano.",
+        "La cartografía debe conectar gabinete, terreno y fuentes oficiales en una misma trazabilidad."
+      ],
+      "sections": [
+        { "id": "marco", "h2": "Qué se entiende por humedal urbano", "html": "<p>La Ley N°21.202 aborda los humedales que se encuentran total o parcialmente dentro del límite urbano y entrega herramientas para su protección. Esto significa que el primer paso no es dibujar un polígono aislado, sino revisar la relación entre el ecosistema, el límite urbano y el proyecto que se quiere emplazar.</p><p>La <a href=\"https://biodiversidadrm.mma.gob.cl/ecosistemas-acuaticos/humedales-urbanos/\" target=\"_blank\" rel=\"noopener noreferrer\">información del Ministerio del Medio Ambiente</a> resume el marco y los criterios de delimitación.</p>" },
+        { "id": "criterios", "h2": "Los tres criterios que orientan la delimitación", "html": "<p>La guía metodológica propone revisar hidrología, vegetación hidrófita y suelos hídricos. La presencia de uno de estos criterios puede ser suficiente para delimitar el humedal, pero su aplicación exige evidencia y una interpretación coherente con el sitio.</p><ul><li>Analiza imágenes y antecedentes hidrológicos en gabinete.</li><li>Contrasta la vegetación observada con las condiciones del terreno.</li><li>Registra evidencias de suelos con mal drenaje o saturación.</li></ul>", "key": "Un polígono de referencia es un punto de partida; la delimitación defendible explica cómo se obtuvo y qué evidencia la respalda." },
+        { "id": "proyecto", "h2": "Cómo integrar el humedal al diagnóstico de un proyecto", "html": "<p>Conviene superponer el humedal con obras, accesos, movimientos de tierra, drenajes, áreas de acopio y zonas de influencia. Después se revisan las interacciones: alteración del régimen hídrico, pérdida de vegetación, cambios en escorrentía y riesgos durante construcción.</p><p>Con un <a href=\"../servicios.html\">diagnóstico territorial y cartografía SIG</a> se puede documentar cada capa, su fuente, fecha y nivel de precisión para que el equipo de diseño trabaje sobre una base común.</p>" },
+        { "id": "terreno", "h2": "Por qué gabinete y terreno deben complementarse", "html": "<p>Las imágenes satelitales permiten reconocer patrones, pero no reemplazan la verificación de condiciones locales. Una visita bien planificada ayuda a observar saturación, vegetación, conectividad, intervenciones y señales que no aparecen en una imagen aislada.</p><p>El resultado debe dejar claros los límites de la información, los puntos de incertidumbre y las recomendaciones para la siguiente etapa del proyecto.</p>" }
+      ],
+      "faqs": [
+        { "question": "¿Un humedal urbano siempre está formalmente declarado?", "answer": "La declaración administrativa y la existencia de un ecosistema son cuestiones relacionadas, pero no idénticas. El caso debe revisarse con la normativa, el expediente y los antecedentes técnicos actualizados." },
+        { "question": "¿Qué información conviene llevar a terreno?", "answer": "Cartografía base, imágenes recientes, límites preliminares, fichas de observación, antecedentes hidrológicos y un registro fotográfico georreferenciado." },
+        { "question": "¿La delimitación define por sí sola la viabilidad del proyecto?", "answer": "No. Es un insumo para evaluar impactos, restricciones, permisos y alternativas de diseño junto con los demás antecedentes del proyecto." }
+      ],
+      "sources": [
+        { "name": "MMA — Humedales urbanos", "url": "https://biodiversidadrm.mma.gob.cl/ecosistemas-acuaticos/humedales-urbanos/" },
+        { "name": "MMA — Guía de delimitación y caracterización de humedales urbanos", "url": "https://humedaleschile.mma.gob.cl/wp-content/uploads/2022/03/GUIA_HUMEDALES_2022_BAJA.pdf" },
+        { "name": "MMA — Biblioteca de Ecosistemas Acuáticos", "url": "https://ecosistemasacuaticos.mma.gob.cl/biblioteca/" }
+      ]
+    },
+    {
+      "slug": "diagnostico-territorial-proyecto-inmobiliario",
+      "title": "Diagnóstico territorial para proyectos inmobiliarios: 7 capas SIG clave",
+      "category": "sig",
+      "focus_keyword": "diagnóstico territorial para proyectos inmobiliarios",
+      "secondary_keywords": ["cartografía SIG inmobiliaria", "factibilidad ambiental predial", "análisis espacial Chile"],
+      "intent": "comercial-investigación",
+      "date": "2026-08-20",
+      "updated": "2026-09-02",
+      "read": "8 min",
+      "excerpt": "Qué capas espaciales revisar antes de avanzar con el diseño, la compra o la evaluación ambiental de un proyecto inmobiliario.",
+      "description": "Diagnóstico territorial para proyectos inmobiliarios: 7 capas SIG para revisar localización, restricciones, accesos, riesgos y factibilidad ambiental en Chile.",
+      "image": "assets/img/photos/dpz-inmobiliario-800.webp",
+      "image_alt": "Vista territorial de un proyecto inmobiliario y sus variables de localización",
+      "service_link": "diagnóstico territorial, cartografía SIG y apoyo a proyectos inmobiliarios",
+      "cta_title": "¿Estás evaluando un predio?",
+      "cta_text": "Convertimos capas dispersas en una lectura territorial útil para decidir antes de diseñar.",
+      "lead": "Un diagnóstico territorial temprano permite detectar restricciones y oportunidades antes de comprometer el diseño de un proyecto inmobiliario. El valor no está en acumular mapas, sino en cruzar variables con una pregunta concreta: qué se puede hacer, dónde y bajo qué condiciones.",
+      "key_takeaways": [
+        "La cartografía SIG debe responder decisiones, no solo ilustrar el informe.",
+        "Las capas deben registrar fuente, fecha, escala y limitaciones de uso.",
+        "La lectura de accesos, riesgos y restricciones permite priorizar estudios y alternativas."
+      ],
+      "sections": [
+        { "id": "base", "h2": "1. Ubicación, límites y base predial", "html": "<p>Comienza por una base consistente: límites del predio, roles o identificadores disponibles, caminos, centros poblados y sistema de coordenadas. Una geometría desplazada puede contaminar todas las conclusiones posteriores.</p><p>Documentar la fuente y fecha de cada capa facilita que el equipo pueda repetir el análisis y corregirlo si aparece información nueva.</p>" },
+        { "id": "normativa", "h2": "2. Instrumentos de planificación y restricciones", "html": "<p>Revisa el instrumento de planificación territorial aplicable, áreas de protección, servidumbres, concesiones, bienes nacionales y restricciones ambientales conocidas. Esta capa debe interpretarse con la normativa y no únicamente con colores en un mapa.</p><p>El <a href=\"https://www.sea.gob.cl/evaluacion-de-impacto-ambiental/guias-instructivos-y-criterios-para-la-evaluacion-de-proyectos-en\" target=\"_blank\" rel=\"noopener noreferrer\">repositorio de guías del SEA</a> ayuda a identificar antecedentes técnicos relacionados con distintas tipologías de proyecto.</p>" },
+        { "id": "ambiente", "h2": "3. Agua, vegetación y áreas sensibles", "html": "<p>Integra cursos y cuerpos de agua, humedales, vegetación nativa, áreas protegidas y otros receptores sensibles. El análisis debe identificar intersecciones, distancias, conectividad y posibles cambios de escorrentía o drenaje.</p><p>Para proyectos que se acercan a un humedal, conviene complementar la revisión con un <a href=\"humedales-urbanos-delimitacion-proyecto.html\">diagnóstico específico de humedales urbanos</a>.</p>" },
+        { "id": "riesgos", "h2": "4. Pendiente, riesgos y accesibilidad", "html": "<p>Pendiente, exposición, amenazas naturales, incendios, remociones en masa, inundabilidad y accesos condicionan la factibilidad técnica y los costos de construcción. El mapa debe separar el riesgo identificado de la recomendación, para que el lector entienda qué es dato y qué es criterio.</p><ul><li>Clasifica zonas con restricciones fuertes, medias y condicionadas.</li><li>Explicita los supuestos del análisis.</li><li>Prioriza validaciones de terreno donde el mapa no es suficiente.</li></ul>" },
+        { "id": "decision", "h2": "5. Entregar una matriz de decisión", "html": "<p>El producto final debería incluir un mapa síntesis, una matriz de restricciones y una lista de brechas. Así, el mandante puede decidir si avanzar, rediseñar, solicitar estudios o comparar otro predio.</p><p>Un <a href=\"../servicios.html\">diagnóstico territorial bien estructurado</a> reduce el riesgo de que un informe quede como una colección de capas sin una conclusión operativa.</p>" }
+      ],
+      "faqs": [
+        { "question": "¿Cuántas capas SIG necesita un diagnóstico inmobiliario?", "answer": "No existe un número fijo. Las capas deben definirse según la ubicación, el tipo de proyecto, la escala de decisión y las preguntas que se deben responder." },
+        { "question": "¿Un mapa SIG reemplaza la visita a terreno?", "answer": "No. El SIG organiza y analiza información; la visita permite validar condiciones locales y detectar variables que no están representadas en las bases disponibles." },
+        { "question": "¿Cuándo conviene hacer este diagnóstico?", "answer": "Antes de cerrar el diseño o comprometer inversiones relevantes, porque en esa etapa todavía es posible comparar alternativas y ajustar el alcance de los estudios." }
+      ],
+      "sources": [
+        { "name": "SEA Chile — Guías, instructivos y criterios para proyectos en el SEIA", "url": "https://www.sea.gob.cl/evaluacion-de-impacto-ambiental/guias-instructivos-y-criterios-para-la-evaluacion-de-proyectos-en" },
+        { "name": "SEA Chile — Criterios de evaluación en el SEIA", "url": "https://www.sea.gob.cl/criterios-de-evaluacion-en-el-seia" },
+        { "name": "SEA Chile — Guía para la descripción de proyectos inmobiliarios", "url": "https://www.sea.gob.cl/documentacion/guias-y-criterios/guia-para-la-descripcion-de-proyectos-inmobiliarios-en-el-seia" }
+      ]
+    },
+    {
+      "slug": "cambio-uso-suelo-rural-bosque-nativo",
+      "title": "Cambio de uso de suelo rural en Chile: antecedentes técnicos que conviene preparar",
+      "category": "forestal",
+      "focus_keyword": "cambio de uso de suelo rural en Chile",
+      "secondary_keywords": ["bosque nativo y obras civiles", "plan de manejo CONAF", "predios rurales Chile"],
+      "intent": "informacional",
+      "date": "2026-08-16",
+      "updated": "2026-09-02",
+      "read": "9 min",
+      "excerpt": "Checklist técnico para ordenar cartografía, vegetación, obras y medidas de manejo cuando un proyecto interviene un predio rural.",
+      "description": "Cambio de uso de suelo rural en Chile: antecedentes de vegetación, obras, cartografía y manejo que conviene revisar antes de intervenir un predio.",
+      "image": "assets/img/photos/dpz-predios-rurales-800.webp",
+      "image_alt": "Predio rural analizado para planificar una intervención territorial en Chile",
+      "service_link": "planes de manejo, cartografía predial y soporte técnico-regulatorio",
+      "cta_title": "¿Vas a intervenir un predio rural?",
+      "cta_text": "Levantamos los antecedentes técnicos y cartográficos para anticipar requisitos y decisiones de manejo.",
+      "lead": "El cambio de uso de suelo rural no se resuelve solo con un plano de emplazamiento. Cuando existe vegetación nativa, plantaciones, formaciones xerofíticas u otras restricciones, el proyecto necesita entender qué se intervendrá, con qué instrumento y bajo qué medidas de protección o reforestación.",
+      "key_takeaways": [
+        "La revisión debe comenzar antes de despejar, construir o modificar el predio.",
+        "La cartografía de obras y vegetación debe ser coherente entre el expediente y el terreno.",
+        "Los requisitos dependen del tipo de vegetación, la obra, la ubicación y el marco sectorial aplicable."
+      ],
+      "sections": [
+        { "id": "diagnostico", "h2": "Diagnóstico predial antes de diseñar", "html": "<p>Delimita el predio, las obras proyectadas, accesos, áreas auxiliares y superficies que podrían intervenirse. Luego caracteriza la cobertura vegetal, pendientes, cauces, suelos y elementos de conservación.</p><p>Este paso permite comparar alternativas y evitar que el diseño avance sobre una zona que después requiera ajustes o antecedentes adicionales.</p>" },
+        { "id": "bosque", "h2": "Cuando existe bosque nativo o formación xerofítica", "html": "<p>La presencia de bosque nativo o formaciones xerofíticas puede activar obligaciones y trámites específicos. CONAF señala que los permisos para estas intervenciones se vinculan con instrumentos que planifican la gestión del patrimonio ecológico o el aprovechamiento sustentable.</p><p>Revisa la información oficial de <a href=\"https://www.conaf.cl/tramites/permisos-bosque-nativo-y-formaciones-xerofiticas/\" target=\"_blank\" rel=\"noopener noreferrer\">permisos para bosque nativo y formaciones xerofíticas</a> antes de definir el alcance.</p>", "key": "La clasificación de la vegetación y la causa de la intervención son antecedentes técnicos; no conviene inferir el trámite solo por el nombre del proyecto." },
+        { "id": "cartografia", "h2": "Cartografía que debe conversar con el expediente", "html": "<p>El plano debe mostrar límites, superficies, trazado de obras, áreas de corta o intervención, sectores de protección y medidas propuestas. Usa la misma base geodésica, nombres y superficies en mapas, tablas y texto.</p><p>La <a href=\"https://www.conaf.cl/centro-documental/documentacion-asociada-4/\" target=\"_blank\" rel=\"noopener noreferrer\">documentación asociada de CONAF</a> incluye referencias sobre cartografía digital georreferenciada y antecedentes técnicos para planes de manejo.</p>" },
+        { "id": "manejo", "h2": "Planificar medidas y seguimiento", "html": "<p>Las medidas deben relacionarse con la intervención real: protección de cursos de agua, control de erosión, manejo de residuos, protección de ejemplares, reforestación o reposición cuando corresponda. También deben indicar ubicación, superficie, responsable y forma de verificación.</p><p>Un <a href=\"../servicios.html\">plan de manejo y apoyo técnico-regulatorio</a> debe ser ejecutable en terreno, no solo consistente en el papel.</p>" }
+      ],
+      "faqs": [
+        { "question": "¿Todo cambio de uso de suelo rural exige el mismo trámite?", "answer": "No. El alcance depende de la obra, la vegetación, la localización y la normativa aplicable. Debe revisarse el caso concreto con los organismos competentes." },
+        { "question": "¿Puedo comenzar las obras mientras preparo los antecedentes?", "answer": "No es recomendable ejecutar intervenciones sin confirmar previamente permisos, aprobaciones o condiciones aplicables al proyecto." },
+        { "question": "¿Por qué la cartografía es tan importante?", "answer": "Porque permite verificar superficies, trazados, áreas de intervención y medidas, y mantiene la coherencia entre el diseño, el expediente y el terreno." }
+      ],
+      "sources": [
+        { "name": "CONAF — Permisos para bosque nativo y formaciones xerofíticas", "url": "https://www.conaf.cl/tramites/permisos-bosque-nativo-y-formaciones-xerofiticas/" },
+        { "name": "CONAF — Planes y normas de manejo", "url": "https://www.conaf.cl/centro-documental/planes-y-normas-de-manejo/" },
+        { "name": "CONAF — Documentación asociada", "url": "https://www.conaf.cl/centro-documental/documentacion-asociada-4/" }
+      ]
+    },
+    {
+      "slug": "silvicultura-preventiva-predios-chile",
+      "title": "Silvicultura preventiva en predios: cómo priorizar medidas contra incendios",
+      "category": "riesgos",
+      "focus_keyword": "silvicultura preventiva en predios",
+      "secondary_keywords": ["manejo de combustibles vegetales", "prevención de incendios forestales Chile", "fajas cortafuegos"],
+      "intent": "informacional",
+      "date": "2026-08-12",
+      "updated": "2026-09-02",
+      "read": "8 min",
+      "excerpt": "Cómo pasar de un diagnóstico general de peligro a un plan predial que priorice combustible, accesos, pendientes y zonas de interfaz.",
+      "description": "Silvicultura preventiva en predios: criterios para priorizar manejo de combustibles, fajas y medidas de prevención de incendios forestales en Chile.",
+      "image": "assets/img/photos/dpz-suelos-fuego-riesgos-900.webp",
+      "image_alt": "Terreno rural con vegetación y condiciones que requieren manejo preventivo del fuego",
+      "service_link": "diagnóstico de suelos, fuego, riesgos y operación predial",
+      "cta_title": "¿Quieres priorizar la prevención?",
+      "cta_text": "Evaluamos el predio y ordenamos medidas según peligro, exposición, accesibilidad y capacidad de ejecución.",
+      "lead": "La silvicultura preventiva busca modificar la continuidad y disponibilidad del combustible vegetal para reducir la propagación del fuego y mitigar daños. En un predio, la prioridad no es intervenir todo: es localizar las zonas donde una medida bien diseñada puede cambiar el comportamiento del incendio.",
+      "key_takeaways": [
+        "La prevención debe combinar combustible, topografía, accesos, viviendas e infraestructura.",
+        "Las fajas y obras de manejo requieren diseño, mantención y verificación periódica.",
+        "Antes de ejecutar una intervención en vegetación, confirma el instrumento sectorial aplicable."
+      ],
+      "sections": [
+        { "id": "riesgo", "h2": "Separar peligro, exposición y vulnerabilidad", "html": "<p>El diagnóstico debe distinguir la vegetación que puede alimentar el fuego, los elementos expuestos y la capacidad del lugar para evacuar, acceder o responder. Pendiente y viento influyen en la propagación, mientras que el combustible es la variable que puede manejarse directamente.</p><p>El resultado es una zonificación de prioridades, no una etiqueta única para todo el predio.</p>" },
+        { "id": "combustible", "h2": "Qué es el manejo de combustibles", "html": "<p>El manejo de combustibles puede incluir reducción de continuidad vertical y horizontal, retiro de residuos, poda, raleo, fajas libres de vegetación y fajas cortacombustibles. La medida se define según la vegetación, la pendiente, el acceso y el objetivo de protección.</p><p>CONAF describe la <a href=\"https://www.conaf.cl/incendios/prevencion-y-mitigacion/gestion-del-territorio/\" target=\"_blank\" rel=\"noopener noreferrer\">silvicultura preventiva y la gestión del territorio</a> como herramientas para retardar la propagación y mitigar daños.</p>", "key": "Una faja sin mantención pierde efectividad; la prevención debe incluir calendario, responsable y registro de las faenas." },
+        { "id": "priorizar", "h2": "Cómo priorizar las primeras medidas", "html": "<p>Comienza por viviendas, instalaciones críticas, caminos de acceso, bordes de interfaz y sectores donde el combustible sea continuo. Después evalúa conectividad entre parches de vegetación, puntos de abastecimiento de agua y lugares donde la topografía acelera la propagación.</p><ul><li>Clasifica tramos por nivel de urgencia y factibilidad.</li><li>Define el ancho y tratamiento con criterio técnico, no por copia automática.</li><li>Incluye disposición de residuos y mantención posterior.</li></ul>" },
+        { "id": "autorizaciones", "h2": "Revisar autorizaciones antes de intervenir", "html": "<p>Las obras de eliminación o manejo de combustible en bosque nativo o plantaciones pueden requerir la presentación y aprobación del instrumento correspondiente. La <a href=\"https://www.conaf.cl/incendios/prevencion-y-mitigacion/\" target=\"_blank\" rel=\"noopener noreferrer\">información de prevención y mitigación de CONAF</a> incluye referencias a fajas y formularios sectoriales.</p><p>Un <a href=\"../servicios.html\">diagnóstico predial</a> debe dejar trazado qué medida se propone, dónde, con qué autorización y cómo se verificará.</p>" }
+      ],
+      "faqs": [
+        { "question": "¿La silvicultura preventiva elimina el riesgo de incendio?", "answer": "No. Reduce la continuidad y disponibilidad del combustible y puede mitigar la propagación, pero no elimina el peligro ni reemplaza la preparación y respuesta." },
+        { "question": "¿Es suficiente construir un cortafuego una sola vez?", "answer": "No necesariamente. La efectividad depende del diseño, la vegetación, el sitio y la mantención periódica." },
+        { "question": "¿Se puede intervenir vegetación sin revisar permisos?", "answer": "No es recomendable. La necesidad de instrumentos y aprobaciones depende del tipo de vegetación y de la intervención prevista." }
+      ],
+      "sources": [
+        { "name": "CONAF — Gestión del territorio y silvicultura preventiva", "url": "https://www.conaf.cl/incendios/prevencion-y-mitigacion/gestion-del-territorio/" },
+        { "name": "CONAF — Prevención y mitigación de incendios forestales", "url": "https://www.conaf.cl/incendios/prevencion-y-mitigacion/" },
+        { "name": "CONAF — Manual de buenas prácticas en medidas de prevención y mitigación", "url": "https://oficinavirtual.conaf.cl/archivos/recursos/insumos_tecnicos/Proteccion%20de%20Incendios%20Forestales/Manual%20buenas%20practicas%202022.pdf" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+name: DPZ — publicación autónoma del blog
+
+on:
+  schedule:
+    # 12:15 UTC = 08:15 o 09:15 en Chile según horario oficial vigente.
+    # El script vuelve a comprobar America/Santiago antes de publicar.
+    - cron: "15 12 * * 2-5"
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Publicar ahora aunque no sea martes-viernes"
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+
+concurrency:
+  group: dpz-blog-publish
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      DPZ_SSH_HOST: ${{ vars.DPZ_SSH_HOST }}
+      DPZ_SSH_USER: ${{ vars.DPZ_SSH_USER }}
+      OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
+    steps:
+      - name: Descargar el repositorio
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          fetch-depth: 0
+
+      - name: Preparar Python y Node
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Preparar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Validar y generar artículo
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          args=()
+          if [[ "${{ inputs.force || false }}" == "true" ]]; then args+=(--force); fi
+          python tools/auto_publish_blog.py "${args[@]}"
+
+      - name: Guardar el artículo y los artefactos generados
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "dpz-blog-automation"
+          git config user.email "automation@dpzdata.com"
+          git add tools/posts.json tools/blog_queue.json blog blog.html sitemap.xml assets/img/photos
+          if git diff --cached --quiet; then
+            echo "No hay cambios para publicar."
+            exit 0
+          fi
+          git commit -m "chore(blog): publicar artículo programado"
+          git push
+
+      - name: Configurar SSH de despliegue
+        if: success()
+        env:
+          DPZ_SSH_PRIVATE_KEY: ${{ secrets.DPZ_SSH_PRIVATE_KEY }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "$DPZ_SSH_HOST"
+          test -n "$DPZ_SSH_USER"
+          test -n "$DPZ_SSH_PRIVATE_KEY"
+          mkdir -p "$HOME/.ssh"
+          chmod 700 "$HOME/.ssh"
+          ssh-keyscan -H "$DPZ_SSH_HOST" >> "$HOME/.ssh/known_hosts"
+          key_file="$RUNNER_TEMP/dpz_deploy_key"
+          printf '%s\n' "$DPZ_SSH_PRIVATE_KEY" > "$key_file"
+          chmod 600 "$key_file"
+          echo "DPZ_SSH_KEY_FILE=$key_file" >> "$GITHUB_ENV"
+
+      - name: Desplegar en dpzdata.com
+        if: success()
+        shell: bash
+        run: |
+          set -euo pipefail
+          remote_tmp="/tmp/dpz-autodeploy"
+          ssh -i "$DPZ_SSH_KEY_FILE" -o IdentitiesOnly=yes "$DPZ_SSH_USER@$DPZ_SSH_HOST" "mkdir -p '$remote_tmp' && find '$remote_tmp' -mindepth 1 -delete"
+          rsync -az --delete -e "ssh -i $DPZ_SSH_KEY_FILE -o IdentitiesOnly=yes" \
+            --exclude='Recursos DPZ Consulting' \
+            --exclude='tools' --exclude='docs' --exclude='.github' \
+            --exclude='README.md' --exclude='AGENTS.md' \
+            --exclude='.git' --exclude='node_modules' \
+            --exclude='package.json' --exclude='package-lock.json' \
+            --exclude='*.bak' --exclude='*.log' \
+            --exclude='assets/models/earth_-_16k_high_resolution.glb' \
+            ./ "$DPZ_SSH_USER@$DPZ_SSH_HOST:$remote_tmp/"
+          ssh -i "$DPZ_SSH_KEY_FILE" -o IdentitiesOnly=yes "$DPZ_SSH_USER@$DPZ_SSH_HOST" "sudo rsync -a --delete '$remote_tmp/' '/var/www/dpzdata/' && sudo chown -R caddy:caddy '/var/www/dpzdata' && sudo chmod -R 755 '/var/www/dpzdata' && find '$remote_tmp' -mindepth 1 -delete"
+
+      - name: Verificar producción
+        if: success()
+        run: node tools/seo-audit.mjs --prod

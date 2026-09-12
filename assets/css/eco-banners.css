@@ -1,0 +1,234 @@
+/* ==========================================================================
+   DPZ Consulting — Banners de ecosistema (superior e inferior)
+   Basado en el kit de banners interactivos, adaptado al sistema DPZ:
+   - Tipografía del sitio (Space Grotesk / Inter) en vez de Georgia/Arial.
+   - Variable renombrada a --dpz-eco-accent: el sitio ya usa --dpz-accent
+     en 41 reglas y el kit la sobrescribía dentro del banner.
+   ========================================================================== */
+
+:root { --dpz-mx: 0; --dpz-my: 0; }
+
+.eco-banner,
+.eco-banner * { box-sizing: border-box; }
+
+.eco-banner {
+  --dpz-eco-accent: #b8ef99;
+  --dpz-eco-glow: rgba(79, 150, 72, 0.35);
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  width: 100%;
+  color: #f7f4e9;
+  background: var(--dpz-black, #0b1d13);
+  font-family: var(--font-body);
+}
+
+.eco-banner--top { min-height: clamp(560px, 78vh, 820px); }
+.eco-banner--bottom { min-height: clamp(420px, 56vh, 570px); }
+
+/* --- Escena --- */
+.eco-banner__scene { position: absolute; inset: 0; z-index: 0; }
+.eco-banner__video {
+  position: absolute; inset: -3%;
+  width: 106%; height: 106%;
+  object-fit: cover; object-position: center;
+  filter: saturate(0.92) contrast(1.03);
+  transform: translate3d(calc(var(--dpz-mx) * -12px), calc(var(--dpz-my) * -7px), 0) scale(1.08);
+  transition: transform 0.25s ease-out, filter 0.8s var(--ease-gloss, ease);
+  will-change: transform;
+}
+.eco-banner--bottom .eco-banner__video {
+  object-position: center 58%;
+  transform: translate3d(calc(var(--dpz-mx) * -9px), calc(var(--dpz-my) * -5px), 0) scale(1.07);
+}
+
+.eco-banner__light {
+  position: absolute; inset: -8%;
+  background:
+    radial-gradient(circle at calc(70% + var(--dpz-mx) * 3%) calc(20% + var(--dpz-my) * 3%), var(--dpz-eco-glow), transparent 31%),
+    linear-gradient(90deg, rgba(4, 15, 9, 0.84), rgba(4, 15, 9, 0.3) 53%, rgba(4, 15, 9, 0.4));
+  mix-blend-mode: soft-light;
+  transform: translate3d(calc(var(--dpz-mx) * 5px), calc(var(--dpz-my) * 4px), 0);
+}
+/* Al pasar el cursor la escena "despierta": sube algo el color y el contraste.
+   Solo cambia `filter`, sin recalcular diseño, así que no cuesta fluidez y
+   convierte un fondo pasivo en algo que responde. */
+.eco-banner:hover .eco-banner__video {
+  filter: saturate(1.08) contrast(1.06) brightness(1.03);
+}
+
+.eco-banner__shade {
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(180deg, rgba(3, 11, 6, 0.62), transparent 34%, rgba(3, 11, 6, 0.2) 58%, rgba(3, 11, 6, 0.84)),
+    radial-gradient(ellipse at center, transparent 40%, rgba(2, 8, 4, 0.58) 120%);
+}
+.eco-banner--bottom .eco-banner__shade {
+  background:
+    linear-gradient(90deg, rgba(3, 13, 7, 0.88), rgba(3, 13, 7, 0.34) 58%, rgba(3, 13, 7, 0.64)),
+    linear-gradient(180deg, rgba(3, 11, 6, 0.2), rgba(3, 11, 6, 0.76));
+}
+
+/* --- Contenido --- */
+.eco-banner__content {
+  position: relative; z-index: 2;
+  width: min(880px, 76vw);
+  padding: clamp(96px, 13vh, 140px) clamp(28px, 8vw, 126px) 150px;
+}
+.eco-banner--bottom .eco-banner__content {
+  width: min(730px, 68vw);
+  padding-top: clamp(72px, 9vh, 98px);
+  padding-bottom: 105px;
+}
+
+.eco-banner__eyebrow {
+  display: flex; align-items: center; gap: 11px;
+  margin: 0 0 22px;
+  color: var(--dpz-eco-accent);
+  font-family: var(--font-display);
+  font-size: 0.72rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.22em;
+}
+.eco-banner__eyebrow::before { content: ""; width: 31px; height: 1px; background: currentColor; }
+
+.eco-banner__title {
+  margin: 0;
+  /* Explícito a propósito: style.css declara color en `h1,h2,h3,h4,h5`, y una
+     regla directa sobre el elemento gana siempre a heredar de .eco-banner. */
+  color: #f7f4e9;
+  font-family: var(--font-display);
+  font-size: clamp(2.6rem, 5.6vw, 5rem);
+  font-weight: 700;
+  line-height: 0.98;
+  letter-spacing: -0.03em;
+  text-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+}
+.eco-banner--bottom .eco-banner__title { font-size: clamp(2.2rem, 4.6vw, 3.8rem); }
+.eco-banner__title em { color: var(--dpz-eco-accent); font-style: normal; font-weight: 700; }
+
+.eco-banner__description {
+  max-width: 590px;
+  margin: 1.7rem 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-family: var(--font-body);
+  font-size: 1.05rem; line-height: 1.6;
+}
+
+.eco-banner__cta {
+  display: inline-flex; align-items: center; gap: 18px;
+  width: max-content;
+  padding: 4px 4px 4px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.38);
+  color: #fff; text-decoration: none;
+  font-family: var(--font-display);
+  font-size: 0.72rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.16em;
+  transition: border-color 0.3s var(--ease-gloss, ease);
+}
+.eco-banner__cta:hover { border-color: var(--dpz-eco-accent); }
+.eco-banner__cta i {
+  display: grid; place-items: center;
+  width: 31px; height: 31px;
+  border-radius: 50%;
+  background: var(--dpz-eco-accent);
+  color: #11231a; font-style: normal; font-size: 14px;
+  transition: transform 0.25s ease;
+}
+.eco-banner__cta:hover i { transform: translate(3px, -3px); }
+
+/* --- Dato lateral --- */
+.eco-banner__meta {
+  position: absolute; z-index: 3;
+  top: 42%; right: clamp(28px, 7vw, 106px);
+  width: 180px; padding: 16px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.eco-banner__meta span {
+  display: block; margin-bottom: 10px;
+  color: var(--dpz-eco-accent);
+  font-family: var(--font-display);
+  font-size: 0.62rem; line-height: 1;
+  text-transform: uppercase; letter-spacing: 0.16em;
+}
+.eco-banner__meta strong {
+  font-family: var(--font-display);
+  font-size: 1.05rem; font-weight: 500; line-height: 1.2;
+}
+
+/* --- Selector de ecosistemas --- */
+.eco-banner__selector {
+  position: absolute; z-index: 4;
+  left: clamp(28px, 8vw, 126px);
+  right: clamp(28px, 8vw, 126px);
+  bottom: 25px;
+  display: grid; grid-template-columns: repeat(5, 1fr);
+  gap: clamp(10px, 2vw, 30px);
+}
+.eco-banner__selector button {
+  appearance: none; border: 0; background: none;
+  padding: 8px 0; text-align: left; cursor: pointer;
+  color: #fff; opacity: 0.44;
+  font-family: var(--font-display);
+  transition: opacity 0.25s ease;
+}
+.eco-banner__selector button:hover,
+.eco-banner__selector button.is-active { opacity: 1; }
+.eco-banner__selector button:focus-visible {
+  outline: 2px solid var(--dpz-eco-accent);
+  outline-offset: 3px; opacity: 1;
+}
+.eco-banner__selector strong {
+  display: block; margin-bottom: 9px;
+  font-size: 0.9rem; font-weight: 500; line-height: 1.2;
+}
+.eco-banner__selector button > i {
+  display: block; height: 1px; overflow: hidden;
+  background: rgba(255, 255, 255, 0.28);
+}
+.eco-banner__selector button > i::after {
+  content: ""; display: block; width: 100%; height: 100%;
+  background: var(--dpz-eco-accent);
+  transform: translateX(-102%);
+  transition: transform 0.45s ease;
+}
+.eco-banner__selector button.is-active > i::after { transform: translateX(0); }
+.eco-banner__selector--compact {
+  left: auto; right: clamp(28px, 8vw, 126px);
+  width: 430px; gap: 12px;
+}
+
+/* El banner superior queda bajo el header fijo: compensamos el alto */
+.eco-banner--top { margin-top: 0; }
+
+@media (max-width: 900px) {
+  .eco-banner--top { min-height: 660px; }
+  .eco-banner--bottom { min-height: 560px; }
+  .eco-banner__content,
+  .eco-banner--bottom .eco-banner__content { width: 100%; padding: 104px 22px 176px; }
+  .eco-banner__title,
+  .eco-banner--bottom .eco-banner__title { font-size: clamp(2.2rem, 11vw, 3.2rem); line-height: 1.02; }
+  .eco-banner__description { max-width: 100%; font-size: 1rem; }
+  .eco-banner__meta { top: auto; right: 22px; bottom: 92px; width: 135px; }
+  .eco-banner__meta strong { font-size: 0.95rem; }
+  .eco-banner__selector,
+  .eco-banner__selector--compact {
+    left: 22px; right: 22px; bottom: 18px; width: auto;
+    grid-template-columns: repeat(5, minmax(78px, 1fr));
+    gap: 8px; overflow-x: auto; scrollbar-width: none;
+  }
+  .eco-banner__selector::-webkit-scrollbar { display: none; }
+  .eco-banner__selector strong { font-size: 0.78rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .eco-banner *,
+  .eco-banner *::before,
+  .eco-banner *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .eco-banner__video,
+  .eco-banner__light { transform: none !important; }
+}

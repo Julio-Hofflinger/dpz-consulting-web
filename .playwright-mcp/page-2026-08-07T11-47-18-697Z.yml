@@ -1,0 +1,309 @@
+- generic [active] [ref=f31e1]:
+  - link "Saltar al contenido" [ref=f31e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=f31e3]:
+    - generic [ref=f31e4]:
+      - link "DPZ Consulting — Inicio" [ref=f31e5] [cursor=pointer]:
+        - /url: index.html
+        - img "Isotipo DPZ" [ref=f31e6]
+        - generic [ref=f31e7]:
+          - generic [ref=f31e8]: DPZ
+          - generic [ref=f31e9]: Consulting
+      - navigation "Principal" [ref=f31e10]:
+        - link "Inicio" [ref=f31e11] [cursor=pointer]:
+          - /url: index.html
+        - link "Servicios" [ref=f31e12] [cursor=pointer]:
+          - /url: servicios.html
+        - link "Nosotros" [ref=f31e13] [cursor=pointer]:
+          - /url: nosotros.html
+        - link "Blog" [ref=f31e14] [cursor=pointer]:
+          - /url: blog.html
+        - link "Contacto" [ref=f31e15] [cursor=pointer]:
+          - /url: contacto.html
+      - link "Cotiza tu proyecto" [ref=f31e17] [cursor=pointer]:
+        - /url: contacto.html
+  - navigation "Menú móvil":
+    - link "Inicio 01":
+      - /url: index.html
+      - text: Inicio
+      - generic: "01"
+    - link "Servicios 02":
+      - /url: servicios.html
+      - text: Servicios
+      - generic: "02"
+    - link "Nosotros 03":
+      - /url: nosotros.html
+      - text: Nosotros
+      - generic: "03"
+    - link "Blog 04":
+      - /url: blog.html
+      - text: Blog
+      - generic: "04"
+    - link "Contacto 05":
+      - /url: contacto.html
+      - text: Contacto
+      - generic: "05"
+    - generic:
+      - paragraph: contacto@dpzdata.com
+      - paragraph: Diagnóstico · Planificación · Zonificación
+  - main [ref=f31e20]:
+    - region [ref=f31e21]:
+      - generic [ref=f31e26]:
+        - paragraph [ref=f31e27]: Diagnóstico · Planificación · Zonificación
+        - heading [level=1] [ref=f31e28]:
+          - text: Consultora Ambiental
+          - emphasis [ref=f31e29]: Forestal Chile
+        - paragraph [ref=f31e30]: Consultora técnica ambiental, forestal y territorial. Convertimos datos, cartografía y criterio regulatorio en decisiones claras y defendibles.
+        - link "Explorar servicios" [ref=f31e31] [cursor=pointer]:
+          - /url: servicios.html
+          - generic [ref=f31e33]: ↗
+      - complementary [ref=f31e34]:
+        - generic [ref=f31e35]: Ecosistema
+        - strong [ref=f31e36]: Gestión forestal
+      - navigation "Seleccionar ecosistema" [ref=f31e37]:
+        - button "Mostrar ecosistema Bosque" [ref=f31e38] [cursor=pointer]:
+          - strong [ref=f31e39]: Bosque
+        - button "Mostrar ecosistema Humedal" [ref=f31e41] [cursor=pointer]:
+          - strong [ref=f31e42]: Humedal
+        - button "Mostrar ecosistema Desierto" [ref=f31e44] [cursor=pointer]:
+          - strong [ref=f31e45]: Desierto
+        - button "Mostrar ecosistema Altiplano" [ref=f31e47] [cursor=pointer]:
+          - strong [ref=f31e48]: Altiplano
+        - button "Mostrar ecosistema Espinal" [ref=f31e50] [cursor=pointer]:
+          - strong [ref=f31e51]: Espinal
+    - generic [ref=f31e54]:
+      - generic [ref=f31e55]: Diagnóstico ambiental ◇
+      - generic [ref=f31e56]: Cartografía y SIG ◇
+      - generic [ref=f31e57]: Planes de manejo ◇
+      - generic [ref=f31e58]: Reforestación y restauración ◇
+      - generic [ref=f31e59]: Soporte regulatorio ◇
+      - generic [ref=f31e60]: Arbolado urbano ◇
+      - generic [ref=f31e61]: Diagnóstico ambiental ◇
+      - generic [ref=f31e62]: Cartografía y SIG ◇
+      - generic [ref=f31e63]: Planes de manejo ◇
+      - generic [ref=f31e64]: Reforestación y restauración ◇
+      - generic [ref=f31e65]: Soporte regulatorio ◇
+      - generic [ref=f31e66]: Arbolado urbano ◇
+    - generic [ref=f31e68]:
+      - generic [ref=f31e69]:
+        - generic [ref=f31e70]: Quiénes somos
+        - paragraph [ref=f31e71]:
+          - strong [ref=f31e72]: "Consultoría Forestal de Precisión:"
+          - text: experiencia de terreno, análisis cartográfico y criterio regulatorio integrados.
+      - generic [ref=f31e73]:
+        - paragraph [ref=f31e74]: "Somos una empresa nueva, pero nuestro equipo no parte de cero: acumula experiencia en proyectos forestales, ambientales y territoriales, tramitación sectorial ante autoridad y ejecución en terreno."
+        - paragraph [ref=f31e75]: Tomamos trabajos acotados, los cotizamos bien y los ejecutamos mejor.
+        - generic [ref=f31e76]: Cobertura en todo Chile
+        - paragraph [ref=f31e81]:
+          - link "Conoce nuestro enfoque" [ref=f31e82] [cursor=pointer]:
+            - /url: nosotros.html
+    - generic [ref=f31e87]:
+      - generic [ref=f31e88]:
+        - generic [ref=f31e89]:
+          - generic [ref=f31e90]: Líneas de servicio
+          - heading "Soluciones técnicas para el territorio" [level=2] [ref=f31e91]
+        - link "Ver todos los servicios" [ref=f31e92] [cursor=pointer]:
+          - /url: servicios.html
+      - generic [ref=f31e96]:
+        - link [ref=f31e97] [cursor=pointer]:
+          - /url: servicios.html
+          - img "Calicata y muestreo de suelos para línea base ambiental del predio" [ref=f31e99]
+          - heading "Diagnóstico ambiental y territorial" [level=3] [ref=f31e100]
+          - paragraph: Caracterización de predios, línea base y evaluación integral del entorno.
+          - generic [ref=f31e101]: Explorar
+        - link [ref=f31e104] [cursor=pointer]:
+          - /url: servicios.html
+          - img "Análisis cartográfico y SIG del territorio" [ref=f31e106]
+          - heading "Cartografía y análisis SIG" [level=3] [ref=f31e107]
+          - paragraph: Datos territoriales, mapas técnicos y análisis espacial de alta precisión.
+          - generic [ref=f31e108]: Explorar
+        - link [ref=f31e111] [cursor=pointer]:
+          - /url: servicios.html
+          - img "Evaluación de cobertura forestal en terreno" [ref=f31e113]
+          - heading "Gestión forestal y vegetacional" [level=3] [ref=f31e114]
+          - paragraph: Planes de manejo, planes de corrección y manejo de la cobertura vegetal.
+          - generic [ref=f31e115]: Explorar
+        - link [ref=f31e118] [cursor=pointer]:
+          - /url: servicios.html
+          - img "Preparación de expedientes técnicos para tramitación ambiental" [ref=f31e120]
+          - heading "Soporte técnico-regulatorio" [level=3] [ref=f31e121]
+          - paragraph: Revisión de observaciones y respuestas a requerimientos de la autoridad.
+          - generic [ref=f31e122]: Explorar
+        - link [ref=f31e125] [cursor=pointer]:
+          - /url: servicios.html
+          - img "Faena de reforestación supervisada en terreno" [ref=f31e127]
+          - heading "Reforestación y restauración" [level=3] [ref=f31e128]
+          - paragraph: Diseño y supervisión de reforestaciones y restauración ecológica aplicada.
+          - generic [ref=f31e129]: Explorar
+        - link [ref=f31e132] [cursor=pointer]:
+          - /url: servicios.html
+          - img "Censo y caracterización de arbolado urbano" [ref=f31e134]
+          - heading "Censo de arbolado urbano" [level=3] [ref=f31e135]
+          - paragraph: Inventario, caracterización y evaluación del arbolado en entornos urbanos.
+          - generic [ref=f31e136]: Explorar
+    - generic [ref=f31e140]:
+      - generic [ref=f31e141]: En cifras
+      - heading "Capacidad técnica probada" [level=2] [ref=f31e142]
+      - generic [ref=f31e143]:
+        - generic [ref=f31e144]:
+          - generic [ref=f31e145]:
+            - generic [ref=f31e146]: "0"
+            - generic [ref=f31e147]: +
+          - paragraph [ref=f31e148]: Líneas de servicio integradas
+        - generic [ref=f31e149]:
+          - generic [ref=f31e150]:
+            - generic [ref=f31e151]: "0"
+            - generic [ref=f31e152]: +
+          - paragraph [ref=f31e153]: Años de experiencia acumulada del equipo
+        - generic [ref=f31e154]:
+          - generic [ref=f31e155]:
+            - generic [ref=f31e156]: "0"
+            - generic [ref=f31e157]: "%"
+          - paragraph [ref=f31e158]: Enfoque técnico-regulatorio defendible
+        - generic [ref=f31e159]:
+          - generic [ref=f31e160]:
+            - generic [ref=f31e161]: "0"
+            - generic [ref=f31e162]: ◇
+          - paragraph [ref=f31e163]: Ecosistemas territoriales cubiertos
+    - generic [ref=f31e165]:
+      - generic [ref=f31e166]:
+        - generic [ref=f31e167]:
+          - generic [ref=f31e168]: Cómo trabajamos
+          - heading "Método claro, resultados defendibles" [level=2] [ref=f31e169]
+        - paragraph [ref=f31e170]: Primero validamos el trabajo real; después construimos estructura. Cada entrega define producto, plazo y alcance.
+      - generic [ref=f31e171]:
+        - generic [ref=f31e172]:
+          - heading "Diagnóstico" [level=3] [ref=f31e173]
+          - paragraph [ref=f31e174]: "Levantamos información en terreno y gabinete: cartografía, normativa y condiciones del predio."
+        - generic [ref=f31e175]:
+          - heading "Análisis" [level=3] [ref=f31e176]
+          - paragraph [ref=f31e177]: Procesamos datos con SIG y criterio forestal/ambiental para identificar riesgos y oportunidades.
+        - generic [ref=f31e178]:
+          - heading "Planificación" [level=3] [ref=f31e179]
+          - paragraph [ref=f31e180]: Definimos planes de manejo, corrección o zonificación técnicamente sustentados.
+        - generic [ref=f31e181]:
+          - heading "Ejecución y soporte" [level=3] [ref=f31e182]
+          - paragraph [ref=f31e183]: Supervisamos la implementación y respondemos requerimientos de la autoridad.
+    - generic [ref=f31e185]:
+      - generic [ref=f31e187]:
+        - generic [ref=f31e188]: Sectores que atendemos
+        - heading "Experiencia en múltiples entornos" [level=2] [ref=f31e189]
+      - generic [ref=f31e190]:
+        - link [ref=f31e191] [cursor=pointer]:
+          - /url: servicios.html
+          - img "Especialista DPZ levantando datos con GNSS en un predio rural" [ref=f31e193]
+          - heading "Predios rurales" [level=3] [ref=f31e194]
+        - link [ref=f31e197] [cursor=pointer]:
+          - /url: servicios.html
+          - img "Evaluación ambiental en terreno para un proyecto inmobiliario" [ref=f31e199]
+          - heading "Inmobiliario" [level=3] [ref=f31e200]
+        - link [ref=f31e203] [cursor=pointer]:
+          - /url: servicios.html
+          - img "Trabajo técnico en terreno para un proyecto energético" [ref=f31e205]
+          - heading "Energía" [level=3] [ref=f31e206]
+        - link [ref=f31e209] [cursor=pointer]:
+          - /url: servicios.html
+          - img "Inspección ambiental junto a obra vial en zona cordillerana" [ref=f31e211]
+          - heading "Infraestructura vial" [level=3] [ref=f31e212]
+    - generic [ref=f31e216]:
+      - generic [ref=f31e217]:
+        - generic [ref=f31e218]:
+          - generic [ref=f31e219]: Perspectivas
+          - heading "Conocimiento aplicado" [level=2] [ref=f31e220]
+        - link "Ver todo" [ref=f31e221] [cursor=pointer]:
+          - /url: blog.html
+      - generic [ref=f31e225]:
+        - article [ref=f31e226]:
+          - link [ref=f31e227] [cursor=pointer]:
+            - /url: "#"
+            - img "Profesional revisando documentación técnica y normativa" [ref=f31e229]
+          - generic [ref=f31e230]: Regulatorio
+          - heading [level=3] [ref=f31e231]:
+            - link "Cómo responder observaciones de la autoridad sin retrasar tu proyecto" [ref=f31e232] [cursor=pointer]:
+              - /url: blog/observaciones-autoridad-proyecto.html
+          - paragraph [ref=f31e233]: Claves para preparar respuestas técnicas sólidas y defendibles ante requerimientos sectoriales.
+        - article [ref=f31e234]:
+          - link [ref=f31e235] [cursor=pointer]:
+            - /url: "#"
+            - img "Mapa cartográfico y análisis de datos geoespaciales" [ref=f31e237]
+          - generic [ref=f31e238]: SIG y Datos
+          - heading [level=3] [ref=f31e239]:
+            - link "El rol de la cartografía SIG en el diagnóstico territorial moderno" [ref=f31e240] [cursor=pointer]:
+              - /url: blog/cartografia-sig-diagnostico-territorial.html
+          - paragraph [ref=f31e241]: Cómo los sistemas de información geográfica aceleran decisiones precisas sobre el terreno.
+        - article [ref=f31e242]:
+          - link [ref=f31e243] [cursor=pointer]:
+            - /url: "#"
+            - img "Plantación de árboles en un proyecto de reforestación" [ref=f31e245]
+          - generic [ref=f31e246]: Reforestación
+          - heading [level=3] [ref=f31e247]:
+            - 'link "Diseño de reforestaciones: del plan a la supervisión en terreno" [ref=f31e248] [cursor=pointer]':
+              - /url: blog/diseno-reforestaciones-supervision.html
+          - paragraph [ref=f31e249]: Buenas prácticas para asegurar sobrevivencia y cumplimiento en proyectos de restauración.
+    - region [ref=f31e250]:
+      - generic [ref=f31e255]:
+        - paragraph [ref=f31e256]: Trabajemos juntos
+        - heading [level=2] [ref=f31e257]:
+          - text: ¿Tienes un desafío
+          - emphasis [ref=f31e258]: territorial?
+        - paragraph [ref=f31e259]: Cuéntanos tu proyecto y te entregamos una propuesta técnica clara, con producto, plazo y alcance definidos.
+        - link "Cotiza tu proyecto" [ref=f31e260] [cursor=pointer]:
+          - /url: contacto.html
+          - generic [ref=f31e262]: ↗
+      - complementary [ref=f31e263]:
+        - generic [ref=f31e264]: Respuesta
+        - strong [ref=f31e265]: 48 h hábiles
+      - navigation "Seleccionar ecosistema" [ref=f31e266]:
+        - button "Mostrar ecosistema Bosque" [ref=f31e267] [cursor=pointer]:
+          - strong [ref=f31e268]: Bosque
+        - button "Mostrar ecosistema Humedal" [ref=f31e270] [cursor=pointer]:
+          - strong [ref=f31e271]: Humedal
+        - button "Mostrar ecosistema Desierto" [ref=f31e273] [cursor=pointer]:
+          - strong [ref=f31e274]: Desierto
+        - button "Mostrar ecosistema Altiplano" [ref=f31e276] [cursor=pointer]:
+          - strong [ref=f31e277]: Altiplano
+        - button "Mostrar ecosistema Espinal" [ref=f31e279] [cursor=pointer]:
+          - strong [ref=f31e280]: Espinal
+  - contentinfo [ref=f31e282]:
+    - generic [ref=f31e283]:
+      - generic [ref=f31e284]:
+        - generic [ref=f31e285]:
+          - generic [ref=f31e286]:
+            - img "DPZ Consulting" [ref=f31e287]
+            - generic [ref=f31e288]: DPZ Consulting
+          - paragraph [ref=f31e289]: "Diagnóstico, Planificación y Zonificación del Territorio. Consultora técnica ambiental, forestal y territorial: análisis técnico, criterio regulatorio y soluciones aplicables."
+        - generic [ref=f31e290]:
+          - heading "Navegación" [level=4] [ref=f31e291]
+          - list [ref=f31e292]:
+            - listitem [ref=f31e293]:
+              - link "Inicio" [ref=f31e294] [cursor=pointer]:
+                - /url: index.html
+            - listitem [ref=f31e295]:
+              - link "Servicios" [ref=f31e296] [cursor=pointer]:
+                - /url: servicios.html
+            - listitem [ref=f31e297]:
+              - link "Nosotros" [ref=f31e298] [cursor=pointer]:
+                - /url: nosotros.html
+            - listitem [ref=f31e299]:
+              - link "Blog" [ref=f31e300] [cursor=pointer]:
+                - /url: blog.html
+            - listitem [ref=f31e301]:
+              - link "Contacto" [ref=f31e302] [cursor=pointer]:
+                - /url: contacto.html
+        - generic [ref=f31e303]:
+          - heading "Contacto" [level=4] [ref=f31e304]
+          - paragraph [ref=f31e305]:
+            - link "contacto@dpzdata.com" [ref=f31e306] [cursor=pointer]:
+              - /url: mailto:contacto@dpzdata.com
+          - paragraph [ref=f31e307]:
+            - link "+56 9 6227 0739" [ref=f31e308] [cursor=pointer]:
+              - /url: tel:+56962270739
+          - paragraph [ref=f31e309]: Región Metropolitana, Chile
+      - generic [ref=f31e310]:
+        - generic [ref=f31e311]: © 2026 DPZ Consulting. Todos los derechos reservados.
+        - generic [ref=f31e312]:
+          - link "LinkedIn" [ref=f31e313] [cursor=pointer]:
+            - /url: https://www.linkedin.com/company/dpzconsulting
+          - link "Instagram" [ref=f31e316] [cursor=pointer]:
+            - /url: https://www.instagram.com/dpzconsulting
+  - button "Abrir asistente DPZ" [ref=f31e322] [cursor=pointer]

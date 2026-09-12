@@ -1,0 +1,14 @@
+{
+  "name": "DPZ Consulting",
+  "short_name": "DPZ",
+  "description": "Consultora técnica ambiental, forestal y territorial. Diagnóstico, planificación y zonificación del territorio.",
+  "lang": "es-CL",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0B140E",
+  "theme_color": "#1E4D2B",
+  "icons": [
+    { "src": "/assets/img/favicon/favicon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/assets/img/favicon/favicon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

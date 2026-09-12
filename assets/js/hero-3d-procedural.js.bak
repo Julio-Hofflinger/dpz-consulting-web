@@ -1,0 +1,532 @@
+/* ==========================================================================
+   DPZ Consulting — Hero 3D  (high-detail Earth + orbital tracks + round particles)
+   ========================================================================== */
+import * as THREE from "three";
+import { EffectComposer } from "three/addons/postprocessing/EffectComposer.js";
+import { RenderPass } from "three/addons/postprocessing/RenderPass.js";
+import { UnrealBloomPass } from "three/addons/postprocessing/UnrealBloomPass.js";
+
+const CANVAS_SELECTOR = "#hero-canvas";
+let scene, camera, renderer, composer;
+
+/* ---------------------------------------------------------------------- */
+/* Helpers                                                                 */
+/* ---------------------------------------------------------------------- */
+function isTouchDevice() {
+  return "ontouchstart" in window || navigator.maxTouchPoints > 0;
+}
+function getViewportSize() {
+  const heroMedia = document.querySelector(".hero__media");
+  if (heroMedia) { const rect = heroMedia.getBoundingClientRect(); return { w: rect.width, h: rect.height }; }
+  return { w: window.innerWidth, h: window.innerHeight };
+}
+function fitCamera() {
+  const { w, h } = getViewportSize();
+  camera.aspect = w / h;
+  const vTan = Math.tan(THREE.MathUtils.degToRad(camera.fov / 2));
+  const hTan = vTan * camera.aspect;
+  // Fit the largest orbit (a ≈ 4.1 → ~4.6 with inclination spread) plus a margin.
+  const FIT_H = 5.2;
+  const FIT_V = 5.0;
+  camera.position.z = Math.max(7, FIT_H / hTan + 0.6, FIT_V / vTan + 0.6);
+  camera.updateProjectionMatrix();
+}
+
+/* ---------------------------------------------------------------------- */
+/* Round particle sprite (generated once)                                  */
+/* ---------------------------------------------------------------------- */
+function createParticleSprite() {
+  const size = 64;
+  const canvas = document.createElement("canvas");
+  canvas.width = canvas.height = size;
+  const ctx = canvas.getContext("2d");
+  const grad = ctx.createRadialGradient(size/2, size/2, 0, size/2, size/2, size/2);
+  grad.addColorStop(0, "rgba(255,255,255,1)");
+  grad.addColorStop(0.4, "rgba(255,255,255,0.6)");
+  grad.addColorStop(1, "rgba(255,255,255,0)");
+  ctx.fillStyle = grad;
+  ctx.beginPath();
+  ctx.arc(size/2, size/2, size/2, 0, Math.PI*2);
+  ctx.fill();
+  const tex = new THREE.CanvasTexture(canvas);
+  tex.minFilter = THREE.LinearFilter;
+  tex.magFilter = THREE.LinearFilter;
+  return tex;
+}
+const PARTICLE_SPRITE = createParticleSprite();
+
+/* ---------------------------------------------------------------------- */
+/* Scene Setup                                                             */
+/* ---------------------------------------------------------------------- */
+function setupScene(canvas) {
+  scene = new THREE.Scene();
+  scene.background = new THREE.Color(0x030603);
+  const isMobile = isTouchDevice();
+
+  const { w, h } = getViewportSize();
+  camera = new THREE.PerspectiveCamera(50, w / h, 0.1, 300);
+  camera.position.set(0, 0, 7);
+  fitCamera();
+
+  renderer = new THREE.WebGLRenderer({ canvas, antialias: !isMobile, alpha: false, powerPreference: "high-performance" });
+  renderer.setSize(w, h, false);
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, isMobile ? 1 : 1.5));
+  renderer.toneMapping = THREE.ACESFilmicToneMapping;
+  renderer.toneMappingExposure = 1.1;
+  renderer.outputColorSpace = THREE.SRGBColorSpace;
+
+  composer = new EffectComposer(renderer);
+  composer.addPass(new RenderPass(scene, camera));
+  const bloom = new UnrealBloomPass(new THREE.Vector2(w, h), 0.55, 0.3, 0.1);
+  composer.addPass(bloom);
+  composer.bloomPass = bloom;
+
+  /* ---------- Lighting ---------- */
+  scene.add(new THREE.AmbientLight(0x101810, 0.7));
+  const sun = new THREE.DirectionalLight(0xffffee, 2.2);
+  sun.position.set(20, 30, 15);
+  sun.castShadow = true;
+  sun.shadow.mapSize.set(1024, 1024);
+  sun.shadow.camera.near = 1; sun.shadow.camera.far = 80;
+  sun.shadow.camera.left = sun.shadow.camera.bottom = -30;
+  sun.shadow.camera.right = sun.shadow.camera.top = 30;
+  scene.add(sun);
+  scene.add(new THREE.DirectionalLight(0x88aaff, 0.4).position.set(-10, 15, -10));
+  scene.add(new THREE.DirectionalLight(0xffddaa, 0.25).position.set(0, -10, -15));
+
+  /* ---------- Earth ---------- */
+  createEarth().catch((e) => console.warn("[hero-3d] createEarth failed:", e));
+  /* ---------- Orbital tracks + satellites ---------- */
+  createOrbitalTracks();
+  /* ---------- Stars (round sprites) ---------- */
+  createStars();
+  /* ---------- Background particle cloud ---------- */
+  createParticleCloud();
+}
+
+const EARTH_RADIUS = 1.2;
+
+async function createEarth() {
+  const geo = new THREE.IcosahedronGeometry(EARTH_RADIUS, 50);
+
+  // Procedural fallback color material so the Earth renders instantly
+  const mat = new THREE.MeshPhysicalMaterial({
+    color: 0x2a6b3c,
+    clearcoat: 0.4, clearcoatRoughness: 0.2,
+    transmission: 0, thickness: 0, roughness: 0.7, metalness: 0.05,
+  });
+
+  const earth = new THREE.Mesh(geo, mat);
+  earth.castShadow = true;
+  earth.receiveShadow = true;
+  earth.rotation.y = -Math.PI / 2;
+  scene.add(earth);
+
+  /* Night side emission */
+  const nightMat = new THREE.MeshBasicMaterial({
+    transparent: true, depthWrite: false, opacity: 0.85,
+    blending: THREE.AdditiveBlending,
+  });
+  const nightMesh = new THREE.Mesh(geo, nightMat);
+  nightMesh.rotation.y = -Math.PI / 2;
+  nightMesh.scale.setScalar(1.001);
+  scene.add(nightMesh);
+
+  /* Cloud layer */
+  const cloudGeo = new THREE.IcosahedronGeometry(EARTH_RADIUS * 1.025, 30);
+  const cloudMat = new THREE.MeshPhysicalMaterial({
+    transparent: true, opacity: 0.45, depthWrite: false,
+    side: THREE.DoubleSide, blending: THREE.NormalBlending,
+  });
+  const clouds = new THREE.Mesh(cloudGeo, cloudMat);
+  clouds.rotation.y = -Math.PI / 2;
+  scene.add(clouds);
+
+  /* Atmosphere halo */
+  const atmoGeo = new THREE.SphereGeometry(EARTH_RADIUS * 1.15, 64, 64);
+  const atmoMat = new THREE.MeshBasicMaterial({
+    color: 0x4488ff, transparent: true, opacity: 0.08,
+    side: THREE.BackSide, depthWrite: false, blending: THREE.AdditiveBlending,
+  });
+  const atmosphere = new THREE.Mesh(atmoGeo, atmoMat);
+  scene.add(atmosphere);
+
+  earth.userData = { nightMesh, clouds, atmosphere };
+  scene.userData.earth = earth;
+
+  /* Load textures serially (one CDN request at a time) and apply live */
+  try {
+    const [dayTex, nightTex, specTex, normalTex, cloudTex] = await loadEarthTextures();
+    mat.map = dayTex;
+    mat.normalMap = normalTex;
+    mat.normalScale = new THREE.Vector2(0.6, 0.6);
+    mat.specularMap = specTex;
+    mat.specular = new THREE.Color(0x333333);
+    mat.shininess = 25;
+    mat.envMapIntensity = 0.9;
+    mat.color = new THREE.Color(0xffffff);
+    mat.needsUpdate = true;
+
+    nightMat.map = nightTex;
+    nightMat.needsUpdate = true;
+
+    cloudMat.map = cloudTex;
+    cloudMat.needsUpdate = true;
+  } catch (e) {
+    // Keep procedural look; textures failed entirely
+    console.warn("[hero-3d] Earth textures failed to load:", e);
+  }
+}
+
+/* ---------------------------------------------------------------------- */
+/* Orbital tracks (3 ellipses) + tiny satellites                           */
+/* ---------------------------------------------------------------------- */
+function createOrbitalTracks() {
+  const tracks = [
+    { a: 2.2, e: 0.05, inc: 0.15, color: 0x66aaff, speed: 0.018, satelliteSize: 0.035 },
+    { a: 3.0, e: 0.12, inc: -0.35, color: 0xffaa44, speed: 0.012, satelliteSize: 0.03 },
+    { a: 4.1, e: 0.02, inc: 0.55, color: 0x44ff88, speed: 0.008, satelliteSize: 0.025 },
+  ];
+
+  tracks.forEach((t, i) => {
+    const pts = [];
+    for (let a = 0; a <= Math.PI * 2; a += 0.02) {
+      const r = t.a * (1 - t.e * t.e) / (1 + t.e * Math.cos(a));
+      const x = r * Math.cos(a);
+      const y = r * Math.sin(a) * Math.cos(t.inc);
+      const z = r * Math.sin(a) * Math.sin(t.inc);
+      pts.push(new THREE.Vector3(x, y, z));
+    }
+    const curve = new THREE.CatmullRomCurve3(pts);
+    curve.closed = true;
+
+    const tubeGeo = new THREE.TubeGeometry(curve, 320, 0.008, 8, true);
+    const tubeMat = new THREE.MeshBasicMaterial({
+      color: t.color,
+      transparent: true,
+      opacity: 0.35,
+      depthWrite: false,
+      blending: THREE.AdditiveBlending,
+    });
+    const tube = new THREE.Mesh(tubeGeo, tubeMat);
+    scene.add(tube);
+
+    /* Satellite */
+    const satGeo = new THREE.IcosahedronGeometry(t.satelliteSize, 3);
+    const satMat = new THREE.MeshPhysicalMaterial({
+      color: t.color,
+      metalness: 0.9,
+      roughness: 0.1,
+      clearcoat: 1,
+      clearcoatRoughness: 0.1,
+      emissive: new THREE.Color(t.color),
+      emissiveIntensity: 0.4,
+    });
+    const satellite = new THREE.Mesh(satGeo, satMat);
+    satellite.castShadow = true;
+    scene.add(satellite);
+
+    /* Engine glow */
+    const glowGeo = new THREE.SphereGeometry(t.satelliteSize * 1.6, 16, 16);
+    const glowMat = new THREE.MeshBasicMaterial({
+      color: t.color,
+      transparent: true,
+      opacity: 0.6,
+      depthWrite: false,
+      blending: THREE.AdditiveBlending,
+    });
+    const glow = new THREE.Mesh(glowGeo, glowMat);
+    satellite.add(glow);
+
+    tube.userData = { curve, speed: t.speed, satellite, glow, phase: i * 2 };
+  });
+}
+
+/* ---------------------------------------------------------------------- */
+/* Stars (round sprites)                                                   */
+/* ---------------------------------------------------------------------- */
+function createStars() {
+  const count = 2500;
+  const positions = new Float32Array(count * 3);
+  const sizes = new Float32Array(count);
+  const colors = new Float32Array(count * 3);
+  const alphas = new Float32Array(count);
+
+  for (let i = 0; i < count; i++) {
+    const r = 40 + Math.random() * 80;
+    const theta = Math.random() * Math.PI * 2;
+    const phi = Math.acos(2 * Math.random() - 1);
+    positions[i*3] = r * Math.sin(phi) * Math.cos(theta);
+    positions[i*3+1] = r * Math.sin(phi) * Math.sin(theta);
+    positions[i*3+2] = r * Math.cos(phi);
+    sizes[i] = 0.8 + Math.random() * 1.8;
+    const temp = 4000 + Math.random() * 6000;
+    const c = new THREE.Color().setHSL(Math.random() * 0.1, 0.3, 0.5 + Math.random() * 0.5);
+    colors[i*3] = c.r; colors[i*3+1] = c.g; colors[i*3+2] = c.b;
+    alphas[i] = 0.4 + Math.random() * 0.6;
+  }
+
+  const geo = new THREE.BufferGeometry();
+  geo.setAttribute("position", new THREE.BufferAttribute(positions, 3));
+  geo.setAttribute("size", new THREE.BufferAttribute(sizes, 1));
+  geo.setAttribute("color", new THREE.BufferAttribute(colors, 3));
+  geo.setAttribute("alpha", new THREE.BufferAttribute(alphas, 1));
+
+  const mat = new THREE.PointsMaterial({
+    size: 1,
+    map: PARTICLE_SPRITE,
+    vertexColors: true,
+    transparent: true,
+    depthWrite: false,
+    blending: THREE.AdditiveBlending,
+    sizeAttenuation: true,
+    alphaTest: 0.001,
+  });
+  mat.onBeforeCompile = (shader) => {
+    shader.uniforms.uTime = { value: 0 };
+    shader.vertexShader = shader.vertexShader.replace(
+      "#include <common>",
+      `#include <common>
+       uniform float uTime;
+       attribute float alpha;
+       varying float vAlpha;`
+    ).replace(
+      "gl_PointSize = size * ( size / -mvPosition.z );",
+      `gl_PointSize = size * ( 120.0 / -mvPosition.z );
+       vAlpha = alpha * (0.7 + 0.3 * sin(uTime + position.x * 0.5));`
+    );
+    shader.fragmentShader = shader.fragmentShader.replace(
+      "#include <common>",
+      `#include <common>
+       varying float vAlpha;`
+    ).replace(
+      "gl_FragColor = vec4( diffuse, opacity );",
+      "gl_FragColor = vec4( diffuse, vAlpha * opacity );"
+    );
+  };
+  const stars = new THREE.Points(geo, mat);
+  scene.add(stars);
+  scene.userData.stars = stars;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Background particle cloud                                               */
+/* ---------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------- */
+/* Texture loader with retry + queue (avoids CDN rate-limit / 429 block)  */
+/* ---------------------------------------------------------------------- */
+const texLoader = new THREE.TextureLoader();
+texLoader.setCrossOrigin("anonymous");
+
+function loadTex(url, retries = 4) {
+  return new Promise((resolve) => {
+    const attempt = (n) => {
+      texLoader.load(
+        url,
+        (t) => {
+          t.colorSpace = THREE.SRGBColorSpace;
+          t.wrapS = t.wrapT = THREE.RepeatWrapping;
+          resolve(t);
+        },
+        undefined,
+        () => {
+          if (n > 0) {
+            const backoff = Math.min(2000 * Math.pow(2, 4 - n), 8000);
+            setTimeout(() => attempt(n - 1), backoff);
+          } else {
+            // Fallback: resolve a neutral 1px texture so the scene still renders
+            const c = document.createElement("canvas");
+            c.width = c.height = 4;
+            const cx = c.getContext("2d");
+            cx.fillStyle = "#1E4D2B"; cx.fillRect(0, 0, 4, 4);
+            resolve(new THREE.CanvasTexture(c));
+          }
+        }
+      );
+    };
+    attempt(retries);
+  });
+}
+
+async function loadEarthTextures() {
+  const BASE = "https://cdn.jsdelivr.net/npm/three@0.164.0/examples/textures/";
+  const files = [
+    "land_ocean_ice_cloud_2048.jpg",
+    "earth_night_2048.jpg",
+    "earth_specular_2048.jpg",
+    "earth_normal_2048.jpg",
+    "earth_clouds_2048.jpg",
+  ];
+  const out = [];
+  for (const f of files) {
+    out.push(await loadTex(BASE + f));
+  }
+  return out;
+}
+
+function createParticleCloud() {
+  const count = 1200;
+  const positions = new Float32Array(count * 3);
+  const sizes = new Float32Array(count);
+  const colors = new Float32Array(count * 3);
+  const alphas = new Float32Array(count);
+
+  for (let i = 0; i < count; i++) {
+    const r = 3 + Math.random() * 9;
+    const theta = Math.random() * Math.PI * 2;
+    const phi = Math.acos(2 * Math.random() - 1);
+    positions[i*3] = r * Math.sin(phi) * Math.cos(theta);
+    positions[i*3+1] = r * Math.sin(phi) * Math.sin(theta);
+    positions[i*3+2] = r * Math.cos(phi);
+    sizes[i] = 0.05 + Math.random() * 0.12;
+    const c = new THREE.Color().setHSL(0.55 + Math.random() * 0.1, 0.7, 0.5);
+    colors[i*3] = c.r; colors[i*3+1] = c.g; colors[i*3+2] = c.b;
+    alphas[i] = 0.2 + Math.random() * 0.5;
+  }
+
+  const geo = new THREE.BufferGeometry();
+  geo.setAttribute("position", new THREE.BufferAttribute(positions, 3));
+  geo.setAttribute("size", new THREE.BufferAttribute(sizes, 1));
+  geo.setAttribute("color", new THREE.BufferAttribute(colors, 3));
+  geo.setAttribute("alpha", new THREE.BufferAttribute(alphas, 1));
+
+  const mat = new THREE.PointsMaterial({
+    size: 1,
+    map: PARTICLE_SPRITE,
+    vertexColors: true,
+    transparent: true,
+    depthWrite: false,
+    blending: THREE.AdditiveBlending,
+    sizeAttenuation: true,
+    alphaTest: 0.001,
+  });
+  mat.onBeforeCompile = (shader) => {
+    shader.uniforms.uTime = { value: 0 };
+    shader.vertexShader = shader.vertexShader.replace(
+      "#include <common>",
+      `#include <common>
+       uniform float uTime;
+       attribute float alpha;
+       varying float vAlpha;`
+    ).replace(
+      "gl_PointSize = size * ( size / -mvPosition.z );",
+      `gl_PointSize = size * ( 100.0 / -mvPosition.z );
+       vAlpha = alpha * (0.6 + 0.4 * sin(uTime * 0.5 + position.y * 0.3));`
+    );
+    shader.fragmentShader = shader.fragmentShader.replace(
+      "#include <common>",
+      `#include <common>
+       varying float vAlpha;`
+    ).replace(
+      "gl_FragColor = vec4( diffuse, opacity );",
+      "gl_FragColor = vec4( diffuse, vAlpha * opacity );"
+    );
+  };
+  const cloud = new THREE.Points(geo, mat);
+  scene.add(cloud);
+  scene.userData.particleCloud = cloud;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Animation Loop                                                          */
+/* ---------------------------------------------------------------------- */
+function animate() {
+  requestAnimationFrame(animate);
+  if (!scene || !camera) return;
+
+  const time = performance.now() * 0.001;
+  const delta = Math.min(1/30, time - (animate.lastTime || time));
+  animate.lastTime = time;
+
+  /* Earth rotation + cloud drift */
+  const earth = scene.userData.earth;
+  if (earth) {
+    earth.rotation.y += delta * 0.02;
+    if (earth.userData.nightMesh) earth.userData.nightMesh.rotation.y = earth.rotation.y;
+    if (earth.userData.clouds) earth.userData.clouds.rotation.y += delta * 0.008;
+    if (earth.userData.atmosphere) earth.userData.atmosphere.rotation.y += delta * 0.002;
+  }
+
+  /* Orbital tracks + satellites */
+  scene.children.forEach(obj => {
+    if (obj.userData.curve) {
+      const { curve, speed, satellite, glow, phase } = obj.userData;
+      const t = (time * speed + phase) % 1;
+      const pos = curve.getPointAt(t);
+      satellite.position.copy(pos);
+      const tangent = curve.getTangentAt(t);
+      satellite.quaternion.setFromUnitVectors(new THREE.Vector3(0,0,1), tangent);
+      glow.material.opacity = 0.5 + Math.sin(time * 4) * 0.2;
+      glow.scale.setScalar(1 + Math.sin(time * 4) * 0.1);
+    }
+  });
+
+  /* Stars twinkle */
+  if (scene.userData.stars && scene.userData.stars.material && scene.userData.stars.material.uniforms && scene.userData.stars.material.uniforms.uTime) {
+    scene.userData.stars.material.uniforms.uTime.value = time;
+  }
+
+  /* Particle cloud */
+  if (scene.userData.particleCloud && scene.userData.particleCloud.material && scene.userData.particleCloud.material.uniforms && scene.userData.particleCloud.material.uniforms.uTime) {
+    scene.userData.particleCloud.material.uniforms.uTime.value = time;
+    scene.userData.particleCloud.rotation.y += delta * 0.0003;
+  }
+
+  composer.render();
+}
+
+/* ---------------------------------------------------------------------- */
+/* Resize                                                                  */
+/* ---------------------------------------------------------------------- */
+function onResize() {
+  if (!renderer) return;
+  const { w, h } = getViewportSize();
+  fitCamera();
+  renderer.setSize(w, h, false);
+  composer.setSize(w, h);
+  if (composer.bloomPass) composer.bloomPass.resolution.set(w, h);
+}
+
+/* ---------------------------------------------------------------------- */
+/* Public API                                                              */
+/* ---------------------------------------------------------------------- */
+export function initHero3D() {
+  const canvas = document.querySelector(CANVAS_SELECTOR);
+  if (!canvas) return;
+  setupScene(canvas);
+  window.addEventListener("resize", onResize);
+  animate();
+  window.__hero3dReady = true;
+  document.body.style.visibility = "visible";
+  document.dispatchEvent(new CustomEvent("hero3d:ready"));
+}
+export function setScrollProgress(p) {
+  p = THREE.MathUtils.clamp(p, 0, 1);
+  if (camera) {
+    const targetZ = THREE.MathUtils.lerp(6.5, 3.2, p);
+    camera.position.z += (targetZ - camera.position.z) * 0.05;
+    camera.lookAt(0, 0, 0);
+  }
+}
+export function setBiome() {}
+export function getCurrentFPS() { return 60; }
+
+window.setScrollProgress = setScrollProgress;
+window.setBiome = setBiome;
+window.setQualityTier = () => {};
+window.getCurrentFPS = getCurrentFPS;
+
+/* Auto-init */
+if (document.readyState !== "loading") {
+  if (document.querySelector(CANVAS_SELECTOR) && !window.__hero3dPremiumInit) {
+    window.__hero3dPremiumInit = true;
+    initHero3D();
+  }
+} else {
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.querySelector(CANVAS_SELECTOR) && !window.__hero3dPremiumInit) {
+      window.__hero3dPremiumInit = true;
+      initHero3D();
+    }
+  });
+}

@@ -1,0 +1,34 @@
+# Dependencias y sistema
+node_modules/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores
+.vscode/
+.idea/
+*.swp
+
+# Temporales / logs
+*.log
+tmp/
+.cache/
+.env
+.env.*
+!.env.example
+
+# Archivos grandes o generados que no forman parte del despliegue
+assets/models/earth_-_16k_high_resolution.glb
+lighthouse-report*
+__pycache__/
+*.py[cod]
+*.zip
+_remote_*
+index-remote.html
+null
+fix_hero.py
+parse-lighthouse.js
+prompts-imagenes.json
+
+# Recursos fuente internos (no se despliegan)
+Recursos DPZ Consulting/
