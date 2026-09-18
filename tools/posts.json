@@ -825,6 +825,92 @@
           "url": "https://www.sea.gob.cl/evaluacion-de-impacto-ambiental/guias-instructivos-y-criterios-para-la-evaluacion-de-proyectos-en"
         }
       ]
+    },
+    {
+      "slug": "cartografia-restricciones-territoriales-chile",
+      "title": "Cartografía de restricciones territoriales para comparar emplazamientos",
+      "category": "sig",
+      "focus_keyword": "cartografía de restricciones territoriales",
+      "secondary_keywords": [
+        "SIG para proyectos",
+        "análisis espacial Chile",
+        "aptitud territorial"
+      ],
+      "intent": "informacional",
+      "date": "2026-09-18",
+      "updated": "2026-09-18",
+      "read": "Tiempo de lectura: 8 min",
+      "excerpt": "Cómo usar cartografía de restricciones territoriales y SIG para comparar alternativas de emplazamiento y justificar técnicamente una ubicación.",
+      "description": "Guía práctica para usar cartografía de restricciones territoriales y SIG en la comparación técnica de alternativas de emplazamiento en Chile.",
+      "image": "assets/img/photos/dpz-cartografia-sig-900.webp",
+      "image_alt": "Mapa SIG con capas para analizar restricciones territoriales",
+      "service_link": "cartografía SIG y análisis espacial",
+      "cta_title": "¿Comparas alternativas de ubicación?",
+      "cta_text": "Construimos mapas comparables y trazables para apoyar decisiones de localización.",
+      "lead": "La cartografía de restricciones territoriales es una herramienta decisiva para comparar alternativas de emplazamiento en proyectos en Chile. Este documento explica, paso a paso, cómo seleccionar capas, estructurar un análisis SIG para proyectos, producir mapas de aptitud territorial y redactar una justificación técnica coherente con los criterios del SEA. Incluye criterios operativos, métricas comparativas y recomendaciones para documentar la alternativa preferente.",
+      "key_takeaways": [
+        "Definir claramente el objetivo del análisis y los criterios de exclusión antes de seleccionar capas.",
+        "Construir una capa maestro de restricciones (booleanas) y una capa de peso para aptitud territorial.",
+        "Usar métricas comparables: área afectada por restricciones, distancia a infraestructuras, y puntaje de aptitud.",
+        "Documentar fuentes, versiones y fechas de datos para respaldar la justificación técnica.",
+        "Revisar criterios y guías del SEA antes de cerrar la comparación y preparar informes."
+      ],
+      "sections": [
+        {
+          "id": "s1",
+          "h2": "1. ¿Qué es y para qué sirve la cartografía de restricciones territoriales?",
+          "html": "<p>La <strong>cartografía de restricciones territoriales</strong> es un conjunto de capas geográficas que representan exclusiones, buffers, ZEE y límites u otros condicionantes que restringen el emplazamiento de actividades. Su propósito al comparar alternativas es transformar criterios normativos, ambientales y técnicos en información espacial objetiva y reproducible.</p><p>En la práctica permite responder preguntas concretas: ¿qué alternativas quedan fuera por superponer con áreas protegidas o cursos de agua? ¿Cuál es el área disponible real para cada alternativa? ¿Qué alternativas minimizan la intersección con restricciones clave? Revisar las guías y criterios de evaluación del SEA ayuda a alinear las capas y umbrales usados con los criterios de evaluación exigibles.</p>",
+          "key": "definicion"
+        },
+        {
+          "id": "s2",
+          "h2": "2. Selección y preparación de datos: capas mínimas y buenas prácticas",
+          "html": "<p>Antes de modelar, defina una lista priorizada de capas: áreas protegidas, humedales, cauces y sus buffers, suelos con restricción, servidumbres, poblaciones, rutas y zonas de riesgo (erosión, aluviones). Incluya también información técnica propia del proyecto (límites de faena, accesos) y fuentes oficiales. Documente origen, fecha y resolución espacial de cada capa.</p><p>Buenas prácticas:</p><ul><li>Usar proyecciones homogéneas y verificar topología.</li><li>Crear metadatos simples con fecha, autor y URL de origen.</li><li>Registrar versiones: cualquier cambio en una capa debe quedar trazable.</li></ul><p>Esta preparación es la base para un análisis SIG para proyectos riguroso y defendible.</p>",
+          "key": "datos"
+        },
+        {
+          "id": "s3",
+          "h2": "3. Flujo SIG para comparar alternativas (paso a paso)",
+          "html": "<p>Un flujo eficiente en SIG para análisis espacial Chile incluye los siguientes pasos operativos:</p><ol><li><strong>Definir criterios de exclusión</strong>: convierta criterios cualitativos en reglas espaciales (ej.: buffer 50 m alrededor de cauces).</li><li><strong>Generar capas de restricción binarias</strong>: para cada criterio cree una capa 0/1 donde 1 = área restringida.</li><li><strong>Combinar capa maestro</strong>: una unión lógica (OR) de restricciones muestra la huella no disponible.</li><li><strong>Calcular métricas por alternativa</strong>: superficie disponible, porcentaje de ocupación por restricción, distancia mínima a infraestructura crítica.</li><li><strong>Crear capa de aptitud</strong>: si corresponde, combine restricciones con pesos (método multicriterio) para obtener un mapa de aptitud territorial.</li></ol><p>Este flujo facilita comparar alternativas de forma cuantitativa y visual. Mantenga scripts o modelos (ModelBuilder, Python) para asegurar reproducibilidad y acelerar revisiones.</p>",
+          "key": "flujo"
+        },
+        {
+          "id": "s4",
+          "h2": "4. Métricas comparativas y cómo interpretarlas",
+          "html": "<p>Al comparar ubicaciones use métricas que reflejen tanto la eliminación por restricciones como la calidad de la superficie restante. Sugerencias de métricas:</p><ul><li><strong>Área restringida y área disponible</strong>: metros cuadrados y % del polígono de alternativa ocupados por restricciones.</li><li><strong>Índice de compatibilidad</strong>: porcentaje de la alternativa que cumple con todos los criterios obligatorios.</li><li><strong>Puntaje de aptitud</strong>: si aplica ponderación, el puntaje medio y la distribución espacial (mapa de calor).</li><li><strong>Indicadores de conectividad e infraestructura</strong>: distancia a vías, redes eléctricas, puertos o centros poblados según lo relevante.</li></ul><p>Interprete resultados considerando la incertidumbre de datos y la sensibilidad a pesos y umbrales. Documente cómo cambian los resultados si modifica un buffer o la resolución de una capa.</p>",
+          "key": "metricas"
+        },
+        {
+          "id": "s5",
+          "h2": "5. Documentación, presentación y justificación técnica",
+          "html": "<p>Para justificar técnicamente una alternativa ante revisión pública o autoridades, el paquete mínimo debe incluir:</p><ul><li>Mapa comparativo de restricciones por alternativa y mapa de aptitud territorial.</li><li>Tabla con métricas clave y criterios usados (umbrales y pesos si existieron).</li><li>Metadatos y log de versiones de capas.</li><li>Descripción del método SIG, flujos y software (p. ej. scripts o modelos).</li></ul><p>Evite afirmar cumplimiento legal sin verificación; en su lugar, indique que la comparación se hizo con criterios y guías del SEA y recomiende revisar la normativa aplicable al caso concreto. Si necesita apoyo metodológico o producir los entregables, puede consultar nuestros servicios en <a href=\"../servicios.html\">../servicios.html</a> o solicitar asesoría técnica en <a href=\"../contacto.html\">../contacto.html</a>.</p>",
+          "key": "documentacion"
+        }
+      ],
+      "faqs": [
+        {
+          "question": "¿Qué diferencia hay entre restricciones obligatorias y condiciones de aptitud?",
+          "answer": "Las restricciones obligatorias son exclusiones binarias (prohíben emplazamiento) derivadas de normativa o condiciones ambientales no negociables; las condiciones de aptitud permiten graduación y priorización (p. ej. suelos de mejor calidad), y suelen tratarse con puntajes en análisis multicriterio."
+        },
+        {
+          "question": "¿Cómo elijo pesos cuando uso un modelo de aptitud territorial?",
+          "answer": "Seleccione pesos basados en objetivos del proyecto y consulta técnica: identifique criterios obligatorios (peso alto) y criterios preferentes (peso intermedio). Realice análisis de sensibilidad para mostrar cómo varía la preferencia de alternativas según los pesos y documente los supuestos."
+        },
+        {
+          "question": "¿Basta un mapa para justificar la alternativa preferente ante el SEA?",
+          "answer": "No basta solo un mapa. Se requiere un paquete técnico que incluya metadatos, metodología, tablas de métricas, análisis de sensibilidad y referencia a los criterios y guías aplicables del SEA. Considere además la necesidad de validar datos y, si corresponde, realizar estudios específicos complementarios."
+        }
+      ],
+      "sources": [
+        {
+          "name": "SEA — Criterios de evaluación en el SEIA",
+          "url": "https://www.sea.gob.cl/criterios-de-evaluacion-en-el-seia"
+        },
+        {
+          "name": "SEA — Guías, instructivos y criterios para la evaluación",
+          "url": "https://www.sea.gob.cl/evaluacion-de-impacto-ambiental/guias-instructivos-y-criterios-para-la-evaluacion-de-proyectos-en"
+        }
+      ]
     }
   ]
 }
