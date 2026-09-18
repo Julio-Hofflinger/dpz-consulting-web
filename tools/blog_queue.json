@@ -128,7 +128,9 @@
           "name": "CONAF — Planes y normas de manejo",
           "url": "https://www.conaf.cl/centro-documental/planes-y-normas-de-manejo/"
         }
-      ]
+      ],
+      "status": "published",
+      "published_at": "2026-09-18T20:45:18-03:00"
     },
     {
       "id": "arbolado-001",

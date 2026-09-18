@@ -911,6 +911,92 @@
           "url": "https://www.sea.gob.cl/evaluacion-de-impacto-ambiental/guias-instructivos-y-criterios-para-la-evaluacion-de-proyectos-en"
         }
       ]
+    },
+    {
+      "slug": "vegetacion-nativa-inventario-predio",
+      "title": "Inventario de vegetación nativa: guía para intervenir predios",
+      "category": "forestal",
+      "focus_keyword": "inventario de vegetación nativa",
+      "secondary_keywords": [
+        "bosque nativo Chile",
+        "caracterización predial",
+        "CONAF"
+      ],
+      "intent": "informacional",
+      "date": "2026-09-18",
+      "updated": "2026-09-18",
+      "read": "Lectura: 7 minutos",
+      "excerpt": "Elementos clave de un inventario de vegetación nativa para decisiones prediales informadas y coherentes con CONAF.",
+      "description": "Qué incluir en un inventario de vegetación nativa para planificar intervenciones prediales con respaldo técnico y relacionarlo con permisos CONAF.",
+      "image": "assets/img/photos/dpz-gestion-forestal-900.webp",
+      "image_alt": "Evaluación de vegetación nativa en un predio forestal",
+      "service_link": "gestión forestal y planes de manejo",
+      "cta_title": "¿Necesitas caracterizar la vegetación del predio?",
+      "cta_text": "Levantamos antecedentes de terreno y cartografía para ordenar la decisión técnica antes de intervenir.",
+      "lead": "Un inventario de vegetación nativa bien diseñado es la base técnica para tomar decisiones sobre obras o manejo en predios rurales. Este documento explica qué debe considerar un inventario de vegetación nativa —desde objetivos y diseño de muestreo hasta datos críticos y cómo vincular los resultados con trámites y planes de CONAF— para apoyar una caracterización predial sólida y reducir riesgos técnicos y administrativos.",
+      "key_takeaways": [
+        "Definir objetivos claros del inventario antes del muestreo permite que los datos sirvan para permisos, diseño y mitigación.",
+        "Registrar estructura, composición y estado sanitario de la vegetación es esencial; incluir cartografía y puntos GPS.",
+        "Relacionar el inventario con los permisos de bosque nativo y las normas/planes de manejo de CONAF facilita la gestión posterior.",
+        "Un inventario no garantiza aprobación administrativa; se recomienda validar hallazgos con los organismos y especialistas pertinentes.",
+        "Incluir un plan de uso de datos (mapas, informes, criterios de conservación) aumenta la utilidad del inventario para la intervención predial."
+      ],
+      "sections": [
+        {
+          "id": "objetivos-alcance",
+          "h2": "1) Objetivos y alcance del inventario",
+          "html": "<p><strong>Definir con claridad para qué servirá el inventario.</strong> Antes de salir a terreno hay que precisar si el inventario apoyará: planificación de obras, evaluación de impacto, diseño de medidas de mitigación, o presentación de antecedentes a organismos como CONAF. Esa decisión condiciona el detalle requerido, la resolución cartográfica y la intensidad del muestreo.</p><p>Recomendaciones prácticas:</p><ul><li>Especifique el alcance espacial (todo el predio o sectores críticos).</li><li>Determine la resolución mínima cartográfica y el sistema de referencia para GPS.</li><li>Establezca entregables: mapas temáticos, tabla de especies, inventario de individuos singulares y un informe metodológico.</li></ul><p>Si necesita apoyo técnico para definir alcance, revise opciones en <a href=\"../servicios.html\">nuestros servicios</a> o consulte directamente a CONAF para requisitos asociados a permisos de bosque nativo.</p>",
+          "key": "objetivos"
+        },
+        {
+          "id": "metodologia-muestreo",
+          "h2": "2) Metodología y diseño de muestreo",
+          "html": "<p>La metodología debe permitir reproducibilidad y representar la variabilidad del predio. Use una combinación de reconocimiento, transectos y parcelas fijas según el mosaico de bosques y formaciones xerofíticas presentes.</p><p>Elementos metodológicos a definir:</p><ul><li>Criterio de selección de parcelas y tamaño de muestra.</li><li>Protocolos para medir cobertura, estratos arbóreos, arbustivos y herbáceos.</li><li>Registro de individuos singulares (árboles de porte, especies nativas relevantes).</li><li>Documentación fotográfica y georreferenciación de puntos de muestreo.</li></ul><p>Una metodología documentada facilita vincular el inventario con la caracterización predial exigida por trámites administrativos y por la elaboración de planes o normas de manejo.</p>",
+          "key": "metodologia"
+        },
+        {
+          "id": "datos-a-recolectar",
+          "h2": "3) Datos esenciales que debe incluir el inventario",
+          "html": "<p>Un inventario útil para la planificación predial debería contener, como mínimo, los siguientes conjuntos de datos:</p><ul><li><strong>Composición de especies:</strong> lista por estrato con abundancia relativa y uso de nombres científicos y comunes.</li><li><strong>Estructura y área basal:</strong> diámetro, altura estimada y densidad por estrato.</li><li><strong>Estado de conservación y amenazas:</strong> presencia de plagas, enfermedades, daños por actividades humanas o erosión.</li><li><strong>Cartografía temática:</strong> polígonos de vegetación, corredores, parches de bosque nativo y formaciones xerofíticas, con capas en formato GIS y mapas en PDF.</li><li><strong>Puntos de interés:</strong> individuos singulares, quebradas, humedales o elementos relevantes para mitigación.</li></ul><p>Si algún dato no es claramente exigido por las fuentes oficiales consultadas, se recomienda documentarlo como información complementaria para la toma de decisiones en cada caso.</p>",
+          "key": "datos"
+        },
+        {
+          "id": "vinculo-conaf",
+          "h2": "4) Vinculación del inventario con permisos y planes de CONAF",
+          "html": "<p>CONAF dispone de trámites y de documentación sobre permisos de bosque nativo y planes o normas de manejo. Un inventario bien estructurado facilita identificar si en el predio existen componentes que requieran consideración especial en esos trámites.</p><p>Cómo usar el inventario frente a CONAF:</p><ul><li>Incorpore en el informe referencias cartográficas y descripción de formaciones para comparar con la información que solicita CONAF sobre bosque nativo y formaciones xerofíticas.</li><li>Adjunte mapas y fotografías que permitan a especialistas validar la caracterización predial.</li><li>No asuma que un inventario reemplaza trámites; use los resultados para preparar antecedentes y consultar directamente con CONAF según corresponda.</li></ul><p>Si surgen discrepancias entre los criterios técnicos del inventario y los requisitos de CONAF, recomendamos coordinar una revisión técnica conjunta antes de tomar decisiones de intervención.</p>",
+          "key": "conaf"
+        },
+        {
+          "id": "uso-para-intervencion",
+          "h2": "5) Cómo aplicar el inventario para planificar la intervención predial",
+          "html": "<p>El objetivo final es que el inventario oriente decisiones de diseño, ubicación de obras y medidas de mitigación. Para ello incluya en el informe secciones prácticas:</p><ol><li><strong>Zonificación de riesgo y conservación:</strong> identificar zonas a preservar o donde las obras deben evitarse.</li><li><strong>Recomendaciones de manejo:</strong> acciones de protección de individuos, restauración de áreas degradadas y manejo de residuos vegetales.</li><li><strong>Medidas de mitigación y monitoreo:</strong> indicadores, cronograma y responsables para seguimiento post-intervención.</li></ol><p>El inventario debe entregarse en formatos editables (datos GIS, tablas) para que el equipo de obra y consultores ambientales incorporen la información al proyecto. Si requiere apoyo para transformar inventarios en criterios ejecutables, contáctenos en <a href=\"../contacto.html\">nuestro contacto</a> para asesoría técnica.</p>",
+          "key": "aplicacion"
+        }
+      ],
+      "faqs": [
+        {
+          "question": "¿El inventario garantiza la aprobación de un permiso ante CONAF?",
+          "answer": "No. Un inventario aporta los antecedentes técnicos necesarios para evaluar situaciones y preparar trámites, pero no garantiza aprobación administrativa. Se recomienda usar los resultados para preparar la documentación requerida por CONAF y coordinar consultas con el organismo según el caso."
+        },
+        {
+          "question": "¿Qué diferencia hay entre inventario y caracterización predial?",
+          "answer": "El inventario se centra en recopilar datos cuantitativos y cartográficos sobre la vegetación (especies, estructura, mapas). La caracterización predial es más amplia e integra infraestructura, uso del suelo, hidrología y otros elementos del predio. Ambos documentos deben articularse para decisiones de intervención."
+        },
+        {
+          "question": "¿Debo incluir formaciones xerofíticas y parches menores en el inventario?",
+          "answer": "Sí. Las formaciones xerofíticas y parches de vegetación nativa pueden ser relevantes para trámites de CONAF y para la planificación de obras. Si la presencia y extensión de estas formaciones no están claras en fuentes oficiales, documentarlas en el inventario y revisar el caso con especialistas es una buena práctica."
+        }
+      ],
+      "sources": [
+        {
+          "name": "CONAF — Permisos de bosque nativo y formaciones xerofíticas",
+          "url": "https://www.conaf.cl/tramites/permisos-bosque-nativo-y-formaciones-xerofiticas/"
+        },
+        {
+          "name": "CONAF — Planes y normas de manejo",
+          "url": "https://www.conaf.cl/centro-documental/planes-y-normas-de-manejo/"
+        }
+      ]
     }
   ]
 }
