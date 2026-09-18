@@ -12,6 +12,11 @@ on:
         required: false
         default: false
         type: boolean
+      deploy_only:
+        description: "Desplegar el estado actual sin generar otro artículo"
+        required: false
+        default: false
+        type: boolean
 
 permissions:
   contents: write
@@ -53,6 +58,7 @@ jobs:
           package-manager-cache: false
 
       - name: Validar y generar artículo
+        if: ${{ inputs.deploy_only != true }}
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         shell: bash
@@ -63,6 +69,7 @@ jobs:
           python tools/auto_publish_blog.py "${args[@]}"
 
       - name: Guardar el artículo y los artefactos generados
+        if: ${{ inputs.deploy_only != true }}
         id: commit
         shell: bash
         run: |
@@ -80,7 +87,7 @@ jobs:
           echo "published=true" >> "$GITHUB_OUTPUT"
 
       - name: Configurar SSH de despliegue
-        if: steps.commit.outputs.published == 'true'
+        if: ${{ inputs.deploy_only == true || steps.commit.outputs.published == 'true' }}
         env:
           DPZ_SSH_PRIVATE_KEY: ${{ secrets.DPZ_SSH_PRIVATE_KEY }}
         shell: bash
@@ -99,7 +106,7 @@ jobs:
           echo "DPZ_SSH_KEY_FILE=$key_file" >> "$GITHUB_ENV"
 
       - name: Desplegar en dpzdata.com
-        if: steps.commit.outputs.published == 'true'
+        if: ${{ inputs.deploy_only == true || steps.commit.outputs.published == 'true' }}
         shell: bash
         run: |
           set -euo pipefail
@@ -117,5 +124,5 @@ jobs:
           ssh -i "$DPZ_SSH_KEY_FILE" -o IdentitiesOnly=yes "$DPZ_SSH_USER@$DPZ_SSH_HOST" "sudo rsync -a --delete '$remote_tmp/' '/var/www/dpzdata/' && sudo chown -R caddy:caddy '/var/www/dpzdata' && sudo chmod -R 755 '/var/www/dpzdata' && find '$remote_tmp' -mindepth 1 -delete"
 
       - name: Verificar producción
-        if: steps.commit.outputs.published == 'true'
+        if: ${{ inputs.deploy_only == true || steps.commit.outputs.published == 'true' }}
         run: node tools/seo-audit.mjs --prod
