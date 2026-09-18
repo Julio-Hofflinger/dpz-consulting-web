@@ -740,6 +740,91 @@
           "url": "https://www.sea.gob.cl/evaluacion-de-impacto-ambiental/cual-es-el-proceso-de-evaluacion-de-impacto-ambiental"
         }
       ]
+    },
+    {
+      "slug": "linea-base-ambiental-anteproyecto",
+      "title": "Cómo construir una línea base ambiental útil y accionable",
+      "category": "diagnostico",
+      "focus_keyword": "línea base ambiental",
+      "secondary_keywords": [
+        "diagnóstico ambiental",
+        "caracterización ambiental Chile",
+        "área de influencia"
+      ],
+      "intent": "informacional",
+      "date": "2026-09-18",
+      "updated": "2026-09-18",
+      "read": "8 minutos",
+      "excerpt": "Guía práctica para crear una línea base ambiental que informe decisiones y anticipe brechas técnicas y regulatorias.",
+      "description": "Paso a paso para diseñar una línea base ambiental que apoye decisiones, delimite brechas y prepare un anteproyecto, considerando el área de influencia en Chile.",
+      "image": "assets/img/photos/dpz-cartografia-sig-900.webp",
+      "image_alt": "Cartografía y antecedentes usados para preparar una línea base ambiental",
+      "service_link": "diagnóstico ambiental-territorial",
+      "cta_title": "¿Debes levantar una línea base?",
+      "cta_text": "Integramos antecedentes territoriales y ambientales para detectar brechas antes de que se conviertan en retrabajo.",
+      "lead": "La línea base ambiental es la herramienta clave para decidir emplazamientos, definir mitigaciones y preparar un anteproyecto robusto. Esta guía explica qué incluir, cómo delimitar el área de influencia, qué datos priorizar y cómo transformar la información en decisiones útiles para proyectos inmobiliarios, energéticos, de infraestructura y prediales en Chile.",
+      "key_takeaways": [
+        "La línea base ambiental concentra información esencial sobre el estado actual del entorno y su área de influencia.",
+        "Definir alcance y métodos claros reduce incertidumbre y costos en etapas posteriores del proyecto.",
+        "Combinar fuentes secundarias con muestreo de campo dirigido permite identificar brechas críticas.",
+        "La línea base debe presentar hipótesis de impacto y opciones de diseño que alimenten el anteproyecto."
+      ],
+      "sections": [
+        {
+          "id": "para-que",
+          "h2": "¿Para qué sirve una línea base ambiental en la toma de decisiones?",
+          "html": "<p>Una <strong>línea base ambiental</strong> describe el estado actual de elementos ambientales relevantes (agua, aire, biodiversidad, suelos, paisajes y comunidades humanas) dentro del <em>área de influencia</em> del proyecto. Su propósito práctico es:</p><ul><li>Dar evidencia objetiva para elegir alternativas de emplazamiento y diseño.</li><li>Detectar riesgos y restricciones tempranas que afecten costos o viabilidad.</li><li>Priorizar estudios detallados en las zonas con mayor incertidumbre.</li><li>Soportar conversaciones con stakeholders y estudios regulatorios.</li></ul><p>Para equipos de proyectos, la línea base no es un inventario exhaustivo sino una herramienta orientada a la decisión: identifica lo que se sabe, lo que falta y qué tan crítico es cada vacío informativo.</p>",
+          "key": "propósito"
+        },
+        {
+          "id": "definir-alcance",
+          "h2": "Definir el área de influencia y el alcance técnico",
+          "html": "<p>Establecer con claridad cuál es el <strong>área de influencia</strong> es la base metodológica. Debe incluirse:</p><ul><li>Una delimitación espacial justificada (distancias, cuencas, corredores ecológicos, vías de acceso) acorde a los posibles impactos del proyecto.</li><li>Los componentes ambientales y socioambientales relevantes para el sector y la escala del proyecto.</li><li>Horizonte temporal considerado: condiciones estacionales y proyecciones de uso de suelo.</li></ul><p>Al definir alcance use criterios técnicos y operativos: ¿qué efectos pueden propagarse fuera del emplazamiento?, ¿qué infraestructura existente influye en el riesgo? Documente las decisiones de alcance para transparentar supuestos y facilitar revisiones posteriores.</p>",
+          "key": "alcance"
+        },
+        {
+          "id": "recoleccion",
+          "h2": "Recolección de información: fuentes secundarias y muestreo estratégico",
+          "html": "<p>Combine dos líneas de trabajo:</p><ol><li><strong>Revisión documental y bases secundarias:</strong> inventarios, estudios anteriores, cartografía, imágenes satelitales y registros administrativos. Esta etapa reduce trabajo de campo y detecta indicadores que requieren verificación.</li><li><strong>Trabajo de campo dirigido:</strong> muestreo puntual orientado a las incertidumbres detectadas (por ejemplo, presencia de hábitats críticos, calidad de cuerpos de agua, asentamientos humanos sensibles).</li></ol><p>Priorice esfuerzos según riesgo e irreversibilidad: donde un dato faltante pueda bloquear la aprobación o implicar rediseño, haga muestreos tempranos. Mantenga protocolos reproducibles y registro de calidad de los datos.</p><p>Si requiere apoyo en levantamientos o análisis, revise los servicios que ofrecemos en <a href=\"../servicios.html\">nuestras soluciones</a> para diagnóstico y caracterización ambiental.</p>",
+          "key": "datos"
+        },
+        {
+          "id": "delimitar-brechas",
+          "h2": "Delimitar brechas y priorizar estudios adicionales",
+          "html": "<p>Una buena línea base identifica y jerarquiza las brechas de información. Siga un proceso práctico:</p><ol><li>Liste preguntas críticas para la toma de decisión (ej.: existe hábitat de especies protegidas en el trazado?).</li><li>Asigne a cada pregunta una consequencecia práctica (impacto en diseño, cronograma, costo) y la probabilidad de ocurrencia.</li><li>Priorice estudios según la combinación de alta consecuencia y alta incertidumbre.</li></ol><p>El resultado debe ser un plan de acción con plazos, metodologías y responsables que permita cerrar brechas relevantes antes del anteproyecto. No todas las brechas requieren el mismo nivel de detalle: algunas se resuelven con monitoreo episódico, otras con estudios especializados.</p>",
+          "key": "brechas"
+        },
+        {
+          "id": "integracion-anteproyecto",
+          "h2": "Integración de la línea base al anteproyecto y recomendaciones prácticas",
+          "html": "<p>Transforme la información en decisiones de diseño:</p><ul><li>Incluya capas cartográficas con restricciones y oportunidades que el equipo de diseño use directamente.</li><li>Proponga medidas de minimización y diseño alternativo (trazados, orientación, compensaciones) vinculadas a la evidencia de la línea base.</li><li>Establezca indicadores de seguimiento que se puedan incorporar en el diseño de monitoreo ambiental.</li></ul><p>Evite documentos aislados: la línea base debe entregar insumos accionables para el anteproyecto y una hoja de ruta para estudios requeridos por evaluación ambiental. Si necesita apoyo para integrar la línea base al diseño o para clarificar requisitos regulatorios, contáctenos vía <a href=\"../contacto.html\">contacto</a>.</p>",
+          "key": "integracion"
+        }
+      ],
+      "faqs": [
+        {
+          "question": "¿Cuándo es suficiente una línea base ambiental para avanzar al anteproyecto?",
+          "answer": "Suficiente cuando cubre las preguntas críticas que pueden cambiar el emplazamiento o el diseño (riesgos que afecten costo/viabilidad) y cuando las brechas remanentes tienen plan de cierre. No existe un umbral único: es un juicio técnico documentado."
+        },
+        {
+          "question": "¿Qué distingue una línea base útil de un diagnóstico ambiental académico?",
+          "answer": "La línea base útil está orientada a la decisión: prioriza información según impacto sobre el proyecto, presenta brechas con planes de cierre y traduce hallazgos a opciones de diseño. Un diagnóstico académico puede ser más exhaustivo pero menos dirigido a implementación."
+        },
+        {
+          "question": "¿Cómo se determina el área de influencia en proyectos complejos?",
+          "answer": "Se determina con criterios técnicos (hidrológicos, ecológicos, de conectividad y de uso humano) y evaluando vías de transmisión de impactos. La delimitación debe estar justificada y documentada para permitir revisiones si cambian las condiciones del proyecto."
+        }
+      ],
+      "sources": [
+        {
+          "name": "SEA — Criterios de evaluación en el SEIA",
+          "url": "https://www.sea.gob.cl/criterios-de-evaluacion-en-el-seia"
+        },
+        {
+          "name": "SEA — Guías, instructivos y criterios para la evaluación",
+          "url": "https://www.sea.gob.cl/evaluacion-de-impacto-ambiental/guias-instructivos-y-criterios-para-la-evaluacion-de-proyectos-en"
+        }
+      ]
     }
   ]
 }

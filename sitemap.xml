@@ -99,5 +99,11 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://dpzdata.com/blog/linea-base-ambiental-anteproyecto.html</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
   <!-- /BLOG:URLS -->
 </urlset>
