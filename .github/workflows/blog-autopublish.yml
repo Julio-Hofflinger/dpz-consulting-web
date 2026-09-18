@@ -96,7 +96,7 @@ jobs:
           set -euo pipefail
           test -n "$DPZ_SSH_HOST"
           test -n "$DPZ_SSH_USER"
-          test -n "$DPZ_SSH_PRIVATE_KEY"
+          test -n "$DPZ_SSH_PRIVATE_KEY" || test -n "$DPZ_SSH_PRIVATE_KEY_B64"
           mkdir -p "$HOME/.ssh"
           chmod 700 "$HOME/.ssh"
           ssh-keyscan -H "$DPZ_SSH_HOST" >> "$HOME/.ssh/known_hosts"
