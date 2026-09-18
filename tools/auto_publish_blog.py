@@ -42,7 +42,7 @@ TIMEZONE = ZoneInfo("America/Santiago")
 SCHEDULED_WEEKDAYS = {2, 3, 4, 5}  # martes a viernes, ISO weekday
 API_URL = "https://api.openai.com/v1/responses"
 SLUG_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
-INTERNAL_LINK_RE = re.compile(r'href\s*=\s*["\']\.\./(?:servicios|contacto|blog)\.html', re.I)
+INTERNAL_LINK_RE = re.compile(r'href\s*=\s*["']\.\./(?:servicios|contacto|blog)\.html(?:[?#][^"']*)?["']', re.I)
 OFFICIAL_SOURCE_DOMAINS = ("conaf.cl", "sea.gob.cl", "mma.gob.cl")
 
 
@@ -266,6 +266,20 @@ def build_post(entry: dict, draft: dict, published_on: date) -> dict:
     return post
 
 
+
+def ensure_internal_link(post: dict, entry: dict) -> None:
+    """Añade un enlace interno estable si el borrador no lo incluyó."""
+    body = " ".join(str(section.get("html", "")) for section in post["sections"])
+    if INTERNAL_LINK_RE.search(body):
+        return
+    if not post["sections"]:
+        raise AutomationError("El borrador necesita al menos una sección para insertar el enlace interno.")
+    label = str(entry["service_link"]).strip()
+    post["sections"][-1]["html"] = (
+        str(post["sections"][-1].get("html", "")).rstrip()
+        + f'<p>Si necesitas apoyo para este análisis, revisa nuestros <a href="../servicios.html">{label}</a>.</p>'
+    )
+
 def validate_generated(config: dict, post: dict) -> None:
     errors, warnings = validate({**config, "posts": [post]}, slug=post["slug"])
     if errors:
@@ -293,6 +307,7 @@ def publish(entry: dict, config: dict, queue: dict, today: date) -> None:
     print(f"Generando: {entry['slug']} ({entry['focus_keyword']})")
     draft = generate_draft(entry)
     post = build_post(entry, draft, today)
+    ensure_internal_link(post, entry)
     validate_generated(config, post)
 
     original_config = CONFIG_PATH.read_text(encoding="utf-8")
