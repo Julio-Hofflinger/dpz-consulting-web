@@ -40,6 +40,12 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Instalar dependencias del publicador
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install --disable-pip-version-check --no-input Pillow
+
       - name: Preparar Node.js
         uses: actions/setup-node@v7
         with:
