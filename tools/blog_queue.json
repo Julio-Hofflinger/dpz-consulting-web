@@ -1,7 +1,12 @@
 {
   "version": 1,
   "timezone": "America/Santiago",
-  "scheduled_weekdays": ["tuesday", "wednesday", "thursday", "friday"],
+  "scheduled_weekdays": [
+    "tuesday",
+    "wednesday",
+    "thursday",
+    "friday"
+  ],
   "posts": [
     {
       "id": "pas-001",
@@ -9,7 +14,11 @@
       "topic": "Qué son los permisos ambientales sectoriales, cuándo conviene identificarlos y cómo ordenarlos desde la etapa temprana de un proyecto",
       "category": "regulatorio",
       "focus_keyword": "permisos ambientales sectoriales",
-      "secondary_keywords": ["PAS Chile", "permisos ambientales de un proyecto", "SEIA Chile"],
+      "secondary_keywords": [
+        "PAS Chile",
+        "permisos ambientales de un proyecto",
+        "SEIA Chile"
+      ],
       "audience": "titulares, desarrolladores y equipos técnicos que preparan un proyecto en Chile",
       "publish_after": "2026-09-15",
       "image": "assets/img/photos/dpz-soporte-regulatorio-900.webp",
@@ -18,9 +27,17 @@
       "cta_title": "¿Necesitas ordenar los permisos del proyecto?",
       "cta_text": "Revisamos la descripción del proyecto y levantamos una matriz inicial de antecedentes y permisos a confirmar.",
       "sources": [
-        {"name": "SEA — Guías, instructivos y criterios para la evaluación", "url": "https://www.sea.gob.cl/evaluacion-de-impacto-ambiental/guias-instructivos-y-criterios-para-la-evaluacion-de-proyectos-en"},
-        {"name": "SEA — Proceso de evaluación de impacto ambiental", "url": "https://www.sea.gob.cl/evaluacion-de-impacto-ambiental/cual-es-el-proceso-de-evaluacion-de-impacto-ambiental"}
-      ]
+        {
+          "name": "SEA — Guías, instructivos y criterios para la evaluación",
+          "url": "https://www.sea.gob.cl/evaluacion-de-impacto-ambiental/guias-instructivos-y-criterios-para-la-evaluacion-de-proyectos-en"
+        },
+        {
+          "name": "SEA — Proceso de evaluación de impacto ambiental",
+          "url": "https://www.sea.gob.cl/evaluacion-de-impacto-ambiental/cual-es-el-proceso-de-evaluacion-de-impacto-ambiental"
+        }
+      ],
+      "status": "published",
+      "published_at": "2026-09-18T20:00:03-03:00"
     },
     {
       "id": "diag-001",
@@ -28,7 +45,11 @@
       "topic": "Cómo construir una línea base ambiental útil para decidir, delimitar brechas y preparar un anteproyecto",
       "category": "diagnostico",
       "focus_keyword": "línea base ambiental",
-      "secondary_keywords": ["diagnóstico ambiental", "caracterización ambiental Chile", "área de influencia"],
+      "secondary_keywords": [
+        "diagnóstico ambiental",
+        "caracterización ambiental Chile",
+        "área de influencia"
+      ],
       "audience": "equipos de proyectos inmobiliarios, energéticos, de infraestructura y prediales",
       "publish_after": "2026-09-16",
       "image": "assets/img/photos/dpz-cartografia-sig-900.webp",
@@ -37,8 +58,14 @@
       "cta_title": "¿Debes levantar una línea base?",
       "cta_text": "Integramos antecedentes territoriales y ambientales para detectar brechas antes de que se conviertan en retrabajo.",
       "sources": [
-        {"name": "SEA — Criterios de evaluación en el SEIA", "url": "https://www.sea.gob.cl/criterios-de-evaluacion-en-el-seia"},
-        {"name": "SEA — Guías, instructivos y criterios para la evaluación", "url": "https://www.sea.gob.cl/evaluacion-de-impacto-ambiental/guias-instructivos-y-criterios-para-la-evaluacion-de-proyectos-en"}
+        {
+          "name": "SEA — Criterios de evaluación en el SEIA",
+          "url": "https://www.sea.gob.cl/criterios-de-evaluacion-en-el-seia"
+        },
+        {
+          "name": "SEA — Guías, instructivos y criterios para la evaluación",
+          "url": "https://www.sea.gob.cl/evaluacion-de-impacto-ambiental/guias-instructivos-y-criterios-para-la-evaluacion-de-proyectos-en"
+        }
       ]
     },
     {
@@ -47,7 +74,11 @@
       "topic": "Cómo usar cartografía de restricciones territoriales para comparar alternativas de emplazamiento en Chile",
       "category": "sig",
       "focus_keyword": "cartografía de restricciones territoriales",
-      "secondary_keywords": ["SIG para proyectos", "análisis espacial Chile", "aptitud territorial"],
+      "secondary_keywords": [
+        "SIG para proyectos",
+        "análisis espacial Chile",
+        "aptitud territorial"
+      ],
       "audience": "profesionales que comparan ubicaciones y necesitan justificar técnicamente una alternativa",
       "publish_after": "2026-09-17",
       "image": "assets/img/photos/dpz-cartografia-sig-900.webp",
@@ -56,8 +87,14 @@
       "cta_title": "¿Comparas alternativas de ubicación?",
       "cta_text": "Construimos mapas comparables y trazables para apoyar decisiones de localización.",
       "sources": [
-        {"name": "SEA — Criterios de evaluación en el SEIA", "url": "https://www.sea.gob.cl/criterios-de-evaluacion-en-el-seia"},
-        {"name": "SEA — Guías, instructivos y criterios para la evaluación", "url": "https://www.sea.gob.cl/evaluacion-de-impacto-ambiental/guias-instructivos-y-criterios-para-la-evaluacion-de-proyectos-en"}
+        {
+          "name": "SEA — Criterios de evaluación en el SEIA",
+          "url": "https://www.sea.gob.cl/criterios-de-evaluacion-en-el-seia"
+        },
+        {
+          "name": "SEA — Guías, instructivos y criterios para la evaluación",
+          "url": "https://www.sea.gob.cl/evaluacion-de-impacto-ambiental/guias-instructivos-y-criterios-para-la-evaluacion-de-proyectos-en"
+        }
       ]
     },
     {
@@ -66,7 +103,11 @@
       "topic": "Qué debe considerar un inventario de vegetación nativa para planificar una intervención predial con mejor respaldo técnico",
       "category": "forestal",
       "focus_keyword": "inventario de vegetación nativa",
-      "secondary_keywords": ["bosque nativo Chile", "caracterización predial", "CONAF"],
+      "secondary_keywords": [
+        "bosque nativo Chile",
+        "caracterización predial",
+        "CONAF"
+      ],
       "audience": "propietarios rurales, desarrolladores y equipos que evalúan obras en predios con vegetación nativa",
       "publish_after": "2026-09-18",
       "image": "assets/img/photos/dpz-gestion-forestal-900.webp",
@@ -75,8 +116,14 @@
       "cta_title": "¿Necesitas caracterizar la vegetación del predio?",
       "cta_text": "Levantamos antecedentes de terreno y cartografía para ordenar la decisión técnica antes de intervenir.",
       "sources": [
-        {"name": "CONAF — Permisos de bosque nativo y formaciones xerofíticas", "url": "https://www.conaf.cl/tramites/permisos-bosque-nativo-y-formaciones-xerofiticas/"},
-        {"name": "CONAF — Planes y normas de manejo", "url": "https://www.conaf.cl/centro-documental/planes-y-normas-de-manejo/"}
+        {
+          "name": "CONAF — Permisos de bosque nativo y formaciones xerofíticas",
+          "url": "https://www.conaf.cl/tramites/permisos-bosque-nativo-y-formaciones-xerofiticas/"
+        },
+        {
+          "name": "CONAF — Planes y normas de manejo",
+          "url": "https://www.conaf.cl/centro-documental/planes-y-normas-de-manejo/"
+        }
       ]
     },
     {
@@ -85,7 +132,11 @@
       "topic": "Cómo organizar una evaluación de riesgo del arbolado urbano para priorizar mantención, seguimiento y decisiones municipales",
       "category": "arbolado",
       "focus_keyword": "evaluación de riesgo del arbolado",
-      "secondary_keywords": ["arbolado urbano Chile", "inventario de árboles", "gestión municipal"],
+      "secondary_keywords": [
+        "arbolado urbano Chile",
+        "inventario de árboles",
+        "gestión municipal"
+      ],
       "audience": "municipios, administradores de parques, condominios y responsables de infraestructura urbana",
       "publish_after": "2026-09-22",
       "image": "assets/img/photos/dpz-arbolado-urbano-900.webp",
@@ -94,8 +145,14 @@
       "cta_title": "¿Necesitas priorizar tu arbolado?",
       "cta_text": "Convertimos el inventario de árboles en una herramienta de priorización y seguimiento.",
       "sources": [
-        {"name": "CONAF — Documentación asociada", "url": "https://www.conaf.cl/centro-documental/documentacion-asociada-4/"},
-        {"name": "CONAF — Centro documental", "url": "https://www.conaf.cl/centro-documental/"}
+        {
+          "name": "CONAF — Documentación asociada",
+          "url": "https://www.conaf.cl/centro-documental/documentacion-asociada-4/"
+        },
+        {
+          "name": "CONAF — Centro documental",
+          "url": "https://www.conaf.cl/centro-documental/"
+        }
       ]
     },
     {
@@ -104,7 +161,11 @@
       "topic": "Cómo estructurar un plan de prevención de incendios en zonas de interfaz, priorizando combustible, accesos y elementos expuestos",
       "category": "riesgos",
       "focus_keyword": "plan de prevención de incendios en interfaz",
-      "secondary_keywords": ["incendios forestales Chile", "silvicultura preventiva", "predios rurales"],
+      "secondary_keywords": [
+        "incendios forestales Chile",
+        "silvicultura preventiva",
+        "predios rurales"
+      ],
       "audience": "propietarios rurales, comunidades, administradores prediales y equipos de prevención",
       "publish_after": "2026-09-23",
       "image": "assets/img/photos/dpz-suelos-fuego-riesgos-900.webp",
@@ -113,8 +174,14 @@
       "cta_title": "¿Quieres reducir la exposición de tu predio?",
       "cta_text": "Diagnosticamos las zonas críticas y priorizamos medidas de prevención ejecutables y mantenibles.",
       "sources": [
-        {"name": "CONAF — Gestión del territorio y silvicultura preventiva", "url": "https://www.conaf.cl/incendios/prevencion-y-mitigacion/gestion-del-territorio/"},
-        {"name": "CONAF — Prevención y mitigación de incendios forestales", "url": "https://www.conaf.cl/incendios/prevencion-y-mitigacion/"}
+        {
+          "name": "CONAF — Gestión del territorio y silvicultura preventiva",
+          "url": "https://www.conaf.cl/incendios/prevencion-y-mitigacion/gestion-del-territorio/"
+        },
+        {
+          "name": "CONAF — Prevención y mitigación de incendios forestales",
+          "url": "https://www.conaf.cl/incendios/prevencion-y-mitigacion/"
+        }
       ]
     },
     {
@@ -123,7 +190,11 @@
       "topic": "Cómo ordenar el seguimiento de compromisos ambientales para mantener trazabilidad y detectar desviaciones a tiempo",
       "category": "regulatorio",
       "focus_keyword": "seguimiento de compromisos ambientales",
-      "secondary_keywords": ["cumplimiento ambiental", "matriz de compromisos", "gestión ambiental de proyectos"],
+      "secondary_keywords": [
+        "cumplimiento ambiental",
+        "matriz de compromisos",
+        "gestión ambiental de proyectos"
+      ],
       "audience": "titulares y equipos que deben coordinar medidas, responsables, evidencias y plazos de un proyecto",
       "publish_after": "2026-09-24",
       "image": "assets/img/photos/dpz-soporte-regulatorio-900.webp",
@@ -132,8 +203,14 @@
       "cta_title": "¿Tienes compromisos dispersos?",
       "cta_text": "Ordenamos responsables, evidencias y estado de avance para facilitar el control técnico del proyecto.",
       "sources": [
-        {"name": "SEA — Proceso de evaluación de impacto ambiental", "url": "https://www.sea.gob.cl/evaluacion-de-impacto-ambiental/cual-es-el-proceso-de-evaluacion-de-impacto-ambiental"},
-        {"name": "SEA — Guías, instructivos y criterios para la evaluación", "url": "https://www.sea.gob.cl/evaluacion-de-impacto-ambiental/guias-instructivos-y-criterios-para-la-evaluacion-de-proyectos-en"}
+        {
+          "name": "SEA — Proceso de evaluación de impacto ambiental",
+          "url": "https://www.sea.gob.cl/evaluacion-de-impacto-ambiental/cual-es-el-proceso-de-evaluacion-de-impacto-ambiental"
+        },
+        {
+          "name": "SEA — Guías, instructivos y criterios para la evaluación",
+          "url": "https://www.sea.gob.cl/evaluacion-de-impacto-ambiental/guias-instructivos-y-criterios-para-la-evaluacion-de-proyectos-en"
+        }
       ]
     },
     {
@@ -142,7 +219,11 @@
       "topic": "Qué indicadores usar para evaluar el avance de una restauración ecológica y comunicar resultados con evidencia",
       "category": "reforestacion",
       "focus_keyword": "indicadores de restauración ecológica",
-      "secondary_keywords": ["restauración ecológica Chile", "monitoreo de reforestación", "sobrevivencia de plantaciones"],
+      "secondary_keywords": [
+        "restauración ecológica Chile",
+        "monitoreo de reforestación",
+        "sobrevivencia de plantaciones"
+      ],
       "audience": "titulares de proyectos, equipos ambientales y responsables de restauración y compensación",
       "publish_after": "2026-09-25",
       "image": "assets/img/photos/dpz-reforestacion-900.webp",
@@ -151,8 +232,14 @@
       "cta_title": "¿Necesitas medir una restauración?",
       "cta_text": "Diseñamos indicadores y fichas de seguimiento para verificar avances y orientar ajustes.",
       "sources": [
-        {"name": "CONAF — Documentación asociada", "url": "https://www.conaf.cl/centro-documental/documentacion-asociada-4/"},
-        {"name": "MMA — Biblioteca de ecosistemas acuáticos", "url": "https://ecosistemasacuaticos.mma.gob.cl/biblioteca/"}
+        {
+          "name": "CONAF — Documentación asociada",
+          "url": "https://www.conaf.cl/centro-documental/documentacion-asociada-4/"
+        },
+        {
+          "name": "MMA — Biblioteca de ecosistemas acuáticos",
+          "url": "https://ecosistemasacuaticos.mma.gob.cl/biblioteca/"
+        }
       ]
     },
     {
@@ -161,7 +248,11 @@
       "topic": "Qué revisar en un diagnóstico de suelos rurales antes de definir obras, manejo predial o medidas de prevención",
       "category": "riesgos",
       "focus_keyword": "diagnóstico de suelos rurales",
-      "secondary_keywords": ["suelos de un predio", "riesgos territoriales", "aptitud de suelo"],
+      "secondary_keywords": [
+        "suelos de un predio",
+        "riesgos territoriales",
+        "aptitud de suelo"
+      ],
       "audience": "propietarios y equipos que deben evaluar restricciones físicas y operacionales de un predio rural",
       "publish_after": "2026-09-29",
       "image": "assets/img/photos/dpz-predios-rurales-800.webp",
@@ -170,8 +261,14 @@
       "cta_title": "¿Necesitas entender el suelo de tu predio?",
       "cta_text": "Integramos observación de terreno, cartografía y criterios de riesgo para apoyar la planificación predial.",
       "sources": [
-        {"name": "SEA — Criterios de evaluación en el SEIA", "url": "https://www.sea.gob.cl/criterios-de-evaluacion-en-el-seia"},
-        {"name": "CONAF — Gestión del territorio", "url": "https://www.conaf.cl/incendios/prevencion-y-mitigacion/gestion-del-territorio/"}
+        {
+          "name": "SEA — Criterios de evaluación en el SEIA",
+          "url": "https://www.sea.gob.cl/criterios-de-evaluacion-en-el-seia"
+        },
+        {
+          "name": "CONAF — Gestión del territorio",
+          "url": "https://www.conaf.cl/incendios/prevencion-y-mitigacion/gestion-del-territorio/"
+        }
       ]
     },
     {
@@ -180,7 +277,11 @@
       "topic": "Cómo organizar datos geoespaciales de un proyecto para que la cartografía sea consistente, actualizable y defendible",
       "category": "sig",
       "focus_keyword": "datos geoespaciales para proyectos",
-      "secondary_keywords": ["SIG y cartografía", "base de datos espacial", "diagnóstico territorial"],
+      "secondary_keywords": [
+        "SIG y cartografía",
+        "base de datos espacial",
+        "diagnóstico territorial"
+      ],
       "audience": "equipos técnicos que coordinan capas, levantamientos, informes y decisiones de localización",
       "publish_after": "2026-09-30",
       "image": "assets/img/photos/dpz-cartografia-sig-900.webp",
@@ -189,8 +290,14 @@
       "cta_title": "¿Tus capas no conversan entre sí?",
       "cta_text": "Ordenamos bases espaciales, metadatos y productos cartográficos para que el equipo trabaje con una fuente consistente.",
       "sources": [
-        {"name": "SEA — Guías, instructivos y criterios para la evaluación", "url": "https://www.sea.gob.cl/evaluacion-de-impacto-ambiental/guias-instructivos-y-criterios-para-la-evaluacion-de-proyectos-en"},
-        {"name": "SEA — Criterios de evaluación en el SEIA", "url": "https://www.sea.gob.cl/criterios-de-evaluacion-en-el-seia"}
+        {
+          "name": "SEA — Guías, instructivos y criterios para la evaluación",
+          "url": "https://www.sea.gob.cl/evaluacion-de-impacto-ambiental/guias-instructivos-y-criterios-para-la-evaluacion-de-proyectos-en"
+        },
+        {
+          "name": "SEA — Criterios de evaluación en el SEIA",
+          "url": "https://www.sea.gob.cl/criterios-de-evaluacion-en-el-seia"
+        }
       ]
     },
     {
@@ -199,7 +306,11 @@
       "topic": "Cómo pasar del diagnóstico predial a una planificación de manejo forestal con objetivos, cartografía y seguimiento",
       "category": "forestal",
       "focus_keyword": "planificación predial forestal",
-      "secondary_keywords": ["manejo forestal Chile", "plan de manejo", "predio forestal"],
+      "secondary_keywords": [
+        "manejo forestal Chile",
+        "plan de manejo",
+        "predio forestal"
+      ],
       "audience": "propietarios forestales y equipos que necesitan ordenar intervenciones y prioridades de manejo",
       "publish_after": "2026-10-01",
       "image": "assets/img/photos/dpz-gestion-forestal-900.webp",
@@ -208,8 +319,14 @@
       "cta_title": "¿Quieres ordenar el manejo de tu predio?",
       "cta_text": "Traducimos el diagnóstico predial en objetivos, unidades de manejo y acciones verificables.",
       "sources": [
-        {"name": "CONAF — Planes y normas de manejo", "url": "https://www.conaf.cl/centro-documental/planes-y-normas-de-manejo/"},
-        {"name": "CONAF — Permisos de bosque nativo y formaciones xerofíticas", "url": "https://www.conaf.cl/tramites/permisos-bosque-nativo-y-formaciones-xerofiticas/"}
+        {
+          "name": "CONAF — Planes y normas de manejo",
+          "url": "https://www.conaf.cl/centro-documental/planes-y-normas-de-manejo/"
+        },
+        {
+          "name": "CONAF — Permisos de bosque nativo y formaciones xerofíticas",
+          "url": "https://www.conaf.cl/tramites/permisos-bosque-nativo-y-formaciones-xerofiticas/"
+        }
       ]
     },
     {
@@ -218,7 +335,11 @@
       "topic": "Cómo delimitar el área de influencia de un proyecto usando criterios técnicos, escala espacial y evidencia territorial",
       "category": "diagnostico",
       "focus_keyword": "área de influencia ambiental",
-      "secondary_keywords": ["diagnóstico territorial", "evaluación ambiental Chile", "cartografía ambiental"],
+      "secondary_keywords": [
+        "diagnóstico territorial",
+        "evaluación ambiental Chile",
+        "cartografía ambiental"
+      ],
       "audience": "equipos que preparan antecedentes ambientales y necesitan justificar el alcance espacial de sus análisis",
       "publish_after": "2026-10-02",
       "image": "assets/img/photos/dpz-inmobiliario-800.webp",
@@ -227,8 +348,14 @@
       "cta_title": "¿No tienes claro hasta dónde analizar?",
       "cta_text": "Definimos una base espacial trazable para ordenar el diagnóstico y evitar límites contradictorios.",
       "sources": [
-        {"name": "SEA — Criterios de evaluación en el SEIA", "url": "https://www.sea.gob.cl/criterios-de-evaluacion-en-el-seia"},
-        {"name": "SEA — Guías, instructivos y criterios para la evaluación", "url": "https://www.sea.gob.cl/evaluacion-de-impacto-ambiental/guias-instructivos-y-criterios-para-la-evaluacion-de-proyectos-en"}
+        {
+          "name": "SEA — Criterios de evaluación en el SEIA",
+          "url": "https://www.sea.gob.cl/criterios-de-evaluacion-en-el-seia"
+        },
+        {
+          "name": "SEA — Guías, instructivos y criterios para la evaluación",
+          "url": "https://www.sea.gob.cl/evaluacion-de-impacto-ambiental/guias-instructivos-y-criterios-para-la-evaluacion-de-proyectos-en"
+        }
       ]
     }
   ]
