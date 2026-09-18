@@ -8,7 +8,7 @@ el sitio estático y corre la auditoría SEO. Si algo falla, termina sin entrega
 un artículo listo para despliegue.
 
 Requiere:
-    OPENAI_API_KEY   Clave de API disponible solo como secreto del runner.
+    OPENAI_API_KEY   Opcional; si no está disponible, usa el borrador local de respaldo.
     OPENAI_MODEL     Opcional; por defecto ``gpt-5-mini``.
 
 Uso:
@@ -20,6 +20,7 @@ from __future__ import annotations
 
 import argparse
 import copy
+import html
 import json
 import os
 import re
@@ -158,6 +159,98 @@ def response_schema() -> dict:
             },
         },
         "required": ["title", "description", "excerpt", "lead", "read", "key_takeaways", "sections", "faqs"],
+    }
+
+
+def local_fallback_enabled() -> bool:
+    """Permite publicar con un borrador local cuando la API no está disponible."""
+    value = os.getenv("DPZ_BLOG_ALLOW_LOCAL_FALLBACK", "true").strip().lower()
+    return value not in {"0", "false", "no", "off"}
+
+
+def should_use_local_fallback(error: AutomationError) -> bool:
+    """Solo sustituye fallas de disponibilidad; errores de contenido siguen bloqueando."""
+    message = str(error)
+    return local_fallback_enabled() and any(
+        marker in message
+        for marker in (
+            "Falta OPENAI_API_KEY",
+            "La API de contenido respondió HTTP 429",
+            "No se pudo obtener el borrador desde la API",
+        )
+    )
+
+
+def build_local_fallback_draft(entry: dict) -> dict:
+    """Construye un borrador seguro y publicable sin depender de una API externa."""
+    focus = html.escape(str(entry["focus_keyword"]).strip())
+    topic = html.escape(str(entry["topic"]).strip())
+    service = html.escape(str(entry["service_link"]).strip())
+    source = entry["sources"][0]
+    source_name = html.escape(str(source["name"]).strip())
+    source_url = html.escape(str(source["url"]).strip(), quote=True)
+
+    return {
+        "title": f"Guía para abordar {focus} en tu proyecto",
+        "description": f"Conoce cómo ordenar antecedentes y decisiones sobre {focus} para reducir brechas y preparar un proyecto con mejor respaldo técnico en Chile.",
+        "excerpt": f"Criterios prácticos para ordenar antecedentes, detectar brechas y definir próximos pasos sobre {focus}.",
+        "lead": f"{focus.capitalize()} requiere una lectura ordenada del proyecto, su localización y los antecedentes disponibles. Esta guía resume cómo abordar el tema: {topic.lower()}.",
+        "read": "6 min",
+        "key_takeaways": [
+            f"Define qué decisión debe apoyar el análisis de {focus} antes de reunir antecedentes.",
+            "Registra fuentes, fechas, supuestos y brechas para mantener trazabilidad.",
+            f"Convierte los hallazgos en próximos pasos y confirma el alcance técnico de {service}.",
+        ],
+        "sections": [
+            {
+                "id": "alcance",
+                "h2": f"Qué revisar primero sobre {focus}",
+                "html": (
+                    f"<p>El punto de partida es describir la decisión concreta que debe tomar el proyecto y los factores que pueden condicionarla. En el caso de {focus}, conviene fijar el área de análisis, la etapa del proyecto y el nivel de precisión que realmente se necesita.</p>"
+                    "<p>También es importante separar los antecedentes confirmados de las hipótesis. Esa distinción evita presentar una recomendación preliminar como si fuera una conclusión definitiva.</p>"
+                ),
+                "key": "Un alcance claro permite priorizar información útil y evita acumular antecedentes que no cambian la decisión.",
+            },
+            {
+                "id": "antecedentes",
+                "h2": "Antecedentes que conviene ordenar",
+                "html": (
+                    "<p>Una revisión inicial debería reunir, como mínimo, la descripción de las obras o actividades, su ubicación, las restricciones conocidas y los antecedentes técnicos ya disponibles. El formato puede ser una matriz simple que indique fuente, fecha, escala, responsable y nivel de confiabilidad.</p>"
+                    "<ul><li>Delimita el proyecto y sus áreas auxiliares.</li><li>Identifica normativa, permisos o criterios sectoriales que deban confirmarse.</li><li>Relaciona cada dato con la decisión o riesgo que ayuda a evaluar.</li></ul>"
+                ),
+            },
+            {
+                "id": "brechas",
+                "h2": "Cómo detectar brechas antes de avanzar",
+                "html": (
+                    "<p>Las brechas aparecen cuando falta información, existen capas contradictorias o el antecedente disponible no tiene la escala necesaria. Revisa primero los puntos que podrían obligar a rediseñar, repetir levantamientos o cambiar el alcance de los estudios.</p>"
+                    f'<p>Como referencia inicial, consulta <a href="{source_url}" target="_blank" rel="noopener noreferrer">{source_name}</a> y contrasta sus criterios con el caso concreto. La fuente orienta, pero no reemplaza la revisión técnica del proyecto.</p>'
+                ),
+                "key": "Detectar una incertidumbre temprano suele costar menos que corregirla después de cerrar el diseño o el expediente.",
+            },
+            {
+                "id": "proximos-pasos",
+                "h2": "Convertir el diagnóstico en próximos pasos",
+                "html": (
+                    "<p>El resultado útil no es solo una lista de restricciones. Debe indicar qué falta confirmar, quién debe hacerlo, qué producto se espera y qué decisión habilita. Ordena las acciones por urgencia, dependencia y facilidad de ejecución.</p>"
+                    f'<p>Si necesitas apoyo para estructurar este trabajo, el servicio de <a href="../servicios.html">{service}</a> puede convertirse en un alcance acotado, con entregables y criterios de revisión definidos.</p>'
+                ),
+            },
+        ],
+        "faqs": [
+            {
+                "question": f"¿Por dónde conviene comenzar el análisis de {focus}?",
+                "answer": "Comienza por la decisión que debe apoyar el análisis, la ubicación exacta del proyecto y los antecedentes que ya están confirmados.",
+            },
+            {
+                "question": "¿Qué hago si las fuentes disponibles se contradicen?",
+                "answer": "Registra la diferencia, compara fecha y escala, y define una validación técnica antes de usar el dato para tomar decisiones.",
+            },
+            {
+                "question": "¿Este contenido reemplaza una revisión del caso concreto?",
+                "answer": "No. Es una orientación general; el alcance final depende del proyecto, su localización, sus obras y los criterios oficiales vigentes.",
+            },
+        ],
     }
 
 
@@ -316,7 +409,13 @@ def run_checked(command: list[str]) -> None:
 
 def publish(entry: dict, config: dict, queue: dict, today: date) -> None:
     print(f"Generando: {entry['slug']} ({entry['focus_keyword']})")
-    draft = generate_draft(entry)
+    try:
+        draft = generate_draft(entry)
+    except AutomationError as exc:
+        if not should_use_local_fallback(exc):
+            raise
+        print(f"Aviso: {exc}; se usará el borrador local de respaldo.")
+        draft = build_local_fallback_draft(entry)
     post = build_post(entry, draft, today)
     ensure_internal_link(post, entry)
     validate_generated(config, post)
