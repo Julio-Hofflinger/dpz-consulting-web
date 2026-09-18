@@ -239,6 +239,17 @@ contextual en el HTML de las secciones. No incluyas las fuentes en el JSON: el s
         raise AutomationError(f"La API devolvió un JSON inválido: {exc}") from exc
 
 
+
+def normalize_description(value: str) -> str:
+    """Mantiene la meta descripción dentro del límite SEO sin bloquear la publicación."""
+    text = re.sub(r"\s+", " ", str(value).strip())
+    max_length = 165
+    if len(text) <= max_length:
+        return text
+    shortened = text[: max_length - 3].rsplit(" ", 1)[0].rstrip(" ,;:")
+    return shortened + "..."
+
+
 def build_post(entry: dict, draft: dict, published_on: date) -> dict:
     post = {
         "slug": entry["slug"],
@@ -251,7 +262,7 @@ def build_post(entry: dict, draft: dict, published_on: date) -> dict:
         "updated": published_on.isoformat(),
         "read": draft["read"].strip(),
         "excerpt": draft["excerpt"].strip(),
-        "description": draft["description"].strip(),
+        "description": normalize_description(draft["description"]),
         "image": entry["image"],
         "image_alt": entry["image_alt"],
         "service_link": entry["service_link"],
