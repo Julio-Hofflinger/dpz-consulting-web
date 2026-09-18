@@ -42,7 +42,7 @@ TIMEZONE = ZoneInfo("America/Santiago")
 SCHEDULED_WEEKDAYS = {2, 3, 4, 5}  # martes a viernes, ISO weekday
 API_URL = "https://api.openai.com/v1/responses"
 SLUG_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
-INTERNAL_LINK_RE = re.compile(r'href\s*=\s*["']\.\./(?:servicios|contacto|blog)\.html(?:[?#][^"']*)?["']', re.I)
+INTERNAL_LINK_RE = re.compile(r"href\s*=\s*[\"']\.\./(?:servicios|contacto|blog)\.html(?:[?#][^\"']*)?[\"']", re.I)
 OFFICIAL_SOURCE_DOMAINS = ("conaf.cl", "sea.gob.cl", "mma.gob.cl")
 
 
