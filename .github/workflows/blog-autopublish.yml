@@ -102,7 +102,11 @@ jobs:
           ssh-keyscan -H "$DPZ_SSH_HOST" >> "$HOME/.ssh/known_hosts"
           key_file="$RUNNER_TEMP/dpz_deploy_key"
           if [[ -n "$DPZ_SSH_PRIVATE_KEY_B64" ]]; then
-            printf '%s' "$DPZ_SSH_PRIVATE_KEY_B64" | base64 --decode > "$key_file"
+            encoded="$(printf '%s' "$DPZ_SSH_PRIVATE_KEY_B64" | tr -d '[:space:]')"
+            remainder=$((${#encoded} % 4))
+            if [[ "$remainder" -eq 2 ]]; then encoded+="=="; fi
+            if [[ "$remainder" -eq 3 ]]; then encoded+="="; fi
+            printf '%s' "$encoded" | base64 --decode --ignore-garbage > "$key_file"
           else
             printf '%s\n' "$DPZ_SSH_PRIVATE_KEY" | tr -d '\r' > "$key_file"
           fi
