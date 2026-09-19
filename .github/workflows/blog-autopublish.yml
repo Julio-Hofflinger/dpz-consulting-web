@@ -91,17 +91,23 @@ jobs:
         env:
           DPZ_SSH_PRIVATE_KEY: ${{ secrets.DPZ_SSH_PRIVATE_KEY }}
           DPZ_SSH_PRIVATE_KEY_B64: ${{ secrets.DPZ_SSH_PRIVATE_KEY_B64 }}
+          DPZ_SSH_PRIVATE_KEY_HEX: ${{ secrets.DPZ_SSH_PRIVATE_KEY_HEX }}
         shell: bash
         run: |
           set -euo pipefail
           test -n "$DPZ_SSH_HOST"
           test -n "$DPZ_SSH_USER"
-          test -n "$DPZ_SSH_PRIVATE_KEY" || test -n "$DPZ_SSH_PRIVATE_KEY_B64"
+          test -n "$DPZ_SSH_PRIVATE_KEY" || test -n "$DPZ_SSH_PRIVATE_KEY_B64" || test -n "$DPZ_SSH_PRIVATE_KEY_HEX"
           mkdir -p "$HOME/.ssh"
           chmod 700 "$HOME/.ssh"
           ssh-keyscan -H "$DPZ_SSH_HOST" >> "$HOME/.ssh/known_hosts"
           key_file="$RUNNER_TEMP/dpz_deploy_key"
-          if [[ -n "$DPZ_SSH_PRIVATE_KEY_B64" ]]; then
+          if [[ -n "$DPZ_SSH_PRIVATE_KEY_HEX" ]]; then
+            encoded_hex="$(printf '%s' "$DPZ_SSH_PRIVATE_KEY_HEX" | tr -d '[:space:]')"
+            [[ "$encoded_hex" =~ ^[0-9A-Fa-f]+$ ]] || { echo "DPZ_SSH_PRIVATE_KEY_HEX no es hexadecimal válido"; exit 1; }
+            (( ${#encoded_hex} % 2 == 0 )) || { echo "DPZ_SSH_PRIVATE_KEY_HEX tiene longitud impar"; exit 1; }
+            printf '%s' "$encoded_hex" | xxd -r -p > "$key_file"
+          elif [[ -n "$DPZ_SSH_PRIVATE_KEY_B64" ]]; then
             encoded="$(printf '%s' "$DPZ_SSH_PRIVATE_KEY_B64" | tr -d '[:space:]')"
             remainder=$((${#encoded} % 4))
             if [[ "$remainder" -eq 2 ]]; then encoded+="=="; fi
