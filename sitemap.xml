@@ -117,5 +117,11 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://dpzdata.com/blog/evaluacion-riesgo-arbolado-urbano.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
   <!-- /BLOG:URLS -->
 </urlset>

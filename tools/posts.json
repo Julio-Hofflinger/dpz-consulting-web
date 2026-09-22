@@ -997,6 +997,92 @@
           "url": "https://www.conaf.cl/centro-documental/planes-y-normas-de-manejo/"
         }
       ]
+    },
+    {
+      "slug": "evaluacion-riesgo-arbolado-urbano",
+      "title": "Evaluación de riesgo del arbolado: guía práctica para municipios",
+      "category": "arbolado",
+      "focus_keyword": "evaluación de riesgo del arbolado",
+      "secondary_keywords": [
+        "arbolado urbano Chile",
+        "inventario de árboles",
+        "gestión municipal"
+      ],
+      "intent": "informacional",
+      "date": "2026-09-22",
+      "updated": "2026-09-22",
+      "read": "8 minutos",
+      "excerpt": "Pasos claros para organizar una evaluación de riesgo del arbolado urbano y priorizar mantenciones, seguimiento y decisiones municipales.",
+      "description": "Guía práctica para organizar una evaluación de riesgo del arbolado urbano: alcance, inventario, criterios, priorización y seguimiento para la gestión municipal.",
+      "image": "assets/img/photos/dpz-arbolado-urbano-900.webp",
+      "image_alt": "Arbolado urbano evaluado para priorizar mantención y gestión del riesgo",
+      "service_link": "censo y caracterización de arbolado urbano",
+      "cta_title": "¿Necesitas priorizar tu arbolado?",
+      "cta_text": "Convertimos el inventario de árboles en una herramienta de priorización y seguimiento.",
+      "lead": "Esta guía explica cómo organizar una evaluación de riesgo del arbolado para municipios, administradores de parques, condominios y responsables de infraestructura urbana. Incluye objetivos, diseño de inventario de árboles, criterios de riesgo, priorización de intervenciones y recomendaciones para seguimiento y comunicación. Se sugiere verificar procedimientos específicos con la documentación técnica disponible y con autoridades competentes.",
+      "key_takeaways": [
+        "Definir objetivos y alcance antes de levantar datos evita esfuerzos innecesarios.",
+        "Un inventario estandarizado (ubicación, especie, estado) es la base para evaluar riesgo y priorizar mantenciones.",
+        "Use criterios claros —vigor, estructura, probabilidad de fallo, exposición— para asignar prioridades.",
+        "Priorizar intervenciones por riesgo y valor de uso/inversión optimiza recursos municipales.",
+        "Establezca un plan de seguimiento y comunicación para documentar decisiones y responder reclamos."
+      ],
+      "sections": [
+        {
+          "id": "objeto-alcance",
+          "h2": "1. Definir objetivos y alcance del estudio",
+          "html": "<h3>1. Definir objetivos y alcance del estudio</h3><p>Antes de iniciar, clarifique qué busca la evaluación: reducir riesgos públicos, planificar mantenciones, priorizar reemplazos, o justificar inversiones. Defina el área (calles, plazas, parques), la profundidad del muestreo (todos los árboles o muestra representativa) y el horizonte temporal de decisiones. Esto permitirá dimensionar recursos y elegir metodología adecuada.</p><p><strong>Recomendación práctica:</strong> documente el objetivo en un brief técnico que incluya responsables, plazos y criterios mínimos de entrega. Revise la documentación técnica disponible de autoridades forestales para alinear métodos y terminología.</p>",
+          "key": "alcance"
+        },
+        {
+          "id": "inventario-datos",
+          "h2": "2. Recolección de datos e inventario de árboles",
+          "html": "<h3>2. Recolección de datos e inventario de árboles</h3><p>Un inventario sistemático es la base. Registre al menos: ubicación georreferenciada, especie, diámetro a la altura del pecho (DAP) o diámetro aproximado, altura o porte, estado fitosanitario, presencia de heridas o podas, y convivencia con infraestructura (cables, veredas, muros).</p><p>Use formularios estandarizados y, si es posible, un SIG o aplicación móvil para evitar reingresos de información. El inventario debe permitir filtrar por sectores críticos (hospitales, escuelas, vías principales) para la priorización.</p><ul><li>Considere fotografías y observaciones sobre probables fallas estructurales.</li><li>Capacite a las cuadrillas y registre la calidad del dato (confianza).</li></ul><p>Si necesita apoyo técnico, consulte opciones de contratación y <a href=\"../servicios.html\">nuestros servicios</a> para levantamientos e integración SIG.</p>",
+          "key": "inventario"
+        },
+        {
+          "id": "metodologia-criterios",
+          "h2": "3. Criterios y metodología para la evaluación de riesgo del arbolado",
+          "html": "<h3>3. Criterios y metodología para la evaluación de riesgo del arbolado</h3><p>La <em>evaluación de riesgo del arbolado</em> debe combinar observación de campo con criterios reproducibles. Proponga una matriz que contemple:</p><ol><li><strong>Probabilidad de falla:</strong> signos estructurales, madera podrida, hendiduras, puntales estructurales comprometidos.</li><li><strong>Consecuencia del fallo:</strong> exposición de personas, vehículos, infraestructura crítica.</li><li><strong>Vigor y condición fitosanitaria:</strong> defoliación, plagas, hongos.</li><li><strong>Valor de uso y ecosistémico:</strong> sombra, captación de agua, patrimonio arbóreo.</li></ol><p>Asigne niveles (alto, medio, bajo) y combine probabilidad y consecuencia para generar una escala de prioridad. Documente criterios y ejemplos para que las evaluaciones sean consistentes entre distintos inspectores.</p><p><strong>Nota:</strong> adapte la metodología a condiciones locales —especies, clima, normativa municipal— y revise la bibliografía técnica disponible en organismos competentes antes de formalizar procesos.</p>",
+          "key": "metodologia"
+        },
+        {
+          "id": "priorizacion-mantencion",
+          "h2": "4. Priorización y planificación de mantención",
+          "html": "<h3>4. Priorización y planificación de mantención</h3><p>Con la escala de riesgo obtendrá una lista priorizada. Para cada árbol o grupo priorizado, defina intervenciones posibles: inspección detallada por especialista, poda correctiva, anclajes, o remoción y reemplazo. Estime recursos y establezca ventanas temporales según el nivel de riesgo.</p><p>Organice las acciones en un plan operativo que incluya:</p><ul><li>Órdenes de trabajo con código de prioridad.</li><li>Presupuesto estimado y responsable técnico.</li><li>Protocolos de seguridad y señalización.</li></ul><p>Priorice intervenciones en sectores de alta exposición (escuelas, consultorios, vías principales). Evite decisiones únicas basadas solo en la edad o tamaño; combine criterios técnicos y valor social.</p>",
+          "key": "priorizacion"
+        },
+        {
+          "id": "implementacion-seguimiento",
+          "h2": "5. Implementación, seguimiento y comunicación",
+          "html": "<h3>5. Implementación, seguimiento y comunicación</h3><p>Implemente un registro de acciones y un calendario de revisiones. Registre trabajos realizados, observaciones post-intervención y fechas de próxima inspección. Un sistema de gestión permitirá generar reportes para rendición de cuentas y para programar inversiones futuras.</p><p>Comunique decisiones relevantes a la comunidad con transparencia: motivos técnicos, alternativas consideradas y plazos. Disponga canales para recibir reclamos o solicitudes y responda con la evidencia registrada.</p><p>Si requiere asesoría para implementar sistemas de gestión y protocolos de inspección, puede escribir a <a href=\"../contacto.html\">nuestro equipo</a> para evaluar apoyo técnico.</p>",
+          "key": "implementacion"
+        }
+      ],
+      "faqs": [
+        {
+          "question": "¿Con qué frecuencia se debe realizar una evaluación de riesgo del arbolado?",
+          "answer": "La frecuencia depende del contexto: árboles en vías de alto tránsito o con historial de fallas requieren revisiones más frecuentes que áreas de bajo uso. Recomendamos establecer inspecciones periódicas y revisiones extra ante eventos climáticos extremos. Defina frecuencias en función del resultado de la evaluación inicial y del nivel de prioridad asignado."
+        },
+        {
+          "question": "¿Necesito un arborista certificado para todas las inspecciones?",
+          "answer": "Para un inventario básico y detección de signos visibles, personal capacitado puede realizar el trabajo. Sin embargo, para árboles con riesgo alto o intervenciones complejas, es aconsejable la evaluación de un especialista con experiencia en diagnóstico estructural. Documente criterios que determinan cuándo escalar a especialista."
+        },
+        {
+          "question": "¿Cómo se integran datos del inventario en la gestión municipal?",
+          "answer": "Integre el inventario en un SIG o base de datos donde cada árbol tenga ficha única, historial de mantenciones y prioridad. Esto facilita programación de órdenes de trabajo, presupuestos y reportes. Si su municipio no dispone de herramientas, considere contratar soporte técnico para integración y capacitación del personal; revise la documentación técnica disponible y adapte las plantillas a su realidad."
+        }
+      ],
+      "sources": [
+        {
+          "name": "CONAF — Documentación asociada",
+          "url": "https://www.conaf.cl/centro-documental/documentacion-asociada-4/"
+        },
+        {
+          "name": "CONAF — Centro documental",
+          "url": "https://www.conaf.cl/centro-documental/"
+        }
+      ]
     }
   ]
 }
