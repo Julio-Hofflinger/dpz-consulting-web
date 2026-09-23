@@ -190,7 +190,9 @@
           "name": "CONAF — Prevención y mitigación de incendios forestales",
           "url": "https://www.conaf.cl/incendios/prevencion-y-mitigacion/"
         }
-      ]
+      ],
+      "status": "published",
+      "published_at": "2026-09-23T13:53:33-03:00"
     },
     {
       "id": "reg-002",

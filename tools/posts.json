@@ -1083,6 +1083,92 @@
           "url": "https://www.conaf.cl/centro-documental/"
         }
       ]
+    },
+    {
+      "slug": "plan-prevencion-incendios-interfaz",
+      "title": "Plan de prevención de incendios en interfaz: guía práctica",
+      "category": "riesgos",
+      "focus_keyword": "plan de prevención de incendios en interfaz",
+      "secondary_keywords": [
+        "incendios forestales Chile",
+        "silvicultura preventiva",
+        "predios rurales"
+      ],
+      "intent": "informacional",
+      "date": "2026-09-23",
+      "updated": "2026-09-23",
+      "read": "8 min de lectura",
+      "excerpt": "Guía práctica para diseñar un plan de prevención de incendios en interfaz que prioriza manejo de combustible, accesos y protección de bienes.",
+      "description": "Estructura un plan de prevención de incendios en interfaz priorizando combustible, accesos y elementos expuestos en predios rurales para reducir riesgo efectivo.",
+      "image": "assets/img/photos/dpz-suelos-fuego-riesgos-900.webp",
+      "image_alt": "Predio en zona de interfaz donde se priorizan medidas de prevención de incendios",
+      "service_link": "diagnóstico de suelos, fuego y riesgos",
+      "cta_title": "¿Quieres reducir la exposición de tu predio?",
+      "cta_text": "Diagnosticamos las zonas críticas y priorizamos medidas de prevención ejecutables y mantenibles.",
+      "lead": "Este texto explica cómo estructurar un plan de prevención de incendios en interfaz orientado a propietarios rurales, comunidades y administradores prediales. Tiene foco en tres prioridades: manejo del combustible, diseño y mantención de accesos para respuesta, y protección de elementos expuestos (viviendas, infraestructuras y recursos productivos). Incluye pasos operativos, criterios para priorizar acciones en terreno y consejos para coordinar con servicios y vecinos. No garantiza permisos ni aprobación administrativa; revise su caso con autoridades y técnicos locales.",
+      "key_takeaways": [
+        "Priorizar combustible, accesos y elementos expuestos facilita decisiones prácticas en terreno.",
+        "Diagnosticar combustible y continuidad vertical/horizontal es la base del plan.",
+        "Diseñar accesos seguros y puntos de encuentro mejora la respuesta y autoevacuación.",
+        "Medidas en elementos expuestos (defensas perimetrales y defensibles) reducen pérdidas.",
+        "Mantención periódica, registro y coordinación local hacen operable el plan."
+      ],
+      "sections": [
+        {
+          "id": "diagnostico-riesgo",
+          "h2": "1. Diagnóstico del riesgo y priorización del combustible",
+          "html": "<p>El primer paso para un plan de prevención de incendios en interfaz es diagnosticar el combustible en el predio y su entorno. Esto incluye evaluar continuidad horizontal (densidad de masas, fajas continuas) y vertical (estratos herbáceo, arbustivo y arbóreo), estado de la vegetación, y presencia de material muerto. Para priorizar acciones en predios rurales conviene:</p><ul><li>Mapear las áreas de mayor continuidad de combustible y su proximidad a viviendas o infraestructuras.</li><li>Identificar corredores naturales que facilitan avance del fuego (vientos dominantes, quebradas, laderas).</li><li>Clasificar unidades de trabajo según potencial de riesgo: inmediato, medio y bajo.</li></ul><p><strong>Recomendación:</strong> documente el diagnóstico con fotos y un plano simple para orientar intervenciones y priorizar silvicultura preventiva y tratamientos mecánicos o desbroces.</p>",
+          "key": "diagnostico"
+        },
+        {
+          "id": "accesos-respuesta",
+          "h2": "2. Accesos y logística de respuesta: diseño y mantención",
+          "html": "<p>Los accesos son críticos para permitir intervención de brigadas y coordinar autoevacuación. Un buen diseño considera trazados accesibles para vehículos, radio de giro, puntos de encuentro y salidas alternativas. En la planificación tenga en cuenta:</p><ul><li>Anchura mínima práctica para vehículos de emergencia y estado de la calzada.</li><li>Puntos de agua o cisternas accesibles y señalizados.</li><li>Rutas de evacuación para personas y animales, con señalización y plan de comunicación.</li></ul><p><strong>Checklist operativo:</strong></p><ol><li>Verificar transitabilidad al inicio y fin de la temporada de mayor riesgo.</li><li>Limpiar obstáculos en rutas y mantener paso libre 24/7 durante episodios críticos.</li><li>Coordinar con vecinos y servicios para definir puntos de encuentro y radio de cobertura.</li></ol><p>Considere incluir información del plan en materiales y enlaces de coordinación local; para apoyo técnico, revise servicios disponibles en <a href=\"../servicios.html\">nuestros servicios</a>.</p>",
+          "key": "accesos"
+        },
+        {
+          "id": "proteccion-elementos-expuestos",
+          "h2": "3. Medidas para elementos expuestos: defensas y zonas defendibles",
+          "html": "<p>Proteger viviendas, galpones e infraestructura productiva exige medidas concretas en el perímetro inmediato y en la envolvente del bien. La idea es crear <em>zonas defendibles</em> que reduzcan la probabilidad de ignición y faciliten la acción de brigadas o propietarios.</p><ul><li>Mantener una franja de reducción de combustible (césped corto, cortafuegos mecanizados, limpieza de copas bajas) en torno a las construcciones.</li><li>Retirar materiales combustibles próximos a edificaciones (leña, malezas, herramientas).</li><li>Utilizar materiales y elementos de diseño que reduzcan puntos de ignición en techumbres y ventilaciones, y mantener canaletas y desagües limpios.</li></ul><p>Priorice protección para elementos críticos que sostienen la actividad productiva y la seguridad humana. Estas medidas, combinadas con la gestión del combustible en el entorno, aumentan la probabilidad de que la infraestructura sobreviva a un incendio.</p>",
+          "key": "elementos-expuestos"
+        },
+        {
+          "id": "gestion-coord-colaboracion",
+          "h2": "4. Roles, coordinación y gobernanza local",
+          "html": "<p>Un plan efectivo define roles claros y mecanismos de coordinación entre propietarios, comunidades y autoridades locales. Señale quién toma decisiones operativas, cómo se comunica la alarma y quién mantiene las infraestructuras preventivas.</p><ul><li>Definir responsables por sector del predio y su reemplazo durante ausencias.</li><li>Establecer canales de alerta y comunicación (teléfonos, radio, grupos vecinales) y pruebas periódicas.</li><li>Coordinar con autoridades y brigadas locales para integrar el plan en contingencias mayores.</li></ul><p>Registre acuerdos y horarios de patrullaje o trabajo preventivo; la coordinación aumenta la eficacia del plan sin reemplazar las obligaciones administrativas que correspondan.</p>",
+          "key": "coordinacion"
+        },
+        {
+          "id": "monitoreo-mantencion",
+          "h2": "5. Monitoreo, mantención y registro de acciones",
+          "html": "<p>Un plan no culmina con la implementación inicial: requiere monitoreo y mantención continua. Establezca rutinas y registros para asegurar que las medidas preventivas se mantienen operativas:</p><ul><li>Calendario de mantenciones (desbroce, poda, limpieza de corredores y accesos).</li><li>Registro de actividades con fecha, responsable y observaciones.</li><li>Revisión post-temporada para ajustar planes y lecciones aprendidas.</li></ul><p>Estos registros facilitan la toma de decisiones al priorizar recursos y justifican acciones ante autoridades o seguros. Si necesita apoyo para levantar un plan técnico o cartografía, contáctenos vía <a href=\"../contacto.html\">contacto</a>.</p>",
+          "key": "monitoreo"
+        }
+      ],
+      "faqs": [
+        {
+          "question": "¿Qué es exactamente una zona de interfaz y por qué es prioritaria?",
+          "answer": "Una zona de interfaz es el espacio donde convergen vegetación combustible y estructuras humanas (viviendas, infraestructuras). Es prioritaria porque la proximidad aumenta la probabilidad de que un incendio forestal afecte personas y bienes; por eso el plan debe reducir combustible y crear defensas perimetrales."
+        },
+        {
+          "question": "¿Con qué frecuencia debo revisar y mantener las medidas del plan?",
+          "answer": "La mantención debe programarse según la dinámica del predio y la vegetación, pero como regla práctica revise accesos y defensas antes y durante la temporada de mayor riesgo, y haga una revisión post-temporada. Lleve registros para ajustar frecuencias según resultados."
+        },
+        {
+          "question": "¿Puedo aplicar tratamientos de silvicultura preventiva por mi cuenta en un predio rural?",
+          "answer": "Algunas labores mecánicas y de mantenimiento (desbroce, poda, limpieza de material vegetal suelto) pueden ejecutarse por el propietario, siempre respetando normativas locales. Para intervenciones mayores o ventas de madera, consulte a profesionales y autoridades para definir medidas técnicas y requisitos aplicables."
+        }
+      ],
+      "sources": [
+        {
+          "name": "CONAF — Gestión del territorio y silvicultura preventiva",
+          "url": "https://www.conaf.cl/incendios/prevencion-y-mitigacion/gestion-del-territorio/"
+        },
+        {
+          "name": "CONAF — Prevención y mitigación de incendios forestales",
+          "url": "https://www.conaf.cl/incendios/prevencion-y-mitigacion/"
+        }
+      ]
     }
   ]
 }
