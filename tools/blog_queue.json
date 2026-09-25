@@ -221,7 +221,9 @@
           "name": "SEA — Guías, instructivos y criterios para la evaluación",
           "url": "https://www.sea.gob.cl/evaluacion-de-impacto-ambiental/guias-instructivos-y-criterios-para-la-evaluacion-de-proyectos-en"
         }
-      ]
+      ],
+      "status": "published",
+      "published_at": "2026-09-25T14:07:06-03:00"
     },
     {
       "id": "rest-001",
