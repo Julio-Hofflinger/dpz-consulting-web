@@ -252,7 +252,9 @@
           "name": "MMA — Biblioteca de ecosistemas acuáticos",
           "url": "https://ecosistemasacuaticos.mma.gob.cl/biblioteca/"
         }
-      ]
+      ],
+      "status": "published",
+      "published_at": "2026-09-29T15:03:54-03:00"
     },
     {
       "id": "riesgos-002",
