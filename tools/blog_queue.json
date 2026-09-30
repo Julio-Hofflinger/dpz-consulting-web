@@ -283,7 +283,9 @@
           "name": "CONAF — Gestión del territorio",
           "url": "https://www.conaf.cl/incendios/prevencion-y-mitigacion/gestion-del-territorio/"
         }
-      ]
+      ],
+      "status": "published",
+      "published_at": "2026-09-30T14:59:35-03:00"
     },
     {
       "id": "sig-002",
