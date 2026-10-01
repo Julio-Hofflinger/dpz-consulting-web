@@ -1425,6 +1425,92 @@
           "url": "https://www.conaf.cl/incendios/prevencion-y-mitigacion/gestion-del-territorio/"
         }
       ]
+    },
+    {
+      "slug": "datos-geoespaciales-proyecto",
+      "title": "Datos geoespaciales para proyectos: cómo organizarlos",
+      "category": "sig",
+      "focus_keyword": "datos geoespaciales para proyectos",
+      "secondary_keywords": [
+        "SIG y cartografía",
+        "base de datos espacial",
+        "diagnóstico territorial"
+      ],
+      "intent": "informacional",
+      "date": "2026-10-01",
+      "updated": "2026-10-01",
+      "read": "8 min",
+      "excerpt": "Pasos claros para que la cartografía de proyecto sea consistente, actualizable y defendible.",
+      "description": "Guía práctica para organizar datos geoespaciales en proyectos: estándares, base de datos espacial, control de calidad y documentación defendible.",
+      "image": "assets/img/photos/dpz-cartografia-sig-900.webp",
+      "image_alt": "Base cartográfica y datos geoespaciales organizados para un proyecto",
+      "service_link": "cartografía SIG y análisis espacial",
+      "cta_title": "¿Tus capas no conversan entre sí?",
+      "cta_text": "Ordenamos bases espaciales, metadatos y productos cartográficos para que el equipo trabaje con una fuente consistente.",
+      "lead": "Esta guía está dirigida a equipos técnicos que coordinan capas, levantamientos e informes. Explica cómo estructurar datos geoespaciales para que la cartografía sea coherente entre disciplinas, fácil de actualizar y defendible en procesos de diagnóstico territorial y evaluación ambiental.",
+      "key_takeaways": [
+        "Defina alcance, estándares y un diccionario de atributos antes de colectar datos.",
+        "Use una base de datos espacial centralizada con control de versiones y metadatos completos.",
+        "Implemente reglas de calidad, validaciones automáticas y un flujo de trabajo de actualización.",
+        "Documente fuentes, transformaciones y decisiones para que la cartografía sea defendible.",
+        "Revise requisitos específicos del proyecto y criterios sectoriales (ej.: SEA) antes de finalizar entregables."
+      ],
+      "sections": [
+        {
+          "id": "alcance-estandares",
+          "h2": "Definir alcance, estándares y producto cartográfico",
+          "html": "<p>Antes de levantar una sola coordenada, reúna al equipo técnico y acuerde el alcance: qué capas son necesarias (límites, redes, uso del suelo, levantamientos puntuales), el propósito de cada capa y los productos finales (mapas, shapefiles, servicios WMS/WFS). El término datos geoespaciales para proyectos debe aparecer en las especificaciones para que todos comprendan el objetivo común.</p><p>Proponga un conjunto mínimo de estándares:</p><ul><li><strong>Sistema de referencia de coordenadas</strong> (elegir uno consistente con la normativa local y con los datos disponibles).</li><li><strong>Resolución y escala de trabajo</strong> para cada tipo de capa (levantamientos topográficos, ortofotos, etc.).</li><li><strong>Diccionario de atributos</strong> con nombres, tipos, códigos permitidos y reglas de obligatoria/condicionalidad.</li><li><strong>Convenciones de nombre de archivos y capas</strong> (proyecto_fecha_autor_tipo).</li></ul><p>Recomendación: documente estas decisiones en un archivo de especificaciones que acompañe a la base de datos y a los entregables para facilitar la revisión técnica y la trazabilidad.</p>",
+          "key": "estandares"
+        },
+        {
+          "id": "diseno-bd-espacial",
+          "h2": "Diseñar la base de datos espacial centralizada",
+          "html": "<p>Una <strong>base de datos espacial</strong> única (por ejemplo PostGIS u otro gestor con soporte espacial) reduce duplicaciones y facilita consultas, relaciones y análisis. Diseñe un modelo lógico que incluya:</p><ul><li>Entidades principales y relaciones (polígonos, líneas, puntos, tablas complementarias).</li><li>Diccionario de atributos vinculado a cada capa, con ejemplos y valores válidos.</li><li>Índices espaciales y no espaciales para optimizar consultas.</li><li>Mecanismos de acceso y roles (quién puede escribir, revisar, publicar).</li></ul><p>Consejo práctico: automatice la carga desde levantamientos mediante plantillas y validadores para que los equipos de campo entreguen datos ya normalizados.</p>",
+          "key": "bd_espacial"
+        },
+        {
+          "id": "gestion-capas-metadatos",
+          "h2": "Flujo de trabajo para gestión de capas y metadatos",
+          "html": "<p>Establezca un flujo de trabajo claro: ingestión → validación → almacenamiento → publicación. Para cada etapa defina responsables, pasos y herramientas. Los metadatos son fundamentales: registren origen, fecha, precisión, responsable, transformaciones aplicadas y restricciones de uso.</p><p>Incluya validaciones automáticas que verifiquen:</p><ol><li>Coherencia del sistema de coordenadas y proyecciones.</li><li>Presencia de campos obligatorios del diccionario de atributos.</li><li>Topologías básicas (no solapas donde no corresponda, nodos desconectados, polígonos sin orientación correcta).</li></ol><p>Para publicación y visualización, documente simbología y escalas, y ofrezca servicios cartográficos a los equipos de decisión. Si requiere apoyo técnico para implementar servicios o flujos, consulte nuestros servicios en <a href=\"../servicios.html\">../servicios.html</a>.</p>",
+          "key": "capas_metadatos"
+        },
+        {
+          "id": "control-calidad-versionamiento",
+          "h2": "Versionado, control de calidad y trazabilidad",
+          "html": "<p>Para que la cartografía sea defendible en informes o procesos de evaluación, implemente control de versiones y registro de cambios. Algunas prácticas recomendadas:</p><ul><li>Use ramas o esquemas de trabajo (producción, pruebas, borradores) y políticas de publicación.</li><li>Registre cada modificación con autor, fecha y motivo; mantenga diffs espaciales cuando sea posible.</li><li>Implemente pruebas automáticas que detecten regresiones (pérdida de atributos, cambios de CRS, geometrías inválidas).</li></ul><p>Adicionalmente, mantenga copias de seguridad periódicas y snapshots que permitan reconstruir el estado de la base de datos en fechas clave del proyecto —esto es crucial cuando debe demostrarse qué información se empleó en una decisión técnica o administrativa.</p>",
+          "key": "versionamiento"
+        },
+        {
+          "id": "entrega-documentacion-defensa",
+          "h2": "Entregables, documentación y cómo defender la cartografía",
+          "html": "<p>Prepare paquetes de entrega que incluyan: extractos de la base de datos, archivos GIS estándar, metadatos completos, un registro de transformaciones (ex.: reproyecciones) y un informe metodológico que explique criterios de muestreo, errores conocidos y limitaciones. Una cartografía defendible debe permitir que un tercero reproduzca los procedimientos o, al menos, evalúe la consistencia técnica de los resultados.</p><p>Evite afirmaciones absolutas sobre cumplimiento sin verificar requisitos legales o sectoriales del caso particular; en proyectos sujetos a evaluación ambiental consulte los criterios aplicables y documente cómo sus datos responden a esos criterios.</p><p>Si necesita apoyo para revisar la documentación final o preparar defensas técnicas, puede coordinar una asesoría con nuestro equipo en <a href=\"../contacto.html\">../contacto.html</a>.</p>",
+          "key": "entrega_defensa"
+        }
+      ],
+      "faqs": [
+        {
+          "question": "¿Qué sistema de coordenadas debo usar para mi proyecto?",
+          "answer": "No existe una única respuesta universal; seleccione el sistema que sea compatible con los datos base disponibles y con la normativa o requerimientos del proyecto. Documente la elección y las transformaciones aplicadas para mantener trazabilidad."
+        },
+        {
+          "question": "¿Cómo asegurar que los levantamientos de campo encajen con las capas existentes?",
+          "answer": "Antes del trabajo de campo, entregue plantillas con el diccionario de atributos, el CRS predefinido y validadores automáticos. Al recibir los datos, ejecute validaciones espaciales y de atributos y devuelva observaciones técnicas a quien realizó el levantamiento."
+        },
+        {
+          "question": "¿Cuándo es necesario centralizar los datos en una base de datos espacial?",
+          "answer": "Centralice cuando el proyecto involucre múltiples disciplinas o versiones de datos; una base de datos espacial mejora consistencia, evita duplicaciones y facilita auditorías. Para proyectos simples o temporales, una estructura más ligera puede ser suficiente, pero siempre documente las reglas y responsables."
+        }
+      ],
+      "sources": [
+        {
+          "name": "SEA — Guías, instructivos y criterios para la evaluación",
+          "url": "https://www.sea.gob.cl/evaluacion-de-impacto-ambiental/guias-instructivos-y-criterios-para-la-evaluacion-de-proyectos-en"
+        },
+        {
+          "name": "SEA — Criterios de evaluación en el SEIA",
+          "url": "https://www.sea.gob.cl/criterios-de-evaluacion-en-el-seia"
+        }
+      ]
     }
   ]
 }

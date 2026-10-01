@@ -314,7 +314,9 @@
           "name": "SEA — Criterios de evaluación en el SEIA",
           "url": "https://www.sea.gob.cl/criterios-de-evaluacion-en-el-seia"
         }
-      ]
+      ],
+      "status": "published",
+      "published_at": "2026-10-01T15:24:25-03:00"
     },
     {
       "id": "forestal-002",
