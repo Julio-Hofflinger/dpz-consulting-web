@@ -345,7 +345,9 @@
           "name": "CONAF — Permisos de bosque nativo y formaciones xerofíticas",
           "url": "https://www.conaf.cl/tramites/permisos-bosque-nativo-y-formaciones-xerofiticas/"
         }
-      ]
+      ],
+      "status": "published",
+      "published_at": "2026-10-02T14:51:28-03:00"
     },
     {
       "id": "diag-002",
