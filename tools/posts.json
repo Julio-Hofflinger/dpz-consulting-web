@@ -1597,6 +1597,92 @@
           "url": "https://www.conaf.cl/tramites/permisos-bosque-nativo-y-formaciones-xerofiticas/"
         }
       ]
+    },
+    {
+      "slug": "delimitacion-area-influencia-proyecto",
+      "title": "Delimitar el área de influencia ambiental: criterios y escala",
+      "category": "diagnostico",
+      "focus_keyword": "área de influencia ambiental",
+      "secondary_keywords": [
+        "diagnóstico territorial",
+        "evaluación ambiental Chile",
+        "cartografía ambiental"
+      ],
+      "intent": "informacional",
+      "date": "2026-10-06",
+      "updated": "2026-10-06",
+      "read": "8 min",
+      "excerpt": "Pasos y criterios técnicos para justificar espacialmente el alcance de un estudio ambiental.",
+      "description": "Guía práctica para definir el área de influencia ambiental en proyectos: criterios técnicos del SEA, elección de escala espacial, evidencia territorial y...",
+      "image": "assets/img/photos/dpz-inmobiliario-800.webp",
+      "image_alt": "Delimitación cartográfica del área de influencia de un proyecto",
+      "service_link": "diagnóstico ambiental-territorial",
+      "cta_title": "¿No tienes claro hasta dónde analizar?",
+      "cta_text": "Definimos una base espacial trazable para ordenar el diagnóstico y evitar límites contradictorios.",
+      "lead": "Definir el área de influencia ambiental es una decisión técnica que condiciona el diagnóstico territorial y la calidad de la evaluación. Esta guía explica cómo aplicar criterios del SEA, elegir la escala espacial adecuada y reunir evidencia territorial y cartográfica para justificar el alcance en un expediente.",
+      "key_takeaways": [
+        "El área de influencia ambiental debe justificar la relación causa–efecto entre proyecto y receptor.",
+        "Use criterios sectoriales publicados por el SEA como orientación técnica, no como receta única.",
+        "Ajuste la escala espacial según impactos potenciales: local, intermedio o de cuenca/territorio.",
+        "Documente fuentes cartográficas y evidencia territorial para sustentar límites y supuestos.",
+        "La cartografía ambiental y el diagnóstico territorial deben integrarse en la sección metodológica del expediente."
+      ],
+      "sections": [
+        {
+          "id": "s1",
+          "h2": "¿Qué es el área de influencia ambiental y cuándo se define?",
+          "html": "<p>El <strong>área de influencia ambiental</strong> es el espacio geográfico dentro del cual el proyecto puede causar efectos relevantes sobre componentes ambientales, sociales y patrimoniales. Su definición debe ocurrir temprano en el proceso de evaluación ambiental para orientar el <em>diagnóstico territorial</em>, el levantamiento de línea base y la selección de estudios técnicos.</p><p>No existe una única regla universal: la delimitación depende del tipo de proyecto, la matriz de impactos esperada y la magnitud/alcance de las actividades. Por eso, si bien es útil apoyarse en los criterios del organismo regulador, la justificación debe ser específica y basada en evidencia.</p>",
+          "key": "definicion"
+        },
+        {
+          "id": "s2",
+          "h2": "Criterios técnicos del SEA aplicables a la delimitación",
+          "html": "<p>El Servicio de Evaluación Ambiental (SEA) publica guías, criterios e instructivos que orientan la identificación del alcance espacial y las metodologías a emplear. Estos documentos sirven como referencia técnica para:</p><ul><li>Identificar componentes susceptibles (agua, suelos, biodiversidad, comunidades humanas, patrimonio).</li><li>Establecer la coherencia entre posibles fuentes de impacto y el área afectable.</li><li>Determinar la necesidad de estudios a escala de cuenca, hidrológica, ecológica o comunal.</li></ul><p>Use los criterios del SEA como marco de respaldo técnico, y explique en la metodología del expediente por qué se adoptaron determinados límites y no otros. Evite presentar el criterio del SEA como único requisito: debe integrarse con la evidencia territorial específica del sitio.</p>",
+          "key": "criterios_sea"
+        },
+        {
+          "id": "s3",
+          "h2": "Elegir la escala espacial: local, intermedia y de territorio",
+          "html": "<p>La escala espacial adecuada depende de la naturaleza del impacto. Proponga una escala y justifíquela con causales concretas:</p><ol><li><strong>Escala local:</strong> impactos directos en el predio o en áreas adyacentes (ruido, polvo, tránsito, remoción de suelo).</li><li><strong>Escala intermedia:</strong> alcance mayor, por ejemplo afectación de corredores faunísticos, cuencas pequeñas o redes viales.</li><li><strong>Escala territorial o de cuenca:</strong> impactos que se propagan por sistemas hídricos, sedimentación en cuencas o efectos acumulativos regionales.</li></ol><p>Explique cómo cada tipo de impacto concreta una distancia o unidad espacial (metros, tramos de río, subcuenca). Cuando existan incertidumbres, defina escenarios conservadores y escale análisis complementarios para el peor caso razonable.</p>",
+          "key": "escala"
+        },
+        {
+          "id": "s4",
+          "h2": "Evidencia territorial y cartografía ambiental para justificar límites",
+          "html": "<p>La delimitación debe apoyarse en información cartográfica y evidencia de terreno. Reúna y documente:</p><ul><li>Cartografía base: límites prediales, redes viales, red hidrográfica, uso del suelo.</li><li>Mapas temáticos: hábitats, áreas protegidas, patrimonio, vulnerabilidad de suelos y riesgos naturales.</li><li>Información local: inspecciones de terreno, entrevistas con autoridades y comunidades, registros de monitoreo.</li></ul><p>Use sistemas SIG para integrar capas y producir mapas que muestren la relación causa–efecto entre la obra y los receptores. Si requiere apoyo en cartografía ambiental o análisis SIG, revise nuestros servicios técnicos para levantamiento y modelación geoespacial: <a href=\"../servicios.html\">servicios de cartografía y SIG</a>.</p>",
+          "key": "evidencia"
+        },
+        {
+          "id": "s5",
+          "h2": "Cómo presentar y justificar el área de influencia en el expediente",
+          "html": "<p>La justificación en el expediente debe ser explícita, reproducible y trazable. Incluya al menos:</p><ul><li>Descripción metodológica: criterios elegidos, fuentes de datos, supuestos y límites de análisis.</li><li>Mapas con proyección, escala y leyenda clara; capas utilizadas y su origen.</li><li>Matriz causa–efecto que relaciona actividades del proyecto con componentes y distancias de efecto.</li><li>Escenarios alternativos y medidas de verificación (muestreos, monitoreos) para validar supuestos.</li></ul><p>Evite afirmaciones generales: cada límite espacial requiere respaldo técnico (datos cartográficos, referencias metodológicas y evidencia de terreno). Si necesita asesoría para estructurar la justificación técnica y los mapas del expediente, puede contactarnos en <a href=\"../contacto.html\">nuestro formulario de contacto</a>.</p>",
+          "key": "justificacion"
+        }
+      ],
+      "faqs": [
+        {
+          "question": "¿Puedo usar una distancia fija (ej. 500 m) para todas las especies y componentes?",
+          "answer": "No es recomendable aplicar una distancia fija de manera indiscriminada. Algunas afectaciones requieren límites mayores (cuencas, corredores) y otras menores. Justifique cualquier distancia con criterios técnicos, referencias sectoriales y evidencia local."
+        },
+        {
+          "question": "¿Qué fuentes cartográficas son mínimas para respaldar la delimitación?",
+          "answer": "Al menos contraste cartografía base (límites, hidrografía, vías), mapas temáticos relevantes al componente afectado y evidencia de terreno. Documente la proyección, la fecha y el origen de cada capa."
+        },
+        {
+          "question": "¿Debo considerar impactos acumulativos al delimitar el área de influencia?",
+          "answer": "Sí. Cuando existan actividades pasadas, presentes o planificadas que interactúen con el proyecto, valore una escala que permita evaluar efectos acumulativos y justifique el criterio adoptado en la metodología."
+        }
+      ],
+      "sources": [
+        {
+          "name": "SEA — Criterios de evaluación en el SEIA",
+          "url": "https://www.sea.gob.cl/criterios-de-evaluacion-en-el-seia"
+        },
+        {
+          "name": "SEA — Guías, instructivos y criterios para la evaluación",
+          "url": "https://www.sea.gob.cl/evaluacion-de-impacto-ambiental/guias-instructivos-y-criterios-para-la-evaluacion-de-proyectos-en"
+        }
+      ]
     }
   ]
 }
